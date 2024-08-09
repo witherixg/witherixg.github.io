@@ -244,7 +244,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-08-09 00:29:30 / Modified: 04:00:52" itemprop="dateCreated datePublished" datetime="2024-08-09T00:29:30+08:00">2024-08-09</time>
+      <time title="Created: 2024-08-09 00:29:30 / Modified: 16:31:32" itemprop="dateCreated datePublished" datetime="2024-08-09T00:29:30+08:00">2024-08-09</time>
     </span>
 
   
@@ -267,7 +267,7 @@
 </ul>
 <h2 id="基本定义"><a href="#基本定义" class="headerlink" title="基本定义"></a>基本定义</h2><p>将访问过的数（$a, b, c, \cdots $）定义为状态$state&#x3D;2^a+2^b+2^c+\cdots$，定义第$i$个点到第$j$个点的距离为$dis(i, j)$。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">state = (<span class="number">1</span> &lt;&lt; a) + (<span class="number">1</span> &lt;&lt; b) + (<span class="number">1</span> &lt;&lt; c) + ...</span><br></pre></td></tr></table></figure>
-<h2 id="DP表"><a href="#DP表" class="headerlink" title="DP表"></a>DP表</h2><p>$dp[i][state]\rightarrow$访问过状态为$state$的数之后，到达第$i$个点的最小距离（$0 \leq i \leq n,1 \leq state \leq 2^{n + 1}-1$）。说明：将原点看成第$0$个点，所以$i$可以取$0$，$state$的有效值仅为奇数（必定过原点），当$0 \sim n$位全部为$1$时取最大值2^{n + 1}-1$。</p>
+<h2 id="DP表"><a href="#DP表" class="headerlink" title="DP表"></a>DP表</h2><p>$dp[i][state]\rightarrow$访问过状态为$state$的点之后，到达第$i$个点的最小距离（$0 \leq i \leq n,1 \leq state \leq 2^{n + 1}-1$）。说明：将原点看成第$0$个点，所以$i$可以取$0$，$state$的有效值仅为奇数（必定过原点），当$0 \sim n$位全部为$1$时取最大值$2^{n + 1}-1$。</p>
 <h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><p>初状态：原点到所有点的距离为确定值</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dp[i][<span class="number">1</span>] = <span class="built_in">dis</span>(i, <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
 
