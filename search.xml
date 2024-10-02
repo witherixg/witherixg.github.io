@@ -902,12 +902,6 @@
       </tags>
   </entry>
   <entry>
-    <title>练习进度</title>
-    <url>/2024/09/28/afea54a14e4b/</url>
-    <content><![CDATA[<p><del><a href="https://www.luogu.com.cn/problem/P5663">P5663</a></del>(<a href="https://www.luogu.com.cn/record/178896036">AC on 2024&#x2F;09&#x2F;28</a>)<br><del><a href="https://www.luogu.com.cn/problem/P1462">P1462</a></del>(<a href="https://www.luogu.com.cn/record/179167661">AC on 2024&#x2F;09&#x2F;30</a>)<br><a href="https://www.luogu.com.cn/problem/P7077">P7077</a><br><del><a href="https://www.luogu.com.cn/problem/P4290">P4290</a></del>(<a href="https://www.luogu.com.cn/record/179232483">AC on 2024&#x2F;10&#x2F;01</a>)<br><del><a href="https://www.luogu.com.cn/problem/P1220">P1220</a></del>(<a href="https://www.luogu.com.cn/record/179309424">AC on 2024&#x2F;10&#x2F;01</a>)<br><del><a href="https://www.luogu.com.cn/problem/P2015">P2015</a></del>(<a href="https://www.luogu.com.cn/record/179349379">AC on 2024&#x2F;10&#x2F;01</a>)<br><del><a href="https://www.luogu.com.cn/problem/P2622">P2622</a></del>(<a href="https://www.luogu.com.cn/record/179052554">AC on 2024&#x2F;09&#x2F;29</a>)<br><a href="https://www.luogu.com.cn/problem/P1450">P1450</a><br><a href="https://www.luogu.com.cn/problem/P4206">P4206</a><br><a href="https://www.luogu.com.cn/problem/P2567">P2567</a><br><a href="https://www.luogu.com.cn/problem/P3930">P3930</a><br><a href="https://www.luogu.com.cn/problem/P8317">P8317</a><br><a href="https://www.luogu.com.cn/problem/P3947">P3947</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Luogu-P2622-关灯问题II</title>
     <url>/2024/09/30/6a6e39e071d6/</url>
     <content><![CDATA[<h1 id="题目-P2622-关灯问题II"><a href="#题目-P2622-关灯问题II" class="headerlink" title="题目 P2622 关灯问题II"></a>题目 <a href="https://www.luogu.com.cn/problem/P2622">P2622 关灯问题II</a></h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>现有 $n$ 盏灯，以及 $m$ 个按钮。每个按钮可以同时控制这 $n$ 盏灯——按下了第 $i$ 个按钮，对于所有的灯都有一个效果。按下 $i$ 按钮对于第 $j$ 盏灯，是下面 $3$ 中效果之一：如果 $a_{i,j}$ 为 $1$，那么当这盏灯开了的时候，把它关上，否则不管；如果为 $-1$ 的话，如果这盏灯是关的，那么把它打开，否则也不管；如果是 $0$，无论这灯是否开，都不管。</p>
