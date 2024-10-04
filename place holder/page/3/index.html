@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -183,6 +183,9 @@
     </div>
     <ul class="links-of-recent-posts-list">
         <li class="links-of-recent-posts-item">
+          <a href="/2024/10/04/c6ee4225f9fe/" title="2024&#x2F;10&#x2F;04&#x2F;c6ee4225f9fe&#x2F;">Luogu-P3930-一道大水题 Knight</a>
+        </li>
+        <li class="links-of-recent-posts-item">
           <a href="/2024/10/04/6c440713a441/" title="2024&#x2F;10&#x2F;04&#x2F;6c440713a441&#x2F;">Luogu-P2567-幸运数字</a>
         </li>
         <li class="links-of-recent-posts-item">
@@ -193,9 +196,6 @@
         </li>
         <li class="links-of-recent-posts-item">
           <a href="/2024/10/01/4012b23818a8/" title="2024&#x2F;10&#x2F;01&#x2F;4012b23818a8&#x2F;">Luogu-P1220-关路灯</a>
-        </li>
-        <li class="links-of-recent-posts-item">
-          <a href="/2024/10/01/ce8588ad7754/" title="2024&#x2F;10&#x2F;01&#x2F;ce8588ad7754&#x2F;">Luogu-P4290-玩具取名</a>
         </li>
     </ul>
   </div>
@@ -211,6 +211,140 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://witherixg.github.io/2024/08/13/5d17d8b3190a/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/./images/avatar.jpg">
+      <meta itemprop="name" content="wither_ixg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wither_ixg">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | wither_ixg">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/08/13/5d17d8b3190a/" class="post-title-link" itemprop="url">Luogu-P4438-道路</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-08-13 23:45:18" itemprop="dateCreated datePublished" datetime="2024-08-13T23:45:18+08:00">2024-08-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-09-04 15:21:13" itemprop="dateModified" datetime="2024-09-04T15:21:13+08:00">2024-09-04</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span>1.4k</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="题目-P4438-HNOI-AHOI2018-道路"><a href="#题目-P4438-HNOI-AHOI2018-道路" class="headerlink" title="题目 P4438 [HNOI&#x2F;AHOI2018] 道路"></a>题目 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4438">P4438 [HNOI&#x2F;AHOI2018] 道路</a></h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>W 国的交通呈一棵树的形状。W 国一共有 $n-1$ 个城市和 $n$ 个乡村，其中城市从 $1$ 到 $n-1$ 编号，乡村从 $1$ 到 $n$ 编号，且 $1$ 号城市是首都。道路都是单向的，本题中我们只考虑从乡村通往首都的道路网络。</p>
+<p>对于每一个城市，恰有一条公路和一条铁路通向这座城市。对于城市 $i$， 通向该城市的道路（公路或铁路）的起点，要么是一个乡村，要么是一个编号比 $i$ 大的城市。没有道路通向任何乡村。除了首都以外，从任何城市或乡村出发只有一条道路；首都没有往外的道路。从任何乡村出发，沿着唯一往外的道路走，总可以到达首都。</p>
+<p>W 国的国王小 W 获得了一笔资金，他决定用这笔资金来改善交通。由于资金有限，小 W 只能翻修 $n-1$ 条道路。小 W 决定对每个城市翻修恰好一条通向它的道路，即从公路和铁路中选择一条并进行翻修。小 W 希望从乡村通向城市可以尽可能地便利，于是根据人口调查的数据，小 W 对每个乡村制定了三个参数，编号为 $i$ 的乡村的三个参数是 $a_i$，$b_i$ 和 $c_i$。假设从编号为 $i$ 的乡村走到首都一共需要经过 $x$ 条未翻修的公路与 $y$ 条未翻修的铁路，那么该乡村的不便利值为：</p>
+<p>$$c_i \cdot (a_i + x) \cdot (b_i + y)$$</p>
+<p>在给定的翻修方案下，每个乡村的不便利值相加的和为该翻修方案的不便利值。 翻修 $n-1$ 条道路有很多方案，其中不便利值最小的方案称为最优翻修方案，小 W 自然希望找到最优翻修方案，请你帮助他求出这个最优翻修方案的不便利值。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行为正整数 $n$。 </p>
+<p>接下来 $n - 1$ 行，每行描述一个城市。其中第 $i$ 行包含两个数 $s_i,t_i$。$s_i$ 表示通向第 $i$ 座城市的公路的起点，$t_i$ 表示通向第 $i$ 座城市的铁路的起点。如果$s_i&gt;0$，那么存在一条从第 $s_i$ 座城市通往第 $i$ 座城市的公路，否则存在一条从第 $-s_i$ 个乡村通往第 $i$ 座城市的公路；$t_i$ 类似地，如果 $t_i &gt; 0$，那么存在一条从第 $t_i$ 座城市通往第 $i$ 座城市的铁路，否则存在一条从第 $-t_i$ 个乡村通往第 $i$ 座城市的铁路。 </p>
+<p>接下来 $n$ 行，每行描述一个乡村。其中第 $i$ 行包含三个数 $a_i,b_i,c_i$，其意义如题面所示。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>输出一行一个整数，表示最优翻修方案的不便利值。</p>
+<h1 id="思路：dp（树形dp）"><a href="#思路：dp（树形dp）" class="headerlink" title="思路：dp（树形dp）"></a>思路：dp（树形dp）</h1><h2 id="负数的处理"><a href="#负数的处理" class="headerlink" title="负数的处理"></a>负数的处理</h2><p>题中提到，乡村的节点编号为负值。为了避免下标越界，可以把所有负数的 $i$ 加上数组长度 $N$。<br>此时，$-i \rightarrow N-i$。</p>
+<h2 id="dp表"><a href="#dp表" class="headerlink" title="dp表"></a>dp表</h2><p>在一个节点上，存在 $3$ 个变量：</p>
+<ul>
+<li>当前的节点 $i$</li>
+<li>到首都 $1$ 号节点的公路 $ld$</li>
+<li>到首都 $1$ 号节点的铁路 $rd$</li>
+</ul>
+<p>因此，使用三维的dp表。</p>
+<p>$dp[i][ld][rd]$：节点 $i$，距离首都 $ld$ 条公路、$rd$ 条铁路的<strong>总</strong>不便利值。</p>
+<p>为了避免溢出，使用<code>long long</code>类型。</p>
+<p>同时，记录不翻修时节点 $i$ 的公路、铁路数 $ldepth[i],rdepth[i]$；记录每个节点的左右子节点 $lson[i],rson[i]$。</p>
+<h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><ul>
+<li><p>初状态：计算所有乡村翻修后的所有可能的不便利值。</p>
+<p>也就是，在 $ld \in [0,ldepth[i]], rd \in [0,rdepth[i]]$ 范围内，计算所有的不便利值$dp[i][ld][rd]$。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dp[i][ld][rd] = (a[i] + ld) * (b[i] + rd) * c[i];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>状态转移方程：对于任意一个城市节点 $i$，都存在大于 $i$ 的左右两个子节点。枚举 $ld,rd$，理由同上。既然从左右两条路中任选一条，所以分两种情况：</p>
+<ul>
+<li>翻修左路，$lson[i] \rightarrow dp[lson[i]][ld][rd], rson[i] \rightarrow dp[rson[i]][ld][rd+1]$</li>
+<li>翻修右路，$lson[i] \rightarrow dp[lson[i]][ld+1][rd], rson[i] \rightarrow dp[rson[i]][ld][rd]$</li>
+</ul>
+<p>题中所求为<strong>最小</strong>不便利值，因此应该在上述两种结果中取较小值。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dp[i][ld][rd] = <span class="built_in">min</span>(</span><br><span class="line">  dp[lson[i]][ld][rd] + dp[rson[i][ld][rd + <span class="number">1</span>]],</span><br><span class="line">  dp[lson[i]][ld + <span class="number">1</span>][rd] + dp[rson[i][ld][rd]]);</span><br></pre></td></tr></table></figure>
+
+<p>注意：因为较小值的子节点是较大值，而这个方程是由子节点推父节点，所以对于所有的城市节点，应该<strong>倒序</strong>遍历。</p>
+</li>
+<li><p>末状态：首都的dp值即为结果。因为首都的 $ldepth[1]&#x3D;rdepth[1]&#x3D;0$，所以只需要获取 $dp[1][0][0]$ 即可。</p>
+</li>
+</ul>
+<h1 id="25pts-WA-Code"><a href="#25pts-WA-Code" class="headerlink" title="25pts WA Code"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/172511695">25pts WA Code</a></h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// template v6</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">40001</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> M = <span class="number">41</span>;</span><br><span class="line"></span><br><span class="line">ll dp[N][M][M];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> lson[N]; <span class="comment">// Highway</span></span><br><span class="line"><span class="type">int</span> rson[N]; <span class="comment">// Railway</span></span><br><span class="line"><span class="type">int</span> a[N], b[N], c[N];</span><br><span class="line"><span class="type">int</span> ldepth[N]; <span class="comment">// total number of highways</span></span><br><span class="line"><span class="type">int</span> rdepth[N]; <span class="comment">// total number of railways</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    ldepth[<span class="number">1</span>] = rdepth[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> t1, t2;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        cin &gt;&gt; t1 &gt;&gt; t2;</span><br><span class="line">        <span class="keyword">if</span>(t1 &lt; <span class="number">0</span>) t1 += N;</span><br><span class="line">        <span class="keyword">if</span>(t2 &lt; <span class="number">0</span>) t2 += N;</span><br><span class="line">        lson[i] = t1, rson[i] = t2;</span><br><span class="line">        ldepth[t1] = ldepth[i] + <span class="number">1</span>;</span><br><span class="line">        rdepth[t1] = rdepth[i];</span><br><span class="line">        ldepth[t2] = ldepth[i];</span><br><span class="line">        rdepth[t2] = rdepth[i] + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = N - <span class="number">1</span>; i &gt;= N - n; i--) &#123;</span><br><span class="line">        cin &gt;&gt; a[i] &gt;&gt; b[i] &gt;&gt; c[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// init villages</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = N - <span class="number">1</span>; i &gt;= N - n; i--) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt;= ldepth[i]; j++) &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> k = <span class="number">0</span>; k &lt;= rdepth[i]; k++) &#123;</span><br><span class="line">                <span class="type">const</span> <span class="type">int</span> ld = j, rd = k;</span><br><span class="line">                dp[i][ld][rd] = (a[i] + ld) * (b[i] + rd) * c[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// dp</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt;= ldepth[i]; j++) &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> k = <span class="number">0</span>; k &lt;= rdepth[i]; k++) &#123;</span><br><span class="line">                <span class="type">const</span> <span class="type">int</span> ld = j, rd = k;</span><br><span class="line">                <span class="type">const</span> <span class="type">int</span> ls = lson[i],</span><br><span class="line">                          rs = rson[i];</span><br><span class="line">                dp[i][ld][rd] = <span class="built_in">min</span>(</span><br><span class="line">                    dp[ls][ld + <span class="number">1</span>][rd] + dp[rs][ld][rd],</span><br><span class="line">                    dp[ls][ld][rd] + dp[rs][ld][rd + <span class="number">1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; dp[<span class="number">1</span>][<span class="number">0</span>][<span class="number">0</span>] &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="为什么会WA"><a href="#为什么会WA" class="headerlink" title="为什么会WA"></a>为什么会WA</h1><h2 id="错误原因"><a href="#错误原因" class="headerlink" title="错误原因"></a>错误原因</h2><p>看测试点可以知道，在输出为数字的位置会出现负号。</p>
+<p>负号？难道<code>long long</code>溢出了吗？</p>
+<p>观察数据范围 $1 \le a_i,b_i \le 60$，$1 \le c_i \le 10^9$，发现在相乘过程中只会超出<code>int</code>的范围而不会超过<code>long long</code>的范围。</p>
+<h2 id="错误位置"><a href="#错误位置" class="headerlink" title="错误位置"></a>错误位置</h2><p>这里直接给出，错误位置是：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dp[i][ld][rd] = (a[i] + ld) * (b[i] + rd) * c[i];</span><br></pre></td></tr></table></figure>
+
+<p>为什么会溢出？</p>
+<p>C++默认支持的运算是<code>int</code>而不是<code>long long</code>。因此<code>(a[i] + ld) * (b[i] + rd) * c[i]</code>仍然是<code>int</code>类型。</p>
+<h2 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h2><p>修改也很简单，只需要提前使用<code>long long</code>类型运算即可。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dp[i][ld][rd] = <span class="number">1ll</span> * (a[i] + ld) * (b[i] + rd) * c[i];</span><br></pre></td></tr></table></figure>
+<p>这里的<code>1ll</code>就是一个<code>long long</code>类型的常量。</p>
+<h1 id="AC-Code"><a href="#AC-Code" class="headerlink" title="AC Code"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/172511854">AC Code</a></h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// template v6</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">40001</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> M = <span class="number">41</span>;</span><br><span class="line"></span><br><span class="line">ll dp[N][M][M];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> lson[N]; <span class="comment">// Highway</span></span><br><span class="line"><span class="type">int</span> rson[N]; <span class="comment">// Railway</span></span><br><span class="line"><span class="type">int</span> a[N], b[N], c[N];</span><br><span class="line"><span class="type">int</span> ldepth[N]; <span class="comment">// total number of highways</span></span><br><span class="line"><span class="type">int</span> rdepth[N]; <span class="comment">// total number of railways</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    ldepth[<span class="number">1</span>] = rdepth[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> t1, t2;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        cin &gt;&gt; t1 &gt;&gt; t2;</span><br><span class="line">        <span class="keyword">if</span>(t1 &lt; <span class="number">0</span>) t1 += N;</span><br><span class="line">        <span class="keyword">if</span>(t2 &lt; <span class="number">0</span>) t2 += N;</span><br><span class="line">        lson[i] = t1, rson[i] = t2;</span><br><span class="line">        ldepth[t1] = ldepth[i] + <span class="number">1</span>;</span><br><span class="line">        rdepth[t1] = rdepth[i];</span><br><span class="line">        ldepth[t2] = ldepth[i];</span><br><span class="line">        rdepth[t2] = rdepth[i] + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = N - <span class="number">1</span>; i &gt;= N - n; i--) &#123;</span><br><span class="line">        cin &gt;&gt; a[i] &gt;&gt; b[i] &gt;&gt; c[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// init villages</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = N - <span class="number">1</span>; i &gt;= N - n; i--) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt;= ldepth[i]; j++) &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> k = <span class="number">0</span>; k &lt;= rdepth[i]; k++) &#123;</span><br><span class="line">                <span class="type">const</span> <span class="type">int</span> ld = j, rd = k;</span><br><span class="line">                dp[i][ld][rd] = <span class="number">1ll</span> * (a[i] + ld) * (b[i] + rd) * c[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// dp</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt;= ldepth[i]; j++) &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> k = <span class="number">0</span>; k &lt;= rdepth[i]; k++) &#123;</span><br><span class="line">                <span class="type">const</span> <span class="type">int</span> ld = j, rd = k;</span><br><span class="line">                <span class="type">const</span> <span class="type">int</span> ls = lson[i],</span><br><span class="line">                          rs = rson[i];</span><br><span class="line">                dp[i][ld][rd] = <span class="built_in">min</span>(</span><br><span class="line">                    dp[ls][ld + <span class="number">1</span>][rd] + dp[rs][ld][rd],</span><br><span class="line">                    dp[ls][ld][rd] + dp[rs][ld][rd + <span class="number">1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; dp[<span class="number">1</span>][<span class="number">0</span>][<span class="number">0</span>] &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1238,93 +1372,6 @@
 </li>
 </ul>
 <h1 id="AC-Code"><a href="#AC-Code" class="headerlink" title="AC Code"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/171383548">AC Code</a></h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// template v6</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">minset</span><span class="params">(<span class="type">int</span> &amp;t, <span class="type">int</span> other)</span> </span>&#123;</span><br><span class="line">    t = <span class="built_in">min</span>(t, other);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">maxset</span><span class="params">(<span class="type">int</span> &amp;t, <span class="type">int</span> other)</span> </span>&#123;</span><br><span class="line">    t = <span class="built_in">max</span>(t, other);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1010</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> sum;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> dp[N * <span class="number">12</span>]; <span class="comment">// top numbers</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(dp, <span class="number">0x7f</span>, <span class="keyword">sizeof</span> dp);</span><br><span class="line">    dp[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="type">int</span> t1, t2;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; t1 &gt;&gt; t2;</span><br><span class="line">        sum += t1 + t2;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = sum; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            <span class="keyword">if</span>(dp[i] != inf) &#123;</span><br><span class="line">                <span class="built_in">minset</span>(dp[i + t1], dp[i]);</span><br><span class="line">                <span class="built_in">minset</span>(dp[i + t2], dp[i] + <span class="number">1</span>);</span><br><span class="line">                dp[i] = inf;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> mid = sum / <span class="number">2</span>;</span><br><span class="line">    <span class="type">int</span> ans = inf;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(sum % <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="comment">// odd</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt;= mid; i++) &#123;</span><br><span class="line">            <span class="built_in">minset</span>(ans, <span class="built_in">min</span>(dp[mid - i], dp[mid + <span class="number">1</span> + i]));</span><br><span class="line">            <span class="keyword">if</span>(ans != inf)&#123;</span><br><span class="line">                cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// even</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt;= mid; i++) &#123;</span><br><span class="line">            <span class="built_in">minset</span>(ans, <span class="built_in">min</span>(dp[mid - i], dp[mid + i]));</span><br><span class="line">            <span class="keyword">if</span>(ans != inf)&#123;</span><br><span class="line">                cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://witherixg.github.io/2024/08/08/e8fc9db12825/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/./images/avatar.jpg">
-      <meta itemprop="name" content="wither_ixg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/08/08/e8fc9db12825/" class="post-title-link" itemprop="url">Happy Birthday!</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2024-08-08 01:00:53" itemprop="dateCreated datePublished" datetime="2024-08-08T01:00:53+08:00">2024-08-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-08-27 05:51:42" itemprop="dateModified" datetime="2024-08-27T05:51:42+08:00">2024-08-27</time>
-    </span>
-
-  
-    <span class="post-meta-item" title="Word count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Word count in article: </span>
-      <span>22</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>$2^4$，$4^2$，hex最小两位数，半个字节的溢出值。</p>
-</blockquote>
-<p>16岁快乐！</p>
-<p><img src="/images/2024/08/08/1.png"></p>
-
       
     </div>
 
