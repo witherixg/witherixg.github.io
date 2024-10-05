@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-count">38</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -183,6 +183,9 @@
     </div>
     <ul class="links-of-recent-posts-list">
         <li class="links-of-recent-posts-item">
+          <a href="/2024/10/05/5c61fe686bba/" title="2024&#x2F;10&#x2F;05&#x2F;5c61fe686bba&#x2F;">Luogu-P1450-硬币购物</a>
+        </li>
+        <li class="links-of-recent-posts-item">
           <a href="/2024/10/04/c6ee4225f9fe/" title="2024&#x2F;10&#x2F;04&#x2F;c6ee4225f9fe&#x2F;">Luogu-P3930-一道大水题 Knight</a>
         </li>
         <li class="links-of-recent-posts-item">
@@ -193,9 +196,6 @@
         </li>
         <li class="links-of-recent-posts-item">
           <a href="/2024/10/01/147d9d9455d2/" title="2024&#x2F;10&#x2F;01&#x2F;147d9d9455d2&#x2F;">Luogu-P2015-二叉苹果树</a>
-        </li>
-        <li class="links-of-recent-posts-item">
-          <a href="/2024/10/01/4012b23818a8/" title="2024&#x2F;10&#x2F;01&#x2F;4012b23818a8&#x2F;">Luogu-P1220-关路灯</a>
         </li>
     </ul>
   </div>
@@ -211,6 +211,105 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://witherixg.github.io/2024/09/28/f0ed6de02ba6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/./images/avatar.jpg">
+      <meta itemprop="name" content="wither_ixg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wither_ixg">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | wither_ixg">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/09/28/f0ed6de02ba6/" class="post-title-link" itemprop="url">Luogu-P5663-加工零件</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-09-28 21:09:57 / Modified: 21:34:03" itemprop="dateCreated datePublished" datetime="2024-09-28T21:09:57+08:00">2024-09-28</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span>760</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong><a href="/2024/09/28/afea54a14e4b/">练习题T1</a></strong></p>
+<h1 id="题目-P5663-CSP-J2019-加工零件"><a href="#题目-P5663-CSP-J2019-加工零件" class="headerlink" title="题目 P5663 [CSP-J2019] 加工零件"></a>题目 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5663">P5663 [CSP-J2019] 加工零件</a></h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>凯凯的工厂正在有条不紊地生产一种神奇的零件，神奇的零件的生产过程自然也很神奇。工厂里有 $n$ 位工人，工人们从 $1 \sim n$ 编号。某些工人之间存在双向的零件传送带。保证每两名工人之间最多只存在一条传送带。</p>
+<p>如果 $x$ 号工人想生产一个被加工到第 $L,(L \gt 1)$ 阶段的零件，则<strong>所有</strong>与 $x$ 号工人有传送带<strong>直接</strong>相连的工人，都需要生产一个被加工到第 $L - 1$ 阶段的零件（但 $x$ 号工人自己<strong>无需</strong>生产第 $L - 1$ 阶段的零件）。</p>
+<p>如果 $x$ 号工人想生产一个被加工到第 $1$ 阶段的零件，则<strong>所有</strong>与 $x$ 号工人有传送带<strong>直接</strong>相连的工人，都需要为 $x$ 号工人提供一个原材料。</p>
+<p>轩轩是 $1$ 号工人。现在给出 $q$ 张工单，第 $i$ 张工单表示编号为 $a_i$ 的工人想生产一个第 $L_i$ 阶段的零件。轩轩想知道对于每张工单，他是否需要给别人提供原材料。他知道聪明的你一定可以帮他计算出来！</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行三个正整数 $n$，$m$ 和 $q$，分别表示工人的数目、传送带的数目和工单的数目。</p>
+<p>接下来 $m$ 行，每行两个正整数 $u$ 和 $v$，表示编号为 $u$ 和 $v$ 的工人之间存在一条零件传输带。保证 $u \neq v$。</p>
+<p>接下来 $q$ 行，每行两个正整数 $a$ 和 $L$，表示编号为 $a$ 的工人想生产一个第 $L$ 阶段的零件。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>共 $q$ 行，每行一个字符串 <code>Yes</code> 或者 <code>No</code>。如果按照第 $i$ 张工单生产，需要编号为 1 的轩轩提供原材料，则在第 $i$ 行输出 <code>Yes</code>；否则在第 $i$ 行输出 <code>No</code>。注意输出<strong>不含</strong>引号。</p>
+<h1 id="思路：最短路"><a href="#思路：最短路" class="headerlink" title="思路：最短路"></a>思路：最短路</h1><h2 id="转化条件"><a href="#转化条件" class="headerlink" title="转化条件"></a>转化条件</h2><p>不难发现，需要 $1$ 号节点提供第 $L$ 阶段零件原材料的充要条件是“能通过走 $L$ 步到达 $1$ 号节点”。</p>
+<p>并且，只需要考虑一个节点的情况（单源）。</p>
+<p>所以使用广搜<del>（面搜）</del>寻找最短路。</p>
+<h2 id="奇偶？"><a href="#奇偶？" class="headerlink" title="奇偶？"></a>奇偶？</h2><p>由于存在双向传送带，所以这个图没有方向性。</p>
+<p>可以花费两步走一次来回，即：走 $k$ 步可以到达 $\Rightarrow$ 走 $k+2$ 步可以到达。</p>
+<p>因此，只需要分别考虑奇数步的最短路和偶数步的最短路即可。</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>使用 $odd_min[i], even_min[i]$ 代表 $1 \rightarrow i$ 奇偶步数的最短路。</p>
+<p>若 $i$ 与 $j$ 相连，则：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">odd_min[j] = even_min[i] + <span class="number">1</span>;</span><br><span class="line">even_min[j] = odd_min[i] + <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<p>同时，在搜索的时候不能仅使用一个 $vis$ 记录访问状态，因为这样只能求出一种情况的最短路。</p>
+<h1 id="80-pts-RE-Code"><a href="#80-pts-RE-Code" class="headerlink" title="80 pts RE Code"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/178895686">80 pts RE Code</a></h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// template v7</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">minset</span><span class="params">(<span class="type">int</span> &amp;t, <span class="type">int</span> other)</span> </span>&#123;</span><br><span class="line">    t = <span class="built_in">min</span>(t, other);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">maxset</span><span class="params">(<span class="type">int</span> &amp;t, <span class="type">int</span> other)</span> </span>&#123;</span><br><span class="line">    t = <span class="built_in">max</span>(t, other);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e5</span> + <span class="number">10</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> M = <span class="number">1e5</span> + <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> odd_min[N], even_min[N];</span><br><span class="line"><span class="type">bool</span> odd_vis[N], even_vis[N];</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">edge</span> &#123;</span><br><span class="line">    <span class="type">int</span> to, next;</span><br><span class="line">&#125; edges[M];</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> &#123;</span><br><span class="line">    <span class="type">int</span> from, to;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> head[N];</span><br><span class="line"><span class="type">int</span> pt = <span class="number">1</span>;</span><br><span class="line">string res[] = &#123;<span class="string">&quot;No&quot;</span>, <span class="string">&quot;Yes&quot;</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m, q;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add_edge</span><span class="params">(<span class="type">int</span> from, <span class="type">int</span> to)</span> </span>&#123;</span><br><span class="line">    edge &amp;e = edges[pt];</span><br><span class="line">    e.to = to;</span><br><span class="line">    e.next = head[from];</span><br><span class="line">    head[from] = pt;</span><br><span class="line">    pt++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">bfs</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// from 1</span></span><br><span class="line">    <span class="type">int</span> p = <span class="number">1</span>;</span><br><span class="line">    even_min[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    even_vis[<span class="number">1</span>] = <span class="literal">true</span>;</span><br><span class="line">    queue&lt;node&gt; q;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = head[<span class="number">1</span>]; i; i = edges[i].next) &#123;</span><br><span class="line">        <span class="type">int</span> from = <span class="number">1</span>, to = edges[i].to;</span><br><span class="line">        q.<span class="built_in">push</span>(&#123;from, to&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(q.<span class="built_in">size</span>()) &#123;</span><br><span class="line">        node n = q.<span class="built_in">front</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="type">bool</span> flag = <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(!odd_vis[n.to] &amp;&amp; even_min[n.from] != inf) &#123;</span><br><span class="line">            odd_min[n.to] = even_min[n.from] + <span class="number">1</span>;</span><br><span class="line">            odd_vis[n.to] = <span class="literal">true</span>;</span><br><span class="line">            flag = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(!even_vis[n.to] &amp;&amp; odd_min[n.from] != inf) &#123;</span><br><span class="line">            even_min[n.to] = odd_min[n.from] + <span class="number">1</span>;</span><br><span class="line">            even_vis[n.to] = <span class="literal">true</span>;</span><br><span class="line">            flag = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(flag) &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i = head[n.to]; i; i = edges[i].next) &#123;</span><br><span class="line">                <span class="type">int</span> from = n.to, to = edges[i].to;</span><br><span class="line">                q.<span class="built_in">push</span>(&#123;from, to&#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m &gt;&gt; q;</span><br><span class="line">    <span class="type">int</span> t1, t2;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">        cin &gt;&gt; t1 &gt;&gt; t2;</span><br><span class="line">        <span class="built_in">add_edge</span>(t1, t2);</span><br><span class="line">        <span class="built_in">add_edge</span>(t2, t1);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">memset</span>(odd_min, inf, <span class="keyword">sizeof</span> odd_min);</span><br><span class="line">    <span class="built_in">memset</span>(even_min, inf, <span class="keyword">sizeof</span> even_min);</span><br><span class="line">    <span class="built_in">bfs</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; q; i++) &#123;</span><br><span class="line">        cin &gt;&gt; t1 &gt;&gt; t2;</span><br><span class="line">        <span class="keyword">if</span>(t2 &amp; <span class="number">1</span>) &#123;</span><br><span class="line">            cout &lt;&lt; res[odd_min[t1] &lt;= t2] &lt;&lt; endl;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            cout &lt;&lt; res[even_min[t1] &lt;= t2] &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="什么情况？"><a href="#什么情况？" class="headerlink" title="什么情况？"></a>什么情况？</h1><p>无向图的数组长度应该为边数的二倍，<code>edges[M]</code>这里写小了。</p>
+<h1 id="AC-Code"><a href="#AC-Code" class="headerlink" title="AC Code"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/178896036">AC Code</a></h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// template v7</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">minset</span><span class="params">(<span class="type">int</span> &amp;t, <span class="type">int</span> other)</span> </span>&#123;</span><br><span class="line">    t = <span class="built_in">min</span>(t, other);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">maxset</span><span class="params">(<span class="type">int</span> &amp;t, <span class="type">int</span> other)</span> </span>&#123;</span><br><span class="line">    t = <span class="built_in">max</span>(t, other);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e5</span> + <span class="number">10</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> M = <span class="number">1e5</span> + <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> odd_min[N], even_min[N];</span><br><span class="line"><span class="type">bool</span> odd_vis[N], even_vis[N];</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">edge</span> &#123;</span><br><span class="line">    <span class="type">int</span> to, next;</span><br><span class="line">&#125; edges[<span class="number">2</span> * M];</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> &#123;</span><br><span class="line">    <span class="type">int</span> from, to;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> head[N];</span><br><span class="line"><span class="type">int</span> pt = <span class="number">1</span>;</span><br><span class="line">string res[] = &#123;<span class="string">&quot;No&quot;</span>, <span class="string">&quot;Yes&quot;</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m, q;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add_edge</span><span class="params">(<span class="type">int</span> from, <span class="type">int</span> to)</span> </span>&#123;</span><br><span class="line">    edge &amp;e = edges[pt];</span><br><span class="line">    e.to = to;</span><br><span class="line">    e.next = head[from];</span><br><span class="line">    head[from] = pt;</span><br><span class="line">    pt++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">bfs</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// from 1</span></span><br><span class="line">    <span class="type">int</span> p = <span class="number">1</span>;</span><br><span class="line">    even_min[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    even_vis[<span class="number">1</span>] = <span class="literal">true</span>;</span><br><span class="line">    queue&lt;node&gt; q;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = head[<span class="number">1</span>]; i; i = edges[i].next) &#123;</span><br><span class="line">        <span class="type">int</span> from = <span class="number">1</span>, to = edges[i].to;</span><br><span class="line">        q.<span class="built_in">push</span>(&#123;from, to&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(q.<span class="built_in">size</span>()) &#123;</span><br><span class="line">        node n = q.<span class="built_in">front</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="type">bool</span> flag = <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(!odd_vis[n.to] &amp;&amp; even_min[n.from] != inf) &#123;</span><br><span class="line">            odd_min[n.to] = even_min[n.from] + <span class="number">1</span>;</span><br><span class="line">            odd_vis[n.to] = <span class="literal">true</span>;</span><br><span class="line">            flag = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(!even_vis[n.to] &amp;&amp; odd_min[n.from] != inf) &#123;</span><br><span class="line">            even_min[n.to] = odd_min[n.from] + <span class="number">1</span>;</span><br><span class="line">            even_vis[n.to] = <span class="literal">true</span>;</span><br><span class="line">            flag = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(flag) &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i = head[n.to]; i; i = edges[i].next) &#123;</span><br><span class="line">                <span class="type">int</span> from = n.to, to = edges[i].to;</span><br><span class="line">                q.<span class="built_in">push</span>(&#123;from, to&#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m &gt;&gt; q;</span><br><span class="line">    <span class="type">int</span> t1, t2;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">        cin &gt;&gt; t1 &gt;&gt; t2;</span><br><span class="line">        <span class="built_in">add_edge</span>(t1, t2);</span><br><span class="line">        <span class="built_in">add_edge</span>(t2, t1);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">memset</span>(odd_min, inf, <span class="keyword">sizeof</span> odd_min);</span><br><span class="line">    <span class="built_in">memset</span>(even_min, inf, <span class="keyword">sizeof</span> even_min);</span><br><span class="line">    <span class="built_in">bfs</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; q; i++) &#123;</span><br><span class="line">        cin &gt;&gt; t1 &gt;&gt; t2;</span><br><span class="line">        <span class="keyword">if</span>(t2 &amp; <span class="number">1</span>) &#123;</span><br><span class="line">            cout &lt;&lt; res[odd_min[t1] &lt;= t2] &lt;&lt; endl;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            cout &lt;&lt; res[even_min[t1] &lt;= t2] &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -256,7 +355,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-10-05 01:23:39" itemprop="dateModified" datetime="2024-10-05T01:23:39+08:00">2024-10-05</time>
+      <time title="Modified: 2024-10-05 22:27:38" itemprop="dateModified" datetime="2024-10-05T22:27:38+08:00">2024-10-05</time>
     </span>
 
   
@@ -265,7 +364,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Word count in article: </span>
-      <span>58</span>
+      <span>63</span>
     </span>
 </div>
 
@@ -276,7 +375,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><del><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5663">P5663</a></del>(<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/178896036">AC on 2024&#x2F;09&#x2F;28</a>)<br><del><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1462">P1462</a></del>(<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/179167661">AC on 2024&#x2F;09&#x2F;30</a>)<br><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7077">P7077</a><br><del><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4290">P4290</a></del>(<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/179232483">AC on 2024&#x2F;10&#x2F;01</a>)<br><del><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1220">P1220</a></del>(<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/179309424">AC on 2024&#x2F;10&#x2F;01</a>)<br><del><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2015">P2015</a></del>(<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/179349379">AC on 2024&#x2F;10&#x2F;01</a>)<br><del><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2622">P2622</a></del>(<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/179052554">AC on 2024&#x2F;09&#x2F;29</a>)<br><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1450">P1450</a><br><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4206">P4206</a><br><del><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2567">P2567</a></del>(<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/179815435">AC on 2024&#x2F;10&#x2F;03</a>)<br><del><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3930">P3930</a></del>(<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/180053151">AC on 2024&#x2F;10&#x2F;04</a>)<br><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P8317">P8317</a><br><del><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3947">P3947</a></del>(<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/179744330">AC on 2024&#x2F;10&#x2F;03</a>)</p>
+          <p><del><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5663">P5663</a></del>(<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/178896036">AC on 2024&#x2F;09&#x2F;28</a>)<br><del><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1462">P1462</a></del>(<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/179167661">AC on 2024&#x2F;09&#x2F;30</a>)<br><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7077">P7077</a><br><del><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4290">P4290</a></del>(<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/179232483">AC on 2024&#x2F;10&#x2F;01</a>)<br><del><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1220">P1220</a></del>(<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/179309424">AC on 2024&#x2F;10&#x2F;01</a>)<br><del><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2015">P2015</a></del>(<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/179349379">AC on 2024&#x2F;10&#x2F;01</a>)<br><del><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2622">P2622</a></del>(<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/179052554">AC on 2024&#x2F;09&#x2F;29</a>)<br><del><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1450">P1450</a></del>(<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/180317020">AC on 2024&#x2F;10&#x2F;05</a>)<br><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4206">P4206</a><br><del><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2567">P2567</a></del>(<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/179815435">AC on 2024&#x2F;10&#x2F;03</a>)<br><del><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3930">P3930</a></del>(<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/180053151">AC on 2024&#x2F;10&#x2F;04</a>)<br><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P8317">P8317</a><br><del><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3947">P3947</a></del>(<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/179744330">AC on 2024&#x2F;10&#x2F;03</a>)</p>
 
       
     </div>
@@ -1084,142 +1183,6 @@
     
     <div class="post-body" itemprop="articleBody">
           <p><a href="/ppt/01%E7%AC%AC%E4%B8%80%E8%8A%82.pptx">01第一节.pptx</a><br><a href="/ppt/02%E7%AC%AC%E4%BA%8C%E8%8A%82.pptx">02第二节.pptx</a><br><a href="/ppt/03%E7%AC%AC%E4%B8%89%E8%8A%82-%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84.pptx">03第三节-分支结构.pptx</a><br><a href="/ppt/04%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84.pptx">04循环结构.pptx</a><br><a href="/ppt/05%E6%95%B0%E7%BB%84.pptx">05数组.pptx</a><br><a href="/ppt/06%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84.pptx">06二维数组.pptx</a><br><a href="/ppt/07%E5%87%BD%E6%95%B0.pptx">07函数.pptx</a><br><a href="/ppt/08%E9%80%92%E5%BD%92%E9%80%92%E6%8E%A8%E6%9C%80%E7%BB%88%E7%89%88.pptx">08递归递推最终版.pptx</a><br><a href="/ppt/09%E7%BB%93%E6%9E%84%E4%BD%93(C++%E7%89%88).pptx">09结构体(C++版).pptx</a><br><a href="/ppt/10%E9%AB%98%E7%B2%BE%E5%BA%A6%E4%B9%98%E9%99%A4%E6%B3%95.ppt">10高精度乘除法.ppt</a><br><a href="/ppt/10%E9%AB%98%E7%B2%BE%E5%BA%A6%E5%8A%A0%E5%87%8F%E6%B3%95.pptx">10高精度加减法.pptx</a><br><a href="/ppt/11%E6%95%B0%E6%8D%AE%E6%8E%92%E5%BA%8F%E6%9C%80%E7%BB%88%E7%89%88.pptx">11数据排序最终版.pptx</a><br><a href="/ppt/12%E6%90%9C%E7%B4%A2%E4%B8%8E%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95.pptx">12搜索与回溯算法.pptx</a><br><a href="/ppt/13%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E6%9C%80%E7%BB%88%E7%89%88.pptx">13广度优先搜索最终版.pptx</a><br><a href="/ppt/14%E6%B7%B1%E6%90%9C%E6%9C%80%E7%BB%88%E7%89%88.pptx">14深搜最终版.pptx</a><br><a href="/ppt/15%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95.pptx">15贪心算法.pptx</a><br><a href="/ppt/16%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95.pptx">16分治算法.pptx</a><br><a href="/ppt/17%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E8%83%8C%E5%8C%85%E6%9C%80%E7%BB%88%E7%89%88.pptx">17动态规划-背包最终版.pptx</a><br><a href="/ppt/18%E5%8C%BA%E9%97%B4dp.pptx">18区间dp.pptx</a><br><a href="/ppt/19%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9dp2024.pptx">19状态压缩dp2024.pptx</a><br><a href="/ppt/20%E6%A0%91.pptx">20树.pptx</a><br><a href="/ppt/21%E5%9B%BE%20%E7%AC%AC%E4%B8%80%E8%8A%82.pptx">21图 第一节.pptx</a><br><a href="/ppt/21%E5%9B%BE%20%E7%AC%AC%E4%BA%8C%E8%8A%82.pptx">21图 第二节.pptx</a><br><a href="/ppt/23%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91.pptx">23最小生成树.pptx</a><br><a href="/ppt/24%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F%20.pptx">24拓扑排序 .pptx</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://witherixg.github.io/2024/08/14/812ac7cdd59d/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/./images/avatar.jpg">
-      <meta itemprop="name" content="wither_ixg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/08/14/812ac7cdd59d/" class="post-title-link" itemprop="url">原神 开发组座谈会内容</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2024-08-14 23:43:02" itemprop="dateCreated datePublished" datetime="2024-08-14T23:43:02+08:00">2024-08-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-08-15 00:26:39" itemprop="dateModified" datetime="2024-08-15T00:26:39+08:00">2024-08-15</time>
-    </span>
-
-  
-    <span class="post-meta-item" title="Word count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Word count in article: </span>
-      <span>448</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="5-0版本已官宣内容"><a href="#5-0版本已官宣内容" class="headerlink" title="5.0版本已官宣内容"></a><a target="_blank" rel="noopener" href="https://m.miyoushe.com/ys?channel=miyousheluodi/#/article/56558938">5.0版本已官宣内容</a></h1><h2 id="大世界相关"><a href="#大世界相关" class="headerlink" title="大世界相关"></a>大世界相关</h2><ul>
-<li>58级以上可突破世界等级9，Boss至少掉落3个材料。</li>
-<li>提高以下怪物的基础掉率：<ul>
-<li>飘浮灵</li>
-<li>深渊法师</li>
-<li>野伏众</li>
-<li>海乱鬼</li>
-<li>遗迹守卫</li>
-<li>遗迹猎者</li>
-<li>遗迹重机</li>
-</ul>
-</li>
-<li>区域特产处新增<code>前往采集</code>，点击后会在地图上画出蓝圈显示位置。</li>
-<li>增加50个标记。</li>
-</ul>
-<h2 id="合成相关"><a href="#合成相关" class="headerlink" title="合成相关"></a>合成相关</h2><ul>
-<li>新增圣遗物套装（截至逐影猎人、黄金剧团）。</li>
-</ul>
-<h2 id="尘歌壶相关"><a href="#尘歌壶相关" class="headerlink" title="尘歌壶相关"></a>尘歌壶相关</h2><ul>
-<li>负荷提升至原来的1.6倍。</li>
-<li>摆设上限提升至2200。</li>
-</ul>
-<h2 id="烹饪相关"><a href="#烹饪相关" class="headerlink" title="烹饪相关"></a>烹饪相关</h2><ul>
-<li>将特殊料理进行以下操作时会出现提示：<ul>
-<li>在背包内使用</li>
-<li>添加至便携营养袋</li>
-<li>复苏角色</li>
-</ul>
-</li>
-<li>星级低的食物会靠前排布。</li>
-<li>背包和烹饪中的界面，新增筛选和搜索功能。</li>
-</ul>
-<h2 id="UI相关"><a href="#UI相关" class="headerlink" title="UI相关"></a>UI相关</h2><ul>
-<li>浓缩树脂合成前，会显示当前拥有的数量，并自动选择可合成的最大数量。</li>
-<li>强化武器时，直接展示溢出的矿物数量。</li>
-<li>锻造时，会自动选择最大数量，并且继承已完成的数量（退出重置）。</li>
-<li>个人资料界面新增如下：<ul>
-<li>满好感角色数</li>
-<li>深渊9~12层星数</li>
-<li>展示命座的开关</li>
-</ul>
-</li>
-<li>长任务会提醒，并推荐适合的元素及武器类型。</li>
-</ul>
-<h2 id="日常-周常相关"><a href="#日常-周常相关" class="headerlink" title="日常&#x2F;周常相关"></a>日常&#x2F;周常相关</h2><ul>
-<li>声望满级后不能接任务。</li>
-<li>移除纪行中声望相关内容。</li>
-<li>每个版本的纪行，新增<code>强化五星圣遗物</code>的任务，累计提升30、60、100级，均可领取20原石。</li>
-<li>完成4次委托的纪行经验从150提升至200。</li>
-</ul>
-<h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><ul>
-<li>本次优化会一次性发放100万摩拉。</li>
-<li>并且，另有一些优化会在前瞻中发布。</li>
-</ul>
 
       
     </div>
