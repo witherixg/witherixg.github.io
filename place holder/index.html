@@ -461,7 +461,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-10-16 20:33:43" itemprop="dateModified" datetime="2024-10-16T20:33:43+08:00">2024-10-16</time>
+      <time title="Modified: 2024-10-17 13:35:37" itemprop="dateModified" datetime="2024-10-17T13:35:37+08:00">2024-10-17</time>
     </span>
 
   
@@ -470,7 +470,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Word count in article: </span>
-      <span>300</span>
+      <span>860</span>
     </span>
 </div>
 
@@ -481,23 +481,39 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="2024-10-16"><a href="#2024-10-16" class="headerlink" title="2024-10-16"></a>2024-10-16</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>老师想从 $n$ 名学生中选 $m$ 人当学霸，但有 $k$ 对人实力相当，如果实力相当的人中，一部分被选上，另一部分没有，同学们就会抗议。所以老师想请你帮他求出他该选多少学霸，才能既不让同学们抗议，又与原来的 $m$ 尽可能接近。</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行，三个正整数 $n,m,k$。</p>
+          <h1 id="2024-10-17"><a href="#2024-10-17" class="headerlink" title="2024-10-17"></a>2024-10-17</h1><h2 id="题目背景"><a href="#题目背景" class="headerlink" title="题目背景"></a>题目背景</h2><p>在商店中，每一种商品都有一个价格（用整数表示）。例如,一朵花的价格是 $2$ ，而一个花瓶的价格是 $5$ 。为了吸引更多的顾客，商店举行了促销活动。</p>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>促销活动把一个或多个商品组合起来降价销售，例如：</p>
+<p>三朵花的价格是 $5$ 而不是 $6$ ，$2$ 个花瓶和一朵花的价格是 $10$ 而不是 $12$ 。 请编写一个程序，计算顾客购买一定商品的花费，尽量地利用优惠使花费最少。尽管有时候添加其他商品可以获得更少的花费，但是你不能这么做。</p>
+<p>对于上面的商品信息，购买三朵花和两个花瓶的最少花费的方案是：以优惠价购买两个花瓶和一朵花（$10$），以原价购买两朵花（$4$）。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>输入文件包括一些商店提供的优惠信息，接着是购物清单。（最多有 $5$ 种商品）</p>
+<p>第一行 优惠方案的种类数（$0\leq s\leq99$）。</p>
+<p>第 $2$ 行 $\sim$ 第 $s+1$ 行  每一行都用几个整数来表示一种优惠方式。第一个整数 $n$ （$\leq n\leq5$），表示这种优惠方式由 $n$ 种商品组成。后面 $n$ 对整数 $c$ 和 $k$ 表示 $k$ （$1\leq k\leq5$）个编号为 $c$ （$1\leq c\leq999$）的商品共同构成这种优惠，最后的整数 $p$ 表示这种优惠的优惠价（$1\leq p\leq9,999$）。优惠价总是比原价低。</p>
+<p>第 $s+2$ 行 这一行有一个整数 $b$ （$0\leq b\leq5$），表示需要购买 $b$ 种不同的商品。</p>
+<p>第 $s+3$ 行 $\sim$ 第 $s+b+2$ 行 这 $b$ 行中的每一行包括三个整数：$c,k,p$ 。 $c$ 表示唯一的商品编号（$1\leq c\leq999$），$k$ 表示需要购买的 $c$ 商品的数量（$1\leq k\leq5$）。$p$ 表示 $c$ 商品的原价（$1\leq p\leq999$）。最多购买 $5\times5&#x3D;25$ 个商品。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>只有一行，输出一个整数：购买这些物品的最低价格。</p>
+<h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">1 7 3 5</span><br><span class="line">2 7 1 8 2 10</span><br><span class="line">2</span><br><span class="line">7 3 2</span><br><span class="line">8 2 5</span><br></pre></td></tr></table></figure>
+
+<h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">14</span><br></pre></td></tr></table></figure>
+
+<h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><p>题目翻译来自NOCOW。</p>
+<p>USACO Training Section 3.3</p>
+<h1 id="2024-10-16"><a href="#2024-10-16" class="headerlink" title="2024-10-16"></a>2024-10-16</h1><h2 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h2><p>老师想从 $n$ 名学生中选 $m$ 人当学霸，但有 $k$ 对人实力相当，如果实力相当的人中，一部分被选上，另一部分没有，同学们就会抗议。所以老师想请你帮他求出他该选多少学霸，才能既不让同学们抗议，又与原来的 $m$ 尽可能接近。</p>
+<h2 id="输入格式-1"><a href="#输入格式-1" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行，三个正整数 $n,m,k$。</p>
 <p>接下来 $k$ 行，每行 $2$ 个数，表示一对实力相当的人的编号（编号为 $1,2,\cdots n$）。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>共一行，表示既不让同学们抗议，又与原来的 $m$ 尽可能接近的选出学霸的数目。</p>
+<h2 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式"></a>输出格式</h2><p>共一行，表示既不让同学们抗议，又与原来的 $m$ 尽可能接近的选出学霸的数目。</p>
 <p>如果有两种方案与 $m$ 的差的绝对值相等，选较小的一种。</p>
-<h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">4 3 2</span><br><span class="line">1 2</span><br><span class="line">3 4</span><br></pre></td></tr></table></figure>
+<h2 id="样例-1-1"><a href="#样例-1-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1-1"><a href="#样例输入-1-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">4 3 2</span><br><span class="line">1 2</span><br><span class="line">3 4</span><br></pre></td></tr></table></figure>
 
-<h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
+<h3 id="样例输出-1-1"><a href="#样例输出-1-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
 
-<h2 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h2><p>对于 $100%$ 的数据，满足 $1 \le n,m \le 2 \times 10^4$。</p>
+<h2 id="提示-1"><a href="#提示-1" class="headerlink" title="提示"></a>提示</h2><p>对于 $100%$ 的数据，满足 $1 \le n,m \le 2 \times 10^4$。</p>
 <h1 id="2024-10-15"><a href="#2024-10-15" class="headerlink" title="2024-10-15"></a>2024-10-15</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><img src="/images/2024/10/15/1.png"></p>
 <p><code>rnd</code>函数如下：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">rnd</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">static</span> <span class="type">const</span> <span class="type">int</span> MOD = <span class="number">1e9</span>;</span><br><span class="line">    <span class="keyword">return</span> Seed = ( <span class="number">1LL</span> * Seed * <span class="number">0x66CCFF</span> % MOD + <span class="number">20120712</span> ) % MOD;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="样例-1-1"><a href="#样例-1-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1-1"><a href="#样例输入-1-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5 3 4 1 0</span><br><span class="line">1 2 3 4 5</span><br></pre></td></tr></table></figure>
+<h2 id="样例-1-2"><a href="#样例-1-2" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1-2"><a href="#样例输入-1-2" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5 3 4 1 0</span><br><span class="line">1 2 3 4 5</span><br></pre></td></tr></table></figure>
 
-<h3 id="样例输出-1-1"><a href="#样例输出-1-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">27</span><br></pre></td></tr></table></figure>
+<h3 id="样例输出-1-2"><a href="#样例输出-1-2" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">27</span><br></pre></td></tr></table></figure>
 
 <h2 id="样例-2"><a href="#样例-2" class="headerlink" title="样例 #2"></a>样例 #2</h2><h3 id="样例输入-2"><a href="#样例输入-2" class="headerlink" title="样例输入 #2"></a>样例输入 #2</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">10 30630 56910 2 0</span><br><span class="line">7484 99194 86969 17540 29184 68691 91892 81564 93999 74280</span><br></pre></td></tr></table></figure>
 
@@ -508,9 +524,9 @@
 <h3 id="样例输出-3"><a href="#样例输出-3" class="headerlink" title="样例输出 #3"></a>样例输出 #3</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">9231813656566921</span><br></pre></td></tr></table></figure>
 
 <h1 id="2024-10-12"><a href="#2024-10-12" class="headerlink" title="2024-10-12"></a>2024-10-12</h1><h2 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h2><p><img src="/images/2024/10/14/1.jpg"><br><img src="/images/2024/10/14/2.jpg"><br><img src="/images/2024/10/14/3.jpg"></p>
-<h2 id="样例-1-2"><a href="#样例-1-2" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1-2"><a href="#样例输入-1-2" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">13 21 1 1</span><br><span class="line">1000 6000</span><br><span class="line">7</span><br><span class="line">1 2</span><br><span class="line">3 7</span><br><span class="line">2 4</span><br><span class="line">5 8</span><br><span class="line">8 9</span><br><span class="line">2 5</span><br><span class="line">3 4</span><br><span class="line">4 7</span><br><span class="line">9 10</span><br><span class="line">10 11</span><br><span class="line">5 9</span><br><span class="line">7 12</span><br><span class="line">3 6</span><br><span class="line">4 5</span><br><span class="line">1 3</span><br><span class="line">11 12</span><br><span class="line">6 7</span><br><span class="line">8 11</span><br><span class="line">6 13</span><br><span class="line">7 8</span><br><span class="line">12 13</span><br></pre></td></tr></table></figure>
+<h2 id="样例-1-3"><a href="#样例-1-3" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1-3"><a href="#样例输入-1-3" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">13 21 1 1</span><br><span class="line">1000 6000</span><br><span class="line">7</span><br><span class="line">1 2</span><br><span class="line">3 7</span><br><span class="line">2 4</span><br><span class="line">5 8</span><br><span class="line">8 9</span><br><span class="line">2 5</span><br><span class="line">3 4</span><br><span class="line">4 7</span><br><span class="line">9 10</span><br><span class="line">10 11</span><br><span class="line">5 9</span><br><span class="line">7 12</span><br><span class="line">3 6</span><br><span class="line">4 5</span><br><span class="line">1 3</span><br><span class="line">11 12</span><br><span class="line">6 7</span><br><span class="line">8 11</span><br><span class="line">6 13</span><br><span class="line">7 8</span><br><span class="line">12 13</span><br></pre></td></tr></table></figure>
 
-<h3 id="样例输入-1-3"><a href="#样例输入-1-3" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">11000</span><br></pre></td></tr></table></figure>
+<h3 id="样例输入-1-4"><a href="#样例输入-1-4" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">11000</span><br></pre></td></tr></table></figure>
       
     </div>
 
