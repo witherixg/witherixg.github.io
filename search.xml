@@ -121,20 +121,6 @@ about_Execution_Policies。</p>
       </tags>
   </entry>
   <entry>
-    <title>Happy Birthday!</title>
-    <url>/2024/08/08/e8fc9db12825/</url>
-    <content><![CDATA[<blockquote>
-<p><span class="math inline">\(2^4\)</span>，<span
-class="math inline">\(4^2\)</span>，hex最小两位数，半个字节的溢出值。</p>
-</blockquote>
-<p>16岁快乐！</p>
-<p><img src="/images/2024/08/08/1.png" /></p>
-]]></content>
-      <tags>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Luogu-P1282-多米诺骨牌</title>
     <url>/2024/08/08/aa03de77eac2/</url>
     <content><![CDATA[<p>第一篇题解，纪念！</p>
@@ -219,6 +205,20 @@ Code</a></h1>
 ]]></content>
       <tags>
         <tag>Luogu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Happy Birthday!</title>
+    <url>/2024/08/08/e8fc9db12825/</url>
+    <content><![CDATA[<blockquote>
+<p><span class="math inline">\(2^4\)</span>，<span
+class="math inline">\(4^2\)</span>，hex最小两位数，半个字节的溢出值。</p>
+</blockquote>
+<p>16岁快乐！</p>
+<p><img src="/images/2024/08/08/1.png" /></p>
+]]></content>
+      <tags>
+        <tag>life</tag>
       </tags>
   </entry>
   <entry>
@@ -1247,18 +1247,6 @@ Code</a></h1>
       </tags>
   </entry>
   <entry>
-    <title>中秋月圆</title>
-    <url>/2024/09/18/40e41828e3cc/</url>
-    <content><![CDATA[<p>拍得有点着急，所以效果<strong>不是很好</strong>。</p>
-<p>俗话说，十五的月亮十六圆，昨天刚好中秋节。</p>
-<p><img src="/images/2024/09/18/1.jpg" /> <img
-src="/images/2024/09/18/2.jpg" /></p>
-]]></content>
-      <tags>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Windows的各种问题</title>
     <url>/2024/09/17/50bde3aa5029/</url>
     <content><![CDATA[<h1 id="前言">前言</h1>
@@ -1320,6 +1308,18 @@ href="https://www.microsoft.com/zh-cn/software-download/windows10">Microsoft官�
 <p>同样，这是<code>ntuser.dat</code>出现了问题。解决方案见<a
 href="#黑屏时，不能打开开始">黑屏时，不能打开开始</a>。</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>中秋月圆</title>
+    <url>/2024/09/18/40e41828e3cc/</url>
+    <content><![CDATA[<p>拍得有点着急，所以效果<strong>不是很好</strong>。</p>
+<p>俗话说，十五的月亮十六圆，昨天刚好中秋节。</p>
+<p><img src="/images/2024/09/18/1.jpg" /> <img
+src="/images/2024/09/18/2.jpg" /></p>
+]]></content>
+      <tags>
+        <tag>life</tag>
+      </tags>
   </entry>
   <entry>
     <title>Luogu-P2407-地图复原</title>
@@ -1521,73 +1521,6 @@ href="https://www.luogu.com.cn/record/179744330">AC on
 ]]></content>
   </entry>
   <entry>
-    <title>Luogu-P2622-关灯问题II</title>
-    <url>/2024/09/30/6a6e39e071d6/</url>
-    <content><![CDATA[<h1 id="题目-p2622-关灯问题ii">题目 <a
-href="https://www.luogu.com.cn/problem/P2622">P2622 关灯问题II</a></h1>
-<h2 id="题目描述">题目描述</h2>
-<p>现有 <span class="math inline">\(n\)</span> 盏灯，以及 <span
-class="math inline">\(m\)</span> 个按钮。每个按钮可以同时控制这 <span
-class="math inline">\(n\)</span> 盏灯——按下了第 <span
-class="math inline">\(i\)</span> 个按钮，对于所有的灯都有一个效果。按下
-<span class="math inline">\(i\)</span> 按钮对于第 <span
-class="math inline">\(j\)</span> 盏灯，是下面 <span
-class="math inline">\(3\)</span> 中效果之一：如果 <span
-class="math inline">\(a_{i,j}\)</span> 为 <span
-class="math inline">\(1\)</span>，那么当这盏灯开了的时候，把它关上，否则不管；如果为
-<span class="math inline">\(-1\)</span>
-的话，如果这盏灯是关的，那么把它打开，否则也不管；如果是 <span
-class="math inline">\(0\)</span>，无论这灯是否开，都不管。</p>
-<p>现在这些灯都是开的，给出所有开关对所有灯的控制效果，求问最少要按几下按钮才能全部关掉。</p>
-<h2 id="输入格式">输入格式</h2>
-<p>前两行两个数，<span class="math inline">\(n, m\)</span>。</p>
-<p>接下来 <span class="math inline">\(m\)</span> 行，每行 <span
-class="math inline">\(n\)</span> 个数 <span class="math inline">\(,a_{i,
-j}\)</span> 表示第 <span class="math inline">\(i\)</span> 个开关对第
-<span class="math inline">\(j\)</span> 个灯的效果。</p>
-<h2 id="输出格式">输出格式</h2>
-<p>一个整数，表示最少按按钮次数。如果没有任何办法使其全部关闭，输出
-<span class="math inline">\(-1\)</span>。</p>
-<h1 id="思路状态压缩bfs">思路：状态压缩bfs</h1>
-<p>因为 <span class="math inline">\(n \leq
-10\)</span>，所以可以用一个数字表示灯的开关状态。</p>
-<h2 id="基本定义">基本定义</h2>
-<p>设 <span class="math inline">\(state\)</span>
-表示当前灯的开关状态。</p>
-<p>如果第 <span class="math inline">\(i\)</span> 个灯开启，那么 <span
-class="math inline">\(state\)</span>（二进制）中的第 <span
-class="math inline">\(i\)</span> 位为 <span
-class="math inline">\(1\)</span>（以最右边为第 <span
-class="math inline">\(0\)</span> 位）。</p>
-<p>使用 <span class="math inline">\(vis[state]\)</span> 记录 <span
-class="math inline">\(state\)</span> 状态是否访问过。</p>
-<h2 id="按钮效果处理">按钮效果处理</h2>
-<ul>
-<li><span class="math inline">\(1: x \rightarrow x \mathrm{and}
-0\)</span></li>
-<li><span class="math inline">\(0: x \rightarrow x\)</span></li>
-<li><span class="math inline">\(-1: x \rightarrow x \mathrm{or}
-1\)</span></li>
-</ul>
-<h1 id="ac-code"><a href="https://www.luogu.com.cn/record/179052554">AC
-Code</a></h1>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// template v7</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">minset</span><span class="params">(<span class="type">int</span> &amp;t, <span class="type">int</span> other)</span> </span>&#123;</span><br><span class="line">    t = <span class="built_in">min</span>(t, other);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">maxset</span><span class="params">(<span class="type">int</span> &amp;t, <span class="type">int</span> other)</span> </span>&#123;</span><br><span class="line">    t = <span class="built_in">max</span>(t, other);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = (<span class="number">1</span> &lt;&lt; <span class="number">10</span>) + <span class="number">10</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> M = <span class="number">110</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> step[N];</span><br><span class="line"><span class="type">bool</span> vis[N];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> op[M][<span class="number">11</span>];</span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">bfs</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> full = (<span class="number">1</span> &lt;&lt; n) - <span class="number">1</span>;</span><br><span class="line">    queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">    q.<span class="built_in">push</span>(full);</span><br><span class="line">    vis[full] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">while</span>(q.<span class="built_in">size</span>()) &#123;</span><br><span class="line">        <span class="type">int</span> from = q.<span class="built_in">front</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">            <span class="type">int</span> state = from;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j = n - <span class="number">1</span>; j &gt;= <span class="number">0</span>; j--) &#123;</span><br><span class="line">                <span class="type">int</span> op_num = op[i][j];</span><br><span class="line">                <span class="keyword">switch</span>(op_num) &#123;</span><br><span class="line">                    <span class="keyword">case</span> <span class="number">-1</span>:</span><br><span class="line">                        state |= (<span class="number">1</span> &lt;&lt; j);</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                        state &amp;= (full ^ (<span class="number">1</span> &lt;&lt; j));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(!vis[state]) &#123;</span><br><span class="line">                q.<span class="built_in">push</span>(state);</span><br><span class="line">                vis[state] = <span class="literal">true</span>;</span><br><span class="line">                step[state] = step[from] + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(!state) &#123;</span><br><span class="line">                <span class="keyword">return</span> step[state];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = n - <span class="number">1</span>; j &gt;= <span class="number">0</span>; j--) &#123;</span><br><span class="line">            cin &gt;&gt; op[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">bfs</span>() &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="补充">补充</h1>
-<h2
-id="既然是状态压缩为什么不用状压dp">既然是状态压缩，为什么不用状压dp？</h2>
-<p>考虑时间复杂度： - 有 <span class="math inline">\(n\)</span>
-个灯泡，状态数为 <span class="math inline">\(2^n\)</span>。 - 有 <span
-class="math inline">\(m\)</span>
-种操作，因为<strong>灯泡的亮暗与操作顺序有关</strong>，所以<strong>需要枚举所有状态的全排列</strong>，约
-<span class="math inline">\(m!\)</span> 种。 - 将它们相乘，时间复杂度为
-<span class="math inline">\(O(2^n \cdot m!)\)</span>。</p>
-<p>所以，时间会炸，要用一些优化才行，但是这样反而比bfs复杂了。</p>
-]]></content>
-      <tags>
-        <tag>Luogu</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Luogu-P1220-关路灯</title>
     <url>/2024/10/01/4012b23818a8/</url>
     <content><![CDATA[<h1 id="题目-p1220-关路灯">题目 <a
@@ -1662,6 +1595,73 @@ id="为什么第三维不需要枚举每个位置">为什么第三维不需要�
 <p>上述定义中，<span class="math inline">\(dp\)</span>
 数组只描述了终点在最左端和最右端的情况。</p>
 <p>不需要枚举每个位置的原因是，最边上的灯泡一定是<strong>最后一个关闭的</strong>，否则一定不是最优解。</p>
+]]></content>
+      <tags>
+        <tag>Luogu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Luogu-P2622-关灯问题II</title>
+    <url>/2024/09/30/6a6e39e071d6/</url>
+    <content><![CDATA[<h1 id="题目-p2622-关灯问题ii">题目 <a
+href="https://www.luogu.com.cn/problem/P2622">P2622 关灯问题II</a></h1>
+<h2 id="题目描述">题目描述</h2>
+<p>现有 <span class="math inline">\(n\)</span> 盏灯，以及 <span
+class="math inline">\(m\)</span> 个按钮。每个按钮可以同时控制这 <span
+class="math inline">\(n\)</span> 盏灯——按下了第 <span
+class="math inline">\(i\)</span> 个按钮，对于所有的灯都有一个效果。按下
+<span class="math inline">\(i\)</span> 按钮对于第 <span
+class="math inline">\(j\)</span> 盏灯，是下面 <span
+class="math inline">\(3\)</span> 中效果之一：如果 <span
+class="math inline">\(a_{i,j}\)</span> 为 <span
+class="math inline">\(1\)</span>，那么当这盏灯开了的时候，把它关上，否则不管；如果为
+<span class="math inline">\(-1\)</span>
+的话，如果这盏灯是关的，那么把它打开，否则也不管；如果是 <span
+class="math inline">\(0\)</span>，无论这灯是否开，都不管。</p>
+<p>现在这些灯都是开的，给出所有开关对所有灯的控制效果，求问最少要按几下按钮才能全部关掉。</p>
+<h2 id="输入格式">输入格式</h2>
+<p>前两行两个数，<span class="math inline">\(n, m\)</span>。</p>
+<p>接下来 <span class="math inline">\(m\)</span> 行，每行 <span
+class="math inline">\(n\)</span> 个数 <span class="math inline">\(,a_{i,
+j}\)</span> 表示第 <span class="math inline">\(i\)</span> 个开关对第
+<span class="math inline">\(j\)</span> 个灯的效果。</p>
+<h2 id="输出格式">输出格式</h2>
+<p>一个整数，表示最少按按钮次数。如果没有任何办法使其全部关闭，输出
+<span class="math inline">\(-1\)</span>。</p>
+<h1 id="思路状态压缩bfs">思路：状态压缩bfs</h1>
+<p>因为 <span class="math inline">\(n \leq
+10\)</span>，所以可以用一个数字表示灯的开关状态。</p>
+<h2 id="基本定义">基本定义</h2>
+<p>设 <span class="math inline">\(state\)</span>
+表示当前灯的开关状态。</p>
+<p>如果第 <span class="math inline">\(i\)</span> 个灯开启，那么 <span
+class="math inline">\(state\)</span>（二进制）中的第 <span
+class="math inline">\(i\)</span> 位为 <span
+class="math inline">\(1\)</span>（以最右边为第 <span
+class="math inline">\(0\)</span> 位）。</p>
+<p>使用 <span class="math inline">\(vis[state]\)</span> 记录 <span
+class="math inline">\(state\)</span> 状态是否访问过。</p>
+<h2 id="按钮效果处理">按钮效果处理</h2>
+<ul>
+<li><span class="math inline">\(1: x \rightarrow x \mathrm{and}
+0\)</span></li>
+<li><span class="math inline">\(0: x \rightarrow x\)</span></li>
+<li><span class="math inline">\(-1: x \rightarrow x \mathrm{or}
+1\)</span></li>
+</ul>
+<h1 id="ac-code"><a href="https://www.luogu.com.cn/record/179052554">AC
+Code</a></h1>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// template v7</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">minset</span><span class="params">(<span class="type">int</span> &amp;t, <span class="type">int</span> other)</span> </span>&#123;</span><br><span class="line">    t = <span class="built_in">min</span>(t, other);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">maxset</span><span class="params">(<span class="type">int</span> &amp;t, <span class="type">int</span> other)</span> </span>&#123;</span><br><span class="line">    t = <span class="built_in">max</span>(t, other);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = (<span class="number">1</span> &lt;&lt; <span class="number">10</span>) + <span class="number">10</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> M = <span class="number">110</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> step[N];</span><br><span class="line"><span class="type">bool</span> vis[N];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> op[M][<span class="number">11</span>];</span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">bfs</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> full = (<span class="number">1</span> &lt;&lt; n) - <span class="number">1</span>;</span><br><span class="line">    queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">    q.<span class="built_in">push</span>(full);</span><br><span class="line">    vis[full] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">while</span>(q.<span class="built_in">size</span>()) &#123;</span><br><span class="line">        <span class="type">int</span> from = q.<span class="built_in">front</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">            <span class="type">int</span> state = from;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j = n - <span class="number">1</span>; j &gt;= <span class="number">0</span>; j--) &#123;</span><br><span class="line">                <span class="type">int</span> op_num = op[i][j];</span><br><span class="line">                <span class="keyword">switch</span>(op_num) &#123;</span><br><span class="line">                    <span class="keyword">case</span> <span class="number">-1</span>:</span><br><span class="line">                        state |= (<span class="number">1</span> &lt;&lt; j);</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                        state &amp;= (full ^ (<span class="number">1</span> &lt;&lt; j));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(!vis[state]) &#123;</span><br><span class="line">                q.<span class="built_in">push</span>(state);</span><br><span class="line">                vis[state] = <span class="literal">true</span>;</span><br><span class="line">                step[state] = step[from] + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(!state) &#123;</span><br><span class="line">                <span class="keyword">return</span> step[state];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = n - <span class="number">1</span>; j &gt;= <span class="number">0</span>; j--) &#123;</span><br><span class="line">            cin &gt;&gt; op[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">bfs</span>() &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="补充">补充</h1>
+<h2
+id="既然是状态压缩为什么不用状压dp">既然是状态压缩，为什么不用状压dp？</h2>
+<p>考虑时间复杂度： - 有 <span class="math inline">\(n\)</span>
+个灯泡，状态数为 <span class="math inline">\(2^n\)</span>。 - 有 <span
+class="math inline">\(m\)</span>
+种操作，因为<strong>灯泡的亮暗与操作顺序有关</strong>，所以<strong>需要枚举所有状态的全排列</strong>，约
+<span class="math inline">\(m!\)</span> 种。 - 将它们相乘，时间复杂度为
+<span class="math inline">\(O(2^n \cdot m!)\)</span>。</p>
+<p>所以，时间会炸，要用一些优化才行，但是这样反而比bfs复杂了。</p>
 ]]></content>
       <tags>
         <tag>Luogu</tag>
@@ -1942,82 +1942,6 @@ Code</a></h1>
       </tags>
   </entry>
   <entry>
-    <title>Luogu-P2567-幸运数字</title>
-    <url>/2024/10/04/6c440713a441/</url>
-    <content><![CDATA[<h1 id="题目-p2567-scoi2010-幸运数字">题目 <a
-href="https://www.luogu.com.cn/problem/P2567">P2567 [SCOI2010]
-幸运数字</a></h1>
-<h2 id="题目背景">题目背景</h2>
-<p>四川 NOI 省选 2010。</p>
-<h2 id="题目描述">题目描述</h2>
-<p>在中国，很多人都把 <span class="math inline">\(6\)</span> 和 <span
-class="math inline">\(8\)</span> 视为是幸运数字！lxhgww
-也这样认为，于是他定义自己的“幸运号码”是十进制表示中只包含数字 <span
-class="math inline">\(6\)</span> 和 <span
-class="math inline">\(8\)</span> 的那些号码，比如 <span
-class="math inline">\(68\)</span>，<span
-class="math inline">\(666\)</span>，<span
-class="math inline">\(888\)</span>
-都是“幸运号码”！但是这种“幸运号码”总是太少了，比如在 <span
-class="math inline">\([1,100]\)</span> 的区间内就只有 <span
-class="math inline">\(6\)</span> 个（<span
-class="math inline">\(6\)</span>，<span
-class="math inline">\(8\)</span>，<span
-class="math inline">\(66\)</span>，<span
-class="math inline">\(68\)</span>，<span
-class="math inline">\(86\)</span>，<span
-class="math inline">\(88\)</span>），于是他又定义了一种“近似幸运号码”。lxhgww
-规定，凡是“幸运号码”的倍数都是“近似幸运号码”，当然，任何的“幸运号码”也都是“近似幸运号码”，比如
-<span class="math inline">\(12\)</span>，<span
-class="math inline">\(16\)</span>，<span
-class="math inline">\(666\)</span> 都是“近似幸运号码”。</p>
-<p>现在 lxhgww 想知道在一段闭区间 <span class="math inline">\([a,
-b]\)</span> 内，“近似幸运号码”的个数。</p>
-<h2 id="输入格式">输入格式</h2>
-<p>输入数据是一行，包括 <span class="math inline">\(2\)</span> 个数字
-<span class="math inline">\(a\)</span> 和 <span
-class="math inline">\(b\)</span>。</p>
-<h2 id="输出格式">输出格式</h2>
-<p>输出数据是一行，包括 <span class="math inline">\(1\)</span>
-个数字，表示在闭区间 <span class="math inline">\([a, b]\)</span>
-内“近似幸运号码”的个数。</p>
-<h1 id="思路打表">思路：打表！</h1>
-<p>快乐打表~</p>
-<p>不难发现，本题的<strong>幸运数字</strong>数量很少。</p>
-<p>于是考虑打表的可能性。</p>
-<p>但是一个一个存储显然会MLE，考虑区间打表。</p>
-<p>区间打表（也叫分块打表）就是已知每段区间上的答案，最终只要求出超出区间部分的即可。</p>
-<p>例如：每段区间的长度为 <span class="math inline">\(5\)</span>，已知
-<span class="math inline">\(1 \sim 5\)</span> 和 <span
-class="math inline">\(6 \sim 10\)</span> 上的答案，想求出 <span
-class="math inline">\(1 \sim 7\)</span> 上的答案，只需要查表获取 <span
-class="math inline">\(1 \sim 5\)</span> 上的答案，再计算出 <span
-class="math inline">\(6 \sim 7\)</span> 上的答案即可。</p>
-<h2 id="打表过程">打表过程</h2>
-<h3 id="第一步获取数据">第一步：获取数据。</h3>
-<p>先打表获取所有的幸运数字。</p>
-<p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// template v9</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">bfs</span><span class="params">()</span></span>&#123;</span><br><span class="line">    queue&lt;ll&gt; q;</span><br><span class="line">    q.<span class="built_in">push</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">while</span>(q.<span class="built_in">size</span>())&#123;</span><br><span class="line">        ll x = q.<span class="built_in">front</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        cout &lt;&lt; x &lt;&lt; <span class="string">&#x27;,&#x27;</span>;</span><br><span class="line">        <span class="keyword">if</span>(x * <span class="number">10</span> &lt; <span class="number">1e10</span>)&#123;</span><br><span class="line">            q.<span class="built_in">push</span>(x * <span class="number">10</span> + <span class="number">6</span>);</span><br><span class="line">            q.<span class="built_in">push</span>(x * <span class="number">10</span> + <span class="number">8</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;step1.out&quot;</span>, <span class="string">&quot;w&quot;</span>, stdout);</span><br><span class="line">    cout &lt;&lt; <span class="string">&#x27;&#123;&#x27;</span>;</span><br><span class="line">    <span class="built_in">bfs</span>();</span><br><span class="line">    cout &lt;&lt; <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<h3 id="第二步分割区间">第二步：分割区间。</h3>
-<p>由于本题的数据范围是 <span class="math inline">\(1 \sim
-10^{10}\)</span>，所以考虑一个合适的区间长度：<span
-class="math inline">\(10^7\)</span>。</p>
-<p>于是，可以写出第二段程序，计算出每段区间内的<strong>近似幸运数字</strong>。</p>
-<p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// template v8</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"></span><br><span class="line">ll arr[] = &#123;&#125;; <span class="comment">// step1.out</span></span><br><span class="line"></span><br><span class="line"><span class="type">const</span> ll len = <span class="number">1e7</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> b[len + <span class="number">10</span>];</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> L = <span class="keyword">sizeof</span> arr / <span class="built_in">sizeof</span> (ll);</span><br><span class="line"><span class="comment">// [l, r]</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">query</span><span class="params">(ll l, ll r)</span></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(b, <span class="number">0</span>, <span class="keyword">sizeof</span> b);</span><br><span class="line">    ll ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(ll i = <span class="number">0</span>; i &lt; L; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(ll j = r / arr[i] * arr[i]; j &gt;= l; j -= arr[i])&#123;</span><br><span class="line">            b[j - l] = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(ll i = l; i &lt;= r; i++)&#123;</span><br><span class="line">        ans += b[i - l];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;step2.out&quot;</span>, <span class="string">&quot;w&quot;</span>, stdout);</span><br><span class="line">    cout &lt;&lt; <span class="string">&#x27;&#123;&#x27;</span>;</span><br><span class="line">    <span class="keyword">for</span>(ll i = <span class="number">0</span>; i &lt; (ll)<span class="number">1e10</span>; i += len)&#123;</span><br><span class="line">        ll ans = <span class="built_in">query</span>(i + <span class="number">1</span>, i + len);</span><br><span class="line">        cout &lt;&lt; ans &lt;&lt; <span class="string">&#x27;,&#x27;</span>;</span><br><span class="line">        cout.<span class="built_in">flush</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<p>由于长度限制，此处不提供具体数据。</p>
-<h3 id="第三步最终程序">第三步：最终程序！</h3>
-<p>这里要做的就是最终要提交的程序了。</p>
-<p>利用分块打表，就能做到最多计算 <span
-class="math inline">\(10^7\)</span> 长度的区间了。</p>
-<p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// template v9</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"></span><br><span class="line">ll arr[] = &#123;&#125;; <span class="comment">// step1.out</span></span><br><span class="line"></span><br><span class="line"><span class="type">const</span> ll len = <span class="number">1e7</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> b[len + <span class="number">10</span>];</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> L = <span class="keyword">sizeof</span> arr / <span class="built_in">sizeof</span> (ll);</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> t[] = &#123;&#125;; <span class="comment">// step2.out</span></span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">query</span><span class="params">(ll l, ll r)</span></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(b, <span class="number">0</span>, <span class="keyword">sizeof</span> b);</span><br><span class="line">    ll ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(ll i = <span class="number">0</span>; i &lt; L; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(ll j = r / arr[i] * arr[i]; j &gt;= l; j -= arr[i])&#123;</span><br><span class="line">            b[j - l] = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(ll i = l; i &lt;= r; i++)&#123;</span><br><span class="line">        ans += b[i - l];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">query</span><span class="params">(ll x)</span></span>&#123;</span><br><span class="line">    ll ans = <span class="number">0</span>, i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(; i * len &lt;= x - len; i++)&#123;</span><br><span class="line">        ans += t[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans + <span class="built_in">query</span>(i * len, x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> ONLINE_JUDGE</span></span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;test.in&quot;</span>, <span class="string">&quot;r&quot;</span>, stdin);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    ll l, r;</span><br><span class="line">    cin &gt;&gt; l &gt;&gt; r;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">query</span>(r) - <span class="built_in">query</span>(l - <span class="number">1</span>) &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<h1 id="ac-code"><a href="https://www.luogu.com.cn/record/179815435">AC
-Code</a></h1>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// template v9</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"></span><br><span class="line">ll arr[] = &#123;&#125;; <span class="comment">// step1.out</span></span><br><span class="line"></span><br><span class="line"><span class="type">const</span> ll len = <span class="number">1e7</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> b[len + <span class="number">10</span>];</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> L = <span class="keyword">sizeof</span> arr / <span class="built_in">sizeof</span> (ll);</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> t[] = &#123;&#125;; <span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">query</span><span class="params">(ll l, ll r)</span></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(b, <span class="number">0</span>, <span class="keyword">sizeof</span> b);</span><br><span class="line">    ll ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(ll i = <span class="number">0</span>; i &lt; L; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(ll j = r / arr[i] * arr[i]; j &gt;= l; j -= arr[i])&#123;</span><br><span class="line">            b[j - l] = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(ll i = l; i &lt;= r; i++)&#123;</span><br><span class="line">        ans += b[i - l];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">query</span><span class="params">(ll x)</span></span>&#123;</span><br><span class="line">    ll ans = <span class="number">0</span>, i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(; i * len &lt;= x - len; i++)&#123;</span><br><span class="line">        ans += t[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans + <span class="built_in">query</span>(i * len, x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> ONLINE_JUDGE</span></span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;test.in&quot;</span>, <span class="string">&quot;r&quot;</span>, stdin);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    ll l, r;</span><br><span class="line">    cin &gt;&gt; l &gt;&gt; r;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">query</span>(r) - <span class="built_in">query</span>(l - <span class="number">1</span>) &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Luogu</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>算法-二分答案</title>
     <url>/2024/10/01/6a35a3531745/</url>
     <content><![CDATA[<h1 id="前言">前言</h1>
@@ -2105,6 +2029,82 @@ class="math inline">\(77\)</span>。</li>
 ]]></content>
       <tags>
         <tag>Algorithm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Luogu-P2567-幸运数字</title>
+    <url>/2024/10/04/6c440713a441/</url>
+    <content><![CDATA[<h1 id="题目-p2567-scoi2010-幸运数字">题目 <a
+href="https://www.luogu.com.cn/problem/P2567">P2567 [SCOI2010]
+幸运数字</a></h1>
+<h2 id="题目背景">题目背景</h2>
+<p>四川 NOI 省选 2010。</p>
+<h2 id="题目描述">题目描述</h2>
+<p>在中国，很多人都把 <span class="math inline">\(6\)</span> 和 <span
+class="math inline">\(8\)</span> 视为是幸运数字！lxhgww
+也这样认为，于是他定义自己的“幸运号码”是十进制表示中只包含数字 <span
+class="math inline">\(6\)</span> 和 <span
+class="math inline">\(8\)</span> 的那些号码，比如 <span
+class="math inline">\(68\)</span>，<span
+class="math inline">\(666\)</span>，<span
+class="math inline">\(888\)</span>
+都是“幸运号码”！但是这种“幸运号码”总是太少了，比如在 <span
+class="math inline">\([1,100]\)</span> 的区间内就只有 <span
+class="math inline">\(6\)</span> 个（<span
+class="math inline">\(6\)</span>，<span
+class="math inline">\(8\)</span>，<span
+class="math inline">\(66\)</span>，<span
+class="math inline">\(68\)</span>，<span
+class="math inline">\(86\)</span>，<span
+class="math inline">\(88\)</span>），于是他又定义了一种“近似幸运号码”。lxhgww
+规定，凡是“幸运号码”的倍数都是“近似幸运号码”，当然，任何的“幸运号码”也都是“近似幸运号码”，比如
+<span class="math inline">\(12\)</span>，<span
+class="math inline">\(16\)</span>，<span
+class="math inline">\(666\)</span> 都是“近似幸运号码”。</p>
+<p>现在 lxhgww 想知道在一段闭区间 <span class="math inline">\([a,
+b]\)</span> 内，“近似幸运号码”的个数。</p>
+<h2 id="输入格式">输入格式</h2>
+<p>输入数据是一行，包括 <span class="math inline">\(2\)</span> 个数字
+<span class="math inline">\(a\)</span> 和 <span
+class="math inline">\(b\)</span>。</p>
+<h2 id="输出格式">输出格式</h2>
+<p>输出数据是一行，包括 <span class="math inline">\(1\)</span>
+个数字，表示在闭区间 <span class="math inline">\([a, b]\)</span>
+内“近似幸运号码”的个数。</p>
+<h1 id="思路打表">思路：打表！</h1>
+<p>快乐打表~</p>
+<p>不难发现，本题的<strong>幸运数字</strong>数量很少。</p>
+<p>于是考虑打表的可能性。</p>
+<p>但是一个一个存储显然会MLE，考虑区间打表。</p>
+<p>区间打表（也叫分块打表）就是已知每段区间上的答案，最终只要求出超出区间部分的即可。</p>
+<p>例如：每段区间的长度为 <span class="math inline">\(5\)</span>，已知
+<span class="math inline">\(1 \sim 5\)</span> 和 <span
+class="math inline">\(6 \sim 10\)</span> 上的答案，想求出 <span
+class="math inline">\(1 \sim 7\)</span> 上的答案，只需要查表获取 <span
+class="math inline">\(1 \sim 5\)</span> 上的答案，再计算出 <span
+class="math inline">\(6 \sim 7\)</span> 上的答案即可。</p>
+<h2 id="打表过程">打表过程</h2>
+<h3 id="第一步获取数据">第一步：获取数据。</h3>
+<p>先打表获取所有的幸运数字。</p>
+<p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// template v9</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">bfs</span><span class="params">()</span></span>&#123;</span><br><span class="line">    queue&lt;ll&gt; q;</span><br><span class="line">    q.<span class="built_in">push</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">while</span>(q.<span class="built_in">size</span>())&#123;</span><br><span class="line">        ll x = q.<span class="built_in">front</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        cout &lt;&lt; x &lt;&lt; <span class="string">&#x27;,&#x27;</span>;</span><br><span class="line">        <span class="keyword">if</span>(x * <span class="number">10</span> &lt; <span class="number">1e10</span>)&#123;</span><br><span class="line">            q.<span class="built_in">push</span>(x * <span class="number">10</span> + <span class="number">6</span>);</span><br><span class="line">            q.<span class="built_in">push</span>(x * <span class="number">10</span> + <span class="number">8</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;step1.out&quot;</span>, <span class="string">&quot;w&quot;</span>, stdout);</span><br><span class="line">    cout &lt;&lt; <span class="string">&#x27;&#123;&#x27;</span>;</span><br><span class="line">    <span class="built_in">bfs</span>();</span><br><span class="line">    cout &lt;&lt; <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h3 id="第二步分割区间">第二步：分割区间。</h3>
+<p>由于本题的数据范围是 <span class="math inline">\(1 \sim
+10^{10}\)</span>，所以考虑一个合适的区间长度：<span
+class="math inline">\(10^7\)</span>。</p>
+<p>于是，可以写出第二段程序，计算出每段区间内的<strong>近似幸运数字</strong>。</p>
+<p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// template v8</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"></span><br><span class="line">ll arr[] = &#123;&#125;; <span class="comment">// step1.out</span></span><br><span class="line"></span><br><span class="line"><span class="type">const</span> ll len = <span class="number">1e7</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> b[len + <span class="number">10</span>];</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> L = <span class="keyword">sizeof</span> arr / <span class="built_in">sizeof</span> (ll);</span><br><span class="line"><span class="comment">// [l, r]</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">query</span><span class="params">(ll l, ll r)</span></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(b, <span class="number">0</span>, <span class="keyword">sizeof</span> b);</span><br><span class="line">    ll ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(ll i = <span class="number">0</span>; i &lt; L; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(ll j = r / arr[i] * arr[i]; j &gt;= l; j -= arr[i])&#123;</span><br><span class="line">            b[j - l] = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(ll i = l; i &lt;= r; i++)&#123;</span><br><span class="line">        ans += b[i - l];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;step2.out&quot;</span>, <span class="string">&quot;w&quot;</span>, stdout);</span><br><span class="line">    cout &lt;&lt; <span class="string">&#x27;&#123;&#x27;</span>;</span><br><span class="line">    <span class="keyword">for</span>(ll i = <span class="number">0</span>; i &lt; (ll)<span class="number">1e10</span>; i += len)&#123;</span><br><span class="line">        ll ans = <span class="built_in">query</span>(i + <span class="number">1</span>, i + len);</span><br><span class="line">        cout &lt;&lt; ans &lt;&lt; <span class="string">&#x27;,&#x27;</span>;</span><br><span class="line">        cout.<span class="built_in">flush</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p>由于长度限制，此处不提供具体数据。</p>
+<h3 id="第三步最终程序">第三步：最终程序！</h3>
+<p>这里要做的就是最终要提交的程序了。</p>
+<p>利用分块打表，就能做到最多计算 <span
+class="math inline">\(10^7\)</span> 长度的区间了。</p>
+<p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// template v9</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"></span><br><span class="line">ll arr[] = &#123;&#125;; <span class="comment">// step1.out</span></span><br><span class="line"></span><br><span class="line"><span class="type">const</span> ll len = <span class="number">1e7</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> b[len + <span class="number">10</span>];</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> L = <span class="keyword">sizeof</span> arr / <span class="built_in">sizeof</span> (ll);</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> t[] = &#123;&#125;; <span class="comment">// step2.out</span></span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">query</span><span class="params">(ll l, ll r)</span></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(b, <span class="number">0</span>, <span class="keyword">sizeof</span> b);</span><br><span class="line">    ll ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(ll i = <span class="number">0</span>; i &lt; L; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(ll j = r / arr[i] * arr[i]; j &gt;= l; j -= arr[i])&#123;</span><br><span class="line">            b[j - l] = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(ll i = l; i &lt;= r; i++)&#123;</span><br><span class="line">        ans += b[i - l];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">query</span><span class="params">(ll x)</span></span>&#123;</span><br><span class="line">    ll ans = <span class="number">0</span>, i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(; i * len &lt;= x - len; i++)&#123;</span><br><span class="line">        ans += t[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans + <span class="built_in">query</span>(i * len, x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> ONLINE_JUDGE</span></span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;test.in&quot;</span>, <span class="string">&quot;r&quot;</span>, stdin);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    ll l, r;</span><br><span class="line">    cin &gt;&gt; l &gt;&gt; r;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">query</span>(r) - <span class="built_in">query</span>(l - <span class="number">1</span>) &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h1 id="ac-code"><a href="https://www.luogu.com.cn/record/179815435">AC
+Code</a></h1>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// template v9</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"></span><br><span class="line">ll arr[] = &#123;&#125;; <span class="comment">// step1.out</span></span><br><span class="line"></span><br><span class="line"><span class="type">const</span> ll len = <span class="number">1e7</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> b[len + <span class="number">10</span>];</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> L = <span class="keyword">sizeof</span> arr / <span class="built_in">sizeof</span> (ll);</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> t[] = &#123;&#125;; <span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">query</span><span class="params">(ll l, ll r)</span></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(b, <span class="number">0</span>, <span class="keyword">sizeof</span> b);</span><br><span class="line">    ll ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(ll i = <span class="number">0</span>; i &lt; L; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(ll j = r / arr[i] * arr[i]; j &gt;= l; j -= arr[i])&#123;</span><br><span class="line">            b[j - l] = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(ll i = l; i &lt;= r; i++)&#123;</span><br><span class="line">        ans += b[i - l];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">query</span><span class="params">(ll x)</span></span>&#123;</span><br><span class="line">    ll ans = <span class="number">0</span>, i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(; i * len &lt;= x - len; i++)&#123;</span><br><span class="line">        ans += t[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans + <span class="built_in">query</span>(i * len, x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> ONLINE_JUDGE</span></span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;test.in&quot;</span>, <span class="string">&quot;r&quot;</span>, stdin);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    ll l, r;</span><br><span class="line">    cin &gt;&gt; l &gt;&gt; r;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">query</span>(r) - <span class="built_in">query</span>(l - <span class="number">1</span>) &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Luogu</tag>
       </tags>
   </entry>
   <entry>
@@ -2441,6 +2441,23 @@ Code</a></h1>
       </tags>
   </entry>
   <entry>
+    <title>山楂树</title>
+    <url>/2024/10/11/f52f2e20a3cc/</url>
+    <content><![CDATA[<p>学校的山楂树开了！但是现在已经被摘得不剩多少了（悲）。</p>
+<p>英语课老师看到外面保洁在摘，开窗户说：给我留点！</p>
+<p><img src="/images/2024/10/11/1.jpg" /> <img
+src="/images/2024/10/11/2.jpg" /> <img src="/images/2024/10/11/3.jpg" />
+<img src="/images/2024/10/11/4.jpg" /> <img
+src="/images/2024/10/11/5.jpg" /></p>
+<ul>
+<li>图片为转载（myf）。</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>模拟题</title>
     <url>/2024/10/14/e56f5f8ce2c9/</url>
     <content><![CDATA[<h1 id="section">2024-10-17</h1>
@@ -2569,77 +2586,6 @@ src="/images/2024/10/14/3.jpg" /></p>
 ]]></content>
   </entry>
   <entry>
-    <title>山楂树</title>
-    <url>/2024/10/11/f52f2e20a3cc/</url>
-    <content><![CDATA[<p>学校的山楂树开了！但是现在已经被摘得不剩多少了（悲）。</p>
-<p>英语课老师看到外面保洁在摘，开窗户说：给我留点！</p>
-<p><img src="/images/2024/10/11/1.jpg" /> <img
-src="/images/2024/10/11/2.jpg" /> <img src="/images/2024/10/11/3.jpg" />
-<img src="/images/2024/10/11/4.jpg" /> <img
-src="/images/2024/10/11/5.jpg" /></p>
-<ul>
-<li>图片为转载（myf）。</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Luogu-P2710-选学霸</title>
-    <url>/2024/10/17/62166b270187/</url>
-    <content><![CDATA[<h1 id="题目-p2170-选学霸">题目 <a
-href="https://www.luogu.com.cn/problem/P2170">P2170 选学霸</a></h1>
-<h2 id="题目描述">题目描述</h2>
-<p>老师想从 <span class="math inline">\(n\)</span> 名学生中选 <span
-class="math inline">\(m\)</span> 人当学霸，但有 <span
-class="math inline">\(k\)</span>
-对人实力相当，如果实力相当的人中，一部分被选上，另一部分没有，同学们就会抗议。所以老师想请你帮他求出他该选多少学霸，才能既不让同学们抗议，又与原来的
-<span class="math inline">\(m\)</span> 尽可能接近。</p>
-<h2 id="输入格式">输入格式</h2>
-<p>第一行，三个正整数 <span class="math inline">\(n,m,k\)</span>。</p>
-<p>接下来 <span class="math inline">\(k\)</span> 行，每行 <span
-class="math inline">\(2\)</span>
-个数，表示一对实力相当的人的编号（编号为 <span
-class="math inline">\(1,2,\cdots n\)</span>）。</p>
-<h2 id="输出格式">输出格式</h2>
-<p>共一行，表示既不让同学们抗议，又与原来的 <span
-class="math inline">\(m\)</span> 尽可能接近的选出学霸的数目。</p>
-<p>如果有两种方案与 <span class="math inline">\(m\)</span>
-的差的绝对值相等，选较小的一种。</p>
-<h1 id="思路背包dp并查集">思路：背包dp，并查集</h1>
-<h2 id="实力相当的处理">实力相当的处理</h2>
-<p>如果有 <span class="math inline">\(x\)</span>
-个人实力相当，可以考虑将这 <span class="math inline">\(x\)</span>
-个人放到并查集中维护。</p>
-<p>每新增一个实力相当的人，就放到对应的并查集中。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> root[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">get</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x != root[x]) &#123;</span><br><span class="line">        root[x] = <span class="built_in">get</span>(root[x]);</span><br><span class="line">        <span class="keyword">return</span> root[x];</span><br><span class="line">    &#125; <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> root[x];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">merge</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;</span><br><span class="line">    root[<span class="built_in">get</span>(y)] = <span class="built_in">get</span>(x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        root[i] = i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="学霸数目">学霸数目</h2>
-<p>经过上一步之后，成绩相当的人都在并查集中。</p>
-<p>考虑每一个集合中的元素个数为花费，那么就可以转化为背包dp。</p>
-<ul>
-<li><p>建立一个 <span class="math inline">\(cnt\)</span>
-数组记录每个并查集中元素个数。</p></li>
-<li><p>在同一个并查集中的元素，计数到 <span
-class="math inline">\(cnt\)</span> 数组的同一个位置。</p></li>
-<li><p>最后，<span class="math inline">\(cnt\)</span>
-数组中就是所有的花费。</p></li>
-</ul>
-<p>之后，就是常规的0/1背包。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt; pt; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">2</span> * m; j &gt;= cnt[i]; j--) &#123;</span><br><span class="line">        dp[j] |= dp[j - cnt[i]];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="最近数量">最近数量</h2>
-<p>从 <span class="math inline">\(m\)</span>
-向外出发，最近的一个数就是答案。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span>(dp[m - i]) &#123;</span><br><span class="line">        cout &lt;&lt; m - i &lt;&lt; endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(dp[m + i]) &#123;</span><br><span class="line">        cout &lt;&lt; m + i &lt;&lt; endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="ac-code"><a href="https://www.luogu.com.cn/record/182620432">AC
-Code</a></h1>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// template v11</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> set(x, y) memset(x, y, sizeof x)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">2e4</span> + <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m, k;</span><br><span class="line"><span class="type">int</span> root[N];</span><br><span class="line"><span class="type">int</span> head[N];</span><br><span class="line"><span class="type">int</span> cnt[N];</span><br><span class="line"><span class="type">bool</span> dp[<span class="number">2</span> * N];</span><br><span class="line"><span class="type">int</span> pt = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">get</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x != root[x]) &#123;</span><br><span class="line">        root[x] = <span class="built_in">get</span>(root[x]);</span><br><span class="line">        <span class="keyword">return</span> root[x];</span><br><span class="line">    &#125; <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> root[x];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">merge</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;</span><br><span class="line">    root[<span class="built_in">get</span>(y)] = <span class="built_in">get</span>(x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        root[i] = i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> ONLINE_JUDGE</span></span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;diyi.in&quot;</span>, <span class="string">&quot;r&quot;</span>, stdin);</span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;diyi.out&quot;</span>, <span class="string">&quot;w&quot;</span>, stdout);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="type">int</span> t1, t2;</span><br><span class="line">    <span class="built_in">init</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        cin &gt;&gt; t1 &gt;&gt; t2;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">get</span>(t1) != <span class="built_in">get</span>(t2))</span><br><span class="line">            <span class="built_in">merge</span>(t1, t2);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="type">int</span> r = <span class="built_in">get</span>(i);</span><br><span class="line">        <span class="keyword">if</span>(!head[r]) &#123;</span><br><span class="line">            head[r] = pt;</span><br><span class="line">            pt++;</span><br><span class="line">        &#125;</span><br><span class="line">        cnt[head[r]]++;</span><br><span class="line">    &#125;</span><br><span class="line">    dp[<span class="number">0</span>] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt; pt; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">2</span> * m; j &gt;= cnt[i]; j--) &#123;</span><br><span class="line">            dp[j] |= dp[j - cnt[i]];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(dp[m - i]) &#123;</span><br><span class="line">            cout &lt;&lt; m - i &lt;&lt; endl;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(dp[m + i]) &#123;</span><br><span class="line">            cout &lt;&lt; m + i &lt;&lt; endl;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Luogu</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Luogu-P3393-逃离僵尸岛</title>
     <url>/2024/10/16/34ca86247380/</url>
     <content><![CDATA[<h1 id="题目-p3393-逃离僵尸岛">题目 <a
@@ -2706,6 +2652,60 @@ class="math inline">\(money[exps[i]]\)</span>，从而简化思路。</p>
 <h1 id="ac-code"><a href="https://www.luogu.com.cn/record/182235590">AC
 Code</a></h1>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// template v9</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> set(x, y) memset(x, y, sizeof x)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e5</span> + <span class="number">10</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> M = <span class="number">2e5</span> + <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> n, m, K, S;</span><br><span class="line">ll money[<span class="number">2</span>];</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> exps[N];</span><br><span class="line"><span class="type">bool</span> zombie[N];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> head[N];</span><br><span class="line">ll dis[N];</span><br><span class="line"><span class="type">int</span> pt = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Edge</span> &#123;</span><br><span class="line">    <span class="type">int</span> to, next;</span><br><span class="line">&#125; edge[<span class="number">2</span> * M];</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> &#123;</span><br><span class="line">    <span class="type">int</span> from;</span><br><span class="line">    <span class="type">bool</span> <span class="keyword">operator</span>&lt;(<span class="type">const</span> node &amp;e) <span class="type">const</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> dis[from] &gt; dis[e.from];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add_edge</span><span class="params">(<span class="type">int</span> from, <span class="type">int</span> to)</span> </span>&#123;</span><br><span class="line">    Edge &amp;e = edge[pt];</span><br><span class="line">    e.to = to;</span><br><span class="line">    e.next = head[from];</span><br><span class="line">    head[from] = pt;</span><br><span class="line">    pt++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> vis[N];</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">min_cost</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">set</span>(dis, inf);</span><br><span class="line">    dis[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    priority_queue&lt;node&gt; q;</span><br><span class="line">    q.<span class="built_in">push</span>(&#123;<span class="number">1</span>&#125;);</span><br><span class="line">    <span class="keyword">while</span>(q.<span class="built_in">size</span>()) &#123;</span><br><span class="line">        <span class="type">int</span> from = q.<span class="built_in">top</span>().from;</span><br><span class="line">        vis[from] = <span class="literal">true</span>;</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = head[from]; i; i = edge[i].next) &#123;</span><br><span class="line">            <span class="type">int</span> to = edge[i].to;</span><br><span class="line">            <span class="keyword">if</span>(vis[to]) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">if</span>(zombie[to]) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">if</span>(dis[from] + money[exps[to]] &lt; dis[to]) &#123;</span><br><span class="line">                dis[to] = dis[from] + money[exps[to]];</span><br><span class="line">                vis[to] = <span class="literal">true</span>;</span><br><span class="line">                q.<span class="built_in">push</span>(&#123;to&#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dis[n] - money[exps[n]];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">mark</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">auto</span> q = queue&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt;();</span><br><span class="line">    q.<span class="built_in">push</span>(&#123;x, <span class="number">0</span>&#125;);</span><br><span class="line">    vis[x] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">while</span>(q.<span class="built_in">size</span>()) &#123;</span><br><span class="line">        <span class="keyword">auto</span> n = q.<span class="built_in">front</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        exps[n.first] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(n.second &lt; S) &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i = head[n.first]; i; i = edge[i].next) &#123;</span><br><span class="line">                <span class="type">int</span> to = edge[i].to;</span><br><span class="line">                <span class="keyword">if</span>(vis[to]) <span class="keyword">continue</span>;</span><br><span class="line">                vis[to] = <span class="literal">true</span>;</span><br><span class="line">                q.<span class="built_in">push</span>(&#123;to, n.second + <span class="number">1</span>&#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> ONLINE_JUDGE</span></span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;diyi.in&quot;</span>, <span class="string">&quot;r&quot;</span>, stdin);</span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;diyi.out&quot;</span>, <span class="string">&quot;w&quot;</span>, stdout);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m &gt;&gt; K &gt;&gt; S;</span><br><span class="line">    cin &gt;&gt; money[<span class="number">0</span>] &gt;&gt; money[<span class="number">1</span>];</span><br><span class="line">    <span class="type">int</span> t1, t2;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; K; i++) &#123;</span><br><span class="line">        cin &gt;&gt; t1;</span><br><span class="line">        zombie[t1] = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        cin &gt;&gt; t1 &gt;&gt; t2;</span><br><span class="line">        <span class="built_in">add_edge</span>(t1, t2);</span><br><span class="line">        <span class="built_in">add_edge</span>(t2, t1);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(zombie[i]) &#123;</span><br><span class="line">            <span class="built_in">mark</span>(i);</span><br><span class="line">            <span class="built_in">set</span>(vis, <span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">min_cost</span>() &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Luogu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Luogu-P2710-选学霸</title>
+    <url>/2024/10/17/62166b270187/</url>
+    <content><![CDATA[<h1 id="题目-p2170-选学霸">题目 <a
+href="https://www.luogu.com.cn/problem/P2170">P2170 选学霸</a></h1>
+<h2 id="题目描述">题目描述</h2>
+<p>老师想从 <span class="math inline">\(n\)</span> 名学生中选 <span
+class="math inline">\(m\)</span> 人当学霸，但有 <span
+class="math inline">\(k\)</span>
+对人实力相当，如果实力相当的人中，一部分被选上，另一部分没有，同学们就会抗议。所以老师想请你帮他求出他该选多少学霸，才能既不让同学们抗议，又与原来的
+<span class="math inline">\(m\)</span> 尽可能接近。</p>
+<h2 id="输入格式">输入格式</h2>
+<p>第一行，三个正整数 <span class="math inline">\(n,m,k\)</span>。</p>
+<p>接下来 <span class="math inline">\(k\)</span> 行，每行 <span
+class="math inline">\(2\)</span>
+个数，表示一对实力相当的人的编号（编号为 <span
+class="math inline">\(1,2,\cdots n\)</span>）。</p>
+<h2 id="输出格式">输出格式</h2>
+<p>共一行，表示既不让同学们抗议，又与原来的 <span
+class="math inline">\(m\)</span> 尽可能接近的选出学霸的数目。</p>
+<p>如果有两种方案与 <span class="math inline">\(m\)</span>
+的差的绝对值相等，选较小的一种。</p>
+<h1 id="思路背包dp并查集">思路：背包dp，并查集</h1>
+<h2 id="实力相当的处理">实力相当的处理</h2>
+<p>如果有 <span class="math inline">\(x\)</span>
+个人实力相当，可以考虑将这 <span class="math inline">\(x\)</span>
+个人放到并查集中维护。</p>
+<p>每新增一个实力相当的人，就放到对应的并查集中。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> root[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">get</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x != root[x]) &#123;</span><br><span class="line">        root[x] = <span class="built_in">get</span>(root[x]);</span><br><span class="line">        <span class="keyword">return</span> root[x];</span><br><span class="line">    &#125; <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> root[x];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">merge</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;</span><br><span class="line">    root[<span class="built_in">get</span>(y)] = <span class="built_in">get</span>(x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        root[i] = i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="学霸数目">学霸数目</h2>
+<p>经过上一步之后，成绩相当的人都在并查集中。</p>
+<p>考虑每一个集合中的元素个数为花费，那么就可以转化为背包dp。</p>
+<ul>
+<li><p>建立一个 <span class="math inline">\(cnt\)</span>
+数组记录每个并查集中元素个数。</p></li>
+<li><p>在同一个并查集中的元素，计数到 <span
+class="math inline">\(cnt\)</span> 数组的同一个位置。</p></li>
+<li><p>最后，<span class="math inline">\(cnt\)</span>
+数组中就是所有的花费。</p></li>
+</ul>
+<p>之后，就是常规的0/1背包。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt; pt; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">2</span> * m; j &gt;= cnt[i]; j--) &#123;</span><br><span class="line">        dp[j] |= dp[j - cnt[i]];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="最近数量">最近数量</h2>
+<p>从 <span class="math inline">\(m\)</span>
+向外出发，最近的一个数就是答案。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span>(dp[m - i]) &#123;</span><br><span class="line">        cout &lt;&lt; m - i &lt;&lt; endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(dp[m + i]) &#123;</span><br><span class="line">        cout &lt;&lt; m + i &lt;&lt; endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="ac-code"><a href="https://www.luogu.com.cn/record/182620432">AC
+Code</a></h1>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// template v11</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> set(x, y) memset(x, y, sizeof x)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">2e4</span> + <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m, k;</span><br><span class="line"><span class="type">int</span> root[N];</span><br><span class="line"><span class="type">int</span> head[N];</span><br><span class="line"><span class="type">int</span> cnt[N];</span><br><span class="line"><span class="type">bool</span> dp[<span class="number">2</span> * N];</span><br><span class="line"><span class="type">int</span> pt = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">get</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x != root[x]) &#123;</span><br><span class="line">        root[x] = <span class="built_in">get</span>(root[x]);</span><br><span class="line">        <span class="keyword">return</span> root[x];</span><br><span class="line">    &#125; <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> root[x];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">merge</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;</span><br><span class="line">    root[<span class="built_in">get</span>(y)] = <span class="built_in">get</span>(x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        root[i] = i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> ONLINE_JUDGE</span></span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;diyi.in&quot;</span>, <span class="string">&quot;r&quot;</span>, stdin);</span><br><span class="line">    <span class="built_in">freopen</span>(<span class="string">&quot;diyi.out&quot;</span>, <span class="string">&quot;w&quot;</span>, stdout);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="type">int</span> t1, t2;</span><br><span class="line">    <span class="built_in">init</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        cin &gt;&gt; t1 &gt;&gt; t2;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">get</span>(t1) != <span class="built_in">get</span>(t2))</span><br><span class="line">            <span class="built_in">merge</span>(t1, t2);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="type">int</span> r = <span class="built_in">get</span>(i);</span><br><span class="line">        <span class="keyword">if</span>(!head[r]) &#123;</span><br><span class="line">            head[r] = pt;</span><br><span class="line">            pt++;</span><br><span class="line">        &#125;</span><br><span class="line">        cnt[head[r]]++;</span><br><span class="line">    &#125;</span><br><span class="line">    dp[<span class="number">0</span>] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt; pt; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">2</span> * m; j &gt;= cnt[i]; j--) &#123;</span><br><span class="line">            dp[j] |= dp[j - cnt[i]];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(dp[m - i]) &#123;</span><br><span class="line">            cout &lt;&lt; m - i &lt;&lt; endl;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(dp[m + i]) &#123;</span><br><span class="line">            cout &lt;&lt; m + i &lt;&lt; endl;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>Luogu</tag>
@@ -3307,14 +3307,16 @@ class="math inline">\(\texttt{)}\)</span> 中的一个。</p>
 <p>对于第一组样例，一种最优的决策过程如下：</p>
 <ul>
 <li>dXqwq 涂 <span class="math inline">\(S_1\)</span>，<span
-class="math inline">\(S =
-\texttt{\color{red}{)}\color{black}{(}}\)</span></li>
+class="math inline">\(S=\)</span><font color="red"><span
+class="math inline">\(\texttt{)}\)</span></font><font color="black"><span
+class="math inline">\(\texttt{(}\)</span></font></li>
 <li>Haitang 涂 <span class="math inline">\(S_2\)</span>，<span
-class="math inline">\(S =
-\texttt{\color{red}{)}\color{blue}{(}}\)</span></li>
+class="math inline">\(S=\)</span><font color="red"><span
+class="math inline">\(\texttt{)}\)</span></font><font color="blue"><span
+class="math inline">\(\texttt{(}\)</span></font>
+此时红色括号没有匹配的子序列，所以分数为 <span
+class="math inline">\(0\)</span>。</li>
 </ul>
-<p>此时红色括号没有匹配的子序列，所以分数为 <span
-class="math inline">\(0\)</span>。</p>
 <p>对于第二组样例，一种最优的决策过程如下：</p>
 <ul>
 <li>dXqwq 涂 <span class="math inline">\(S_1\)</span>，<span
