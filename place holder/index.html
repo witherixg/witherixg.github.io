@@ -250,7 +250,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-10-19 14:33:12 / Modified: 15:24:25" itemprop="dateCreated datePublished" datetime="2024-10-19T14:33:12+08:00">2024-10-19</time>
+      <time title="Created: 2024-10-19 14:33:12 / Modified: 16:12:24" itemprop="dateCreated datePublished" datetime="2024-10-19T14:33:12+08:00">2024-10-19</time>
     </span>
 
   
@@ -259,7 +259,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Word count in article: </span>
-      <span>3k</span>
+      <span>2.8k</span>
     </span>
 </div>
 
@@ -270,12 +270,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>记录</p>
-<h1 id="A-坦白"><a href="#A-坦白" class="headerlink" title="A.  坦白"></a>A.  坦白</h1><p>文件操作</p>
-<blockquote>
-<p>时间限制: 1000ms</p>
-<p>空间限制: 512000KB</p>
-<p>输入文件名: confess.in</p>
+          <h1 id="A-坦白"><a href="#A-坦白" class="headerlink" title="A. 坦白"></a>A. 坦白</h1><blockquote>
+<p>时间限制: 1000ms  </p>
+<p>空间限制: 512000KB  </p>
+<p>输入文件名: confess.in  </p>
 <p>输出文件名: confess.out</p>
 </blockquote>
 <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
@@ -285,430 +283,426 @@
 <p>她知道维持现状对她来说永远是当下最好的选择，但是哪怕是鼓起了一次勇气，现在自己还会落得这样的结局吗……</p>
 <p>她笑了笑，回忆过去对她来说已经于事无补，自己的结局在 「那一刻」已经确定了，世界上的秘密终究不能永远是秘密。</p>
 <hr>
-<p>Mizuki 可以回忆起 nnn 个有序的事件，每个事件都是好的或者坏的，好的事件会为她带来 +1+1+1 的收益，坏的事件会为她带来 −1-1−1 的收益。</p>
-<p>对于每个事件，如果她选择坦白，都会取消原来的收益，改为获得 ⊕1\oplus 1⊕1 的收益，其中 ⊕\oplus⊕ 为异或运算。</p>
-<p>总收益值定义为 2642^{64}264 依次经过每个事件的收益计算后的值。</p>
-<p>你想要知道，如果 Mizuki 选择恰好 mmm 个事件坦白，她可以获得的最大收益，你只需要输出最大收益减掉 2642^{64}264 的值。</p>
-<p>因为 Mizuki 想要知道坦白是否是好的，你需要对 m=0,1,⋯ ,nm&#x3D;0,1,\cdots,nm=0,1,⋯,n 分别计算。</p>
+<p>Mizuki 可以回忆起 $n$ 个有序的事件，每个事件都是好的或者坏的，好的事件会为她带来 $+1$ 的收益，坏的事件会为她带来 $-1$ 的收益。</p>
+<p>对于每个事件，如果她选择坦白，都会取消原来的收益，改为获得 $\oplus 1$ 的收益，其中 $\oplus$ 为异或运算。</p>
+<p>总收益值定义为 $2^{64}$ 依次经过每个事件的收益计算后的值。</p>
+<p>你想要知道，如果 Mizuki 选择恰好 $m$ 个事件坦白，她可以获得的最大收益，你只需要输出最大收益减掉 $2^{64}$ 的值。</p>
+<p>因为 Mizuki 想要知道坦白是否是好的，你需要对 $m&#x3D;0,1,\cdots,n$ 分别计算。</p>
 <h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>从文件 <code>confess.in</code> 中读入数据。</p>
 <p><strong>本题有多组测试数据。</strong></p>
-<p>第一行输入一个整数 TTT，代表数据组数。</p>
-<p>接下来 TTT 行，每行输入一个字符串 SSS，第 iii 个字符为 +\texttt{+}+ 代表第 iii 个事件是好的，反之代表这个事件是坏的。</p>
+<p>第一行输入一个整数 $T$，代表数据组数。</p>
+<p>接下来 $T$ 行，每行输入一个字符串 $S$，第 $i$ 个字符为 $\texttt{+}$ 代表第 $i$ 个事件是好的，反之代表这个事件是坏的。</p>
 <h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>输出到文件 <code>confess.out</code> 中。</p>
-<p>对于每组数据输出一行 ∣S∣+1|S|+1∣S∣+1 个整数，分别代表坦白 0,1,⋯ ,m0,1,\cdots,m0,1,⋯,m 次的最大收益减 2642^{64}264 的值。</p>
-<h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><h3 id="Input-1"><a href="#Input-1" class="headerlink" title="Input 1"></a>Input 1</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span></span><br><span class="line">+</span><br><span class="line">--</span><br><span class="line">+--</span><br><span class="line">++-+--++</span><br></pre></td></tr></table></figure>
+<p>对于每组数据输出一行 $|S|+1$ 个整数，分别代表坦白 $0,1,\cdots,m$ 次的最大收益减 $2^{64}$ 的值。</p>
+<h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><h3 id="Input-1"><a href="#Input-1" class="headerlink" title="Input 1"></a>Input 1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">+</span><br><span class="line">--</span><br><span class="line">+--</span><br><span class="line">++-+--++</span><br></pre></td></tr></table></figure>
 
-<h3 id="Output-1"><a href="#Output-1" class="headerlink" title="Output 1"></a>Output 1</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="number">1</span> </span><br><span class="line">-<span class="number">2</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line">-<span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> </span><br><span class="line"><span class="number">2</span> <span class="number">4</span> <span class="number">6</span> <span class="number">6</span> <span class="number">6</span> <span class="number">6</span> <span class="number">4</span> <span class="number">2</span> <span class="number">0</span> </span><br></pre></td></tr></table></figure>
+<h3 id="Output-1"><a href="#Output-1" class="headerlink" title="Output 1"></a>Output 1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1 1 </span><br><span class="line">-2 0 0 </span><br><span class="line">-1 1 1 1 </span><br><span class="line">2 4 6 6 6 6 4 2 0 </span><br></pre></td></tr></table></figure>
 
-<h3 id="Input-2"><a href="#Input-2" class="headerlink" title="Input 2"></a>Input 2</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 confess2<span class="selector-class">.in</span>。</span><br><span class="line">该样例满足测试点 <span class="number">3</span> 的性质。</span><br></pre></td></tr></table></figure>
+<h3 id="Input-2"><a href="#Input-2" class="headerlink" title="Input 2"></a>Input 2</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 confess2.in。</span><br><span class="line">该样例满足测试点 3 的性质。</span><br></pre></td></tr></table></figure>
 
-<h3 id="Output-2"><a href="#Output-2" class="headerlink" title="Output 2"></a>Output 2</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 confess2<span class="selector-class">.ans</span>。</span><br><span class="line">该样例满足测试点 <span class="number">3</span> 的性质。</span><br></pre></td></tr></table></figure>
+<h3 id="Output-2"><a href="#Output-2" class="headerlink" title="Output 2"></a>Output 2</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 confess2.ans。</span><br><span class="line">该样例满足测试点 3 的性质。</span><br></pre></td></tr></table></figure>
 
-<h3 id="Input-3"><a href="#Input-3" class="headerlink" title="Input 3"></a>Input 3</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 confess3<span class="selector-class">.in</span>。</span><br><span class="line">该样例满足测试点 <span class="number">8</span> 的性质。</span><br></pre></td></tr></table></figure>
+<h3 id="Input-3"><a href="#Input-3" class="headerlink" title="Input 3"></a>Input 3</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 confess3.in。</span><br><span class="line">该样例满足测试点 8 的性质。</span><br></pre></td></tr></table></figure>
 
-<h3 id="Output-3"><a href="#Output-3" class="headerlink" title="Output 3"></a>Output 3</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 confess3<span class="selector-class">.ans</span>。</span><br><span class="line">该样例满足测试点 <span class="number">8</span> 的性质。</span><br></pre></td></tr></table></figure>
+<h3 id="Output-3"><a href="#Output-3" class="headerlink" title="Output 3"></a>Output 3</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 confess3.ans。</span><br><span class="line">该样例满足测试点 8 的性质。</span><br></pre></td></tr></table></figure>
 
-<h2 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h2><p>本题共 101010 个测试点，全部测试点满足 1≤T≤101\le T\le 101≤T≤10，1≤∣S∣≤3×1051\le |S|\le 3\times 10^51≤∣S∣≤3×105，Si∈{+,-}S_i\in\{\texttt{+},\texttt{-}\}Si​∈{+,-}。</p>
-<p>下表记 N=max⁡(∣S∣)N&#x3D;\max(|S|)N=max(∣S∣)。</p>
+<h2 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h2><p>本题共 10 个测试点，全部测试点满足 $1\le T\le 10$，$1\le |S|\le 3\times 10^5$，$S_i\in{\texttt{+},\texttt{-}}$。</p>
+<p>下表记 $N&#x3D;\max(|S|)$。</p>
 <table>
 <thead>
 <tr>
-<th align="center">测试点</th>
-<th align="center">N≤N\le N≤</th>
-<th align="center">特殊限制</th>
+<th>测试点</th>
+<th>$N\le$</th>
+<th>特殊限制</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">111</td>
-<td align="center">999</td>
-<td align="center">数据随机生成</td>
+<td>1</td>
+<td>9</td>
+<td>数据随机生成</td>
 </tr>
 <tr>
-<td align="center">2∼32\sim 32∼3</td>
-<td align="center">181818</td>
-<td align="center"></td>
+<td>2~3</td>
+<td>18</td>
+<td></td>
 </tr>
 <tr>
-<td align="center">4∼54\sim 54∼5</td>
-<td align="center">200200200</td>
-<td align="center">数据随机生成</td>
+<td>4~5</td>
+<td>200</td>
+<td>数据随机生成</td>
 </tr>
 <tr>
-<td align="center">6∼76\sim 76∼7</td>
-<td align="center">10310^3103</td>
-<td align="center"></td>
+<td>6~7</td>
+<td>$10^3$</td>
+<td></td>
 </tr>
 <tr>
-<td align="center">888</td>
-<td align="center">10510^5105</td>
-<td align="center">数据随机生成</td>
+<td>8</td>
+<td>$10^5$</td>
+<td>数据随机生成</td>
 </tr>
 <tr>
-<td align="center">999</td>
-<td align="center">10510^5105</td>
-<td align="center"></td>
+<td>9</td>
+<td>$10^5$</td>
+<td></td>
 </tr>
 <tr>
-<td align="center">101010</td>
-<td align="center">3×1053\times 10^53×105</td>
-<td align="center"></td>
+<td>10</td>
+<td>$3\times 10^5$</td>
+<td></td>
 </tr>
 </tbody></table>
-<p>数据随机生成：∣S∣=N|S|&#x3D;N∣S∣=N，每个字符等概率为 +,-\texttt{+},\texttt{-}+,- 中的一个。</p>
+<p>数据随机生成：$|S|&#x3D;N$，每个字符等概率为 $\texttt{+}$,$\texttt{-}$ 中的一个。</p>
 <h2 id="样例解释"><a href="#样例解释" class="headerlink" title="样例解释"></a>样例解释</h2><p>对于第一组样例，以下为最优策略：</p>
 <ul>
-<li>m=1m&#x3D;1m=1 时坦白第 111 个事件。</li>
+<li>$m&#x3D;1$ 时坦白第 $1$ 个事件。</li>
 </ul>
 <p>对于第二组样例，以下为最优策略：</p>
 <ul>
-<li>m=1m&#x3D;1m=1 时坦白第 111 个事件。</li>
-<li>m=2m&#x3D;2m=2 时坦白第 1,21,21,2 个事件。</li>
+<li>$m&#x3D;1$ 时坦白第 $1$ 个事件。</li>
+<li>$m&#x3D;2$ 时坦白第 $1,2$ 个事件。</li>
 </ul>
 <p>对于第三组样例，以下为最优策略：</p>
 <ul>
-<li>m=1m&#x3D;1m=1 时坦白第 333 个事件。</li>
-<li>m=2m&#x3D;2m=2 时坦白第 1,31,31,3 个事件。</li>
-<li>m=3m&#x3D;3m=3 时坦白第 1,2,31,2,31,2,3 个事件。</li>
+<li>$m&#x3D;1$ 时坦白第 $3$ 个事件。</li>
+<li>$m&#x3D;2$ 时坦白第 $1,3$ 个事件。</li>
+<li>$m&#x3D;3$ 时坦白第 $1,2,3$ 个事件。</li>
 </ul>
 <h2 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h2><p>暂留。</p>
-<h1 id="B-秘密"><a href="#B-秘密" class="headerlink" title="B.  秘密"></a>B.  秘密</h1><p>文件操作</p>
-<blockquote>
-<p>时间限制: 1000ms</p>
-<p>空间限制: 512000KB</p>
-<p>输入文件名: secret.in</p>
+<p>根据您的要求，以下是处理后的内容，其中包含对标题的等级提升以及LaTeX表达式的正确格式化：</p>
+<h1 id="B-秘密"><a href="#B-秘密" class="headerlink" title="B. 秘密"></a>B. 秘密</h1><blockquote>
+<p>时间限制: 1000ms  </p>
+<p>空间限制: 512000KB  </p>
+<p>输入文件名: secret.in  </p>
 <p>输出文件名: secret.out</p>
 </blockquote>
 <h2 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h2><p>dXqwq 是个急性子的女孩子。</p>
-<p>她和一些朋友在一个社团里，这 nnn 个人都生活在数轴上互不相同的位置 aia_iai​。</p>
-<p>一些时候，某个人会收到一条秘密消息，他想要尽快把这些消息线下告诉每个人。所有人的移动速度都是 111 单位长度每秒，两个人在相同位置的时候可以交换消息，交换消息不消耗时间。</p>
+<p>她和一些朋友在一个社团里，这 $n$ 个人都生活在数轴上互不相同的位置 $a_i$。</p>
+<p>一些时候，某个人会收到一条秘密消息，他想要尽快把这些消息线下告诉每个人。所有人的移动速度都是 1 单位长度每秒，两个人在相同位置的时候可以交换消息，交换消息不消耗时间。</p>
 <p>为了让大家能够尽快地收到新消息，dXqwq 想要让你编写一个程序，来计算所有人都<strong>收到消息</strong>需要花费的最小时间。</p>
-<p>接下来 qqq 天，每天会发生以下三种事件的一种：</p>
+<p>接下来 $q$ 天，每天会发生以下三种事件的一种：</p>
 <ul>
-<li><code>+ x</code> ：一个位置为 xxx 的人加入了社团，保证此时没有人的位置为 xxx。</li>
-<li><code>- x</code>：一个位置为 xxx 的人退出了社团，保证此时有人的位置为 xxx。</li>
-<li><code>? x</code>：一个位置为 xxx 的人收到了一条秘密消息，你需要求出所有人都收到消息的最小时间，保证此时有人的位置为 xxx。</li>
+<li><code>+ x</code> ：一个位置为 $x$ 的人加入了社团，保证此时没有人的位置为 $x$。</li>
+<li><code>- x</code>：一个位置为 $x$ 的人退出了社团，保证此时有人的位置为 $x$。</li>
+<li><code>? x</code>：一个位置为 $x$ 的人收到了一条秘密消息，你需要求出所有人都收到消息的最小时间，保证此时有人的位置为 $x$。</li>
 </ul>
 <p>我们认为每一天结束后，所有人都会回到自己的初始位置。</p>
 <h2 id="输入格式-1"><a href="#输入格式-1" class="headerlink" title="输入格式"></a>输入格式</h2><p>从文件 <code>secret.in</code> 中读入数据。</p>
-<p>第一行输入两个整数 n,qn,qn,q。</p>
-<p>第二行输入 nnn 个整数 aia_iai​。</p>
-<p>接下来 qqq 行，每行输入一个字符 ooo 和一个整数 xxx，代表事件类型和参数。</p>
+<p>第一行输入两个整数 $n, q$。</p>
+<p>第二行输入 $n$ 个整数 $a_i$。</p>
+<p>接下来 $q$ 行，每行输入一个字符 $o$ 和一个整数 $x$，代表事件类型和参数。</p>
 <h2 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式"></a>输出格式</h2><p>输出到文件 <code>secret.out</code> 中。</p>
-<p>对于每个 o=?o&#x3D;\texttt{?}o=? 的询问输出一行一个浮点数，代表所有人都收到消息的最小时间，保留两位小数。</p>
-<h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例"></a>样例</h2><h3 id="Input-1-1"><a href="#Input-1-1" class="headerlink" title="Input 1"></a>Input 1</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span> <span class="number">6</span></span><br><span class="line"><span class="number">1</span> <span class="number">3</span> <span class="number">5</span></span><br><span class="line">? <span class="number">3</span></span><br><span class="line">- <span class="number">3</span></span><br><span class="line">? <span class="number">5</span></span><br><span class="line">+ <span class="number">2</span></span><br><span class="line">+ <span class="number">4</span></span><br><span class="line">? <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<p>对于每个 $o &#x3D; ?$ 的询问输出一行一个浮点数，代表所有人都收到消息的最小时间，保留两位小数。</p>
+<h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例"></a>样例</h2><h3 id="Input-1-1"><a href="#Input-1-1" class="headerlink" title="Input 1"></a>Input 1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">3 6</span><br><span class="line">1 3 5</span><br><span class="line">? 3</span><br><span class="line">- 3</span><br><span class="line">? 5</span><br><span class="line">+ 2</span><br><span class="line">+ 4</span><br><span class="line">? 2</span><br></pre></td></tr></table></figure>
 
-<h3 id="Output-1-1"><a href="#Output-1-1" class="headerlink" title="Output 1"></a>Output 1</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2.00</span></span><br><span class="line"><span class="number">2.00</span></span><br><span class="line"><span class="number">1.50</span></span><br></pre></td></tr></table></figure>
+<h3 id="Output-1-1"><a href="#Output-1-1" class="headerlink" title="Output 1"></a>Output 1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2.00</span><br><span class="line">2.00</span><br><span class="line">1.50</span><br></pre></td></tr></table></figure>
 
-<h3 id="Input-2-1"><a href="#Input-2-1" class="headerlink" title="Input 2"></a>Input 2</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 secret2<span class="selector-class">.in</span>。</span><br><span class="line">该样例满足测试点 <span class="number">4</span> 的性质。</span><br></pre></td></tr></table></figure>
+<h3 id="Input-2-1"><a href="#Input-2-1" class="headerlink" title="Input 2"></a>Input 2</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 secret2.in。</span><br><span class="line">该样例满足测试点 4 的性质。</span><br></pre></td></tr></table></figure>
 
-<h3 id="Output-2-1"><a href="#Output-2-1" class="headerlink" title="Output 2"></a>Output 2</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 secret2<span class="selector-class">.ans</span>。</span><br><span class="line">该样例满足测试点 <span class="number">4</span> 的性质。</span><br></pre></td></tr></table></figure>
+<h3 id="Output-2-1"><a href="#Output-2-1" class="headerlink" title="Output 2"></a>Output 2</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 secret2.ans。</span><br><span class="line">该样例满足测试点 4 的性质。</span><br></pre></td></tr></table></figure>
 
-<h3 id="Input-3-1"><a href="#Input-3-1" class="headerlink" title="Input 3"></a>Input 3</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 secret3<span class="selector-class">.in</span>。</span><br><span class="line">该样例满足测试点 <span class="number">7</span> 的性质。</span><br></pre></td></tr></table></figure>
+<h3 id="Input-3-1"><a href="#Input-3-1" class="headerlink" title="Input 3"></a>Input 3</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 secret3.in。</span><br><span class="line">该样例满足测试点 7 的性质。</span><br></pre></td></tr></table></figure>
 
-<h3 id="Output-3-1"><a href="#Output-3-1" class="headerlink" title="Output 3"></a>Output 3</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 secret3<span class="selector-class">.ans</span>。</span><br><span class="line">该样例满足测试点 <span class="number">7</span> 的性质。</span><br></pre></td></tr></table></figure>
+<h3 id="Output-3-1"><a href="#Output-3-1" class="headerlink" title="Output 3"></a>Output 3</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 secret3.ans。</span><br><span class="line">该样例满足测试点 7 的性质。</span><br></pre></td></tr></table></figure>
 
-<h2 id="数据范围-1"><a href="#数据范围-1" class="headerlink" title="数据范围"></a>数据范围</h2><p>本题共 101010 个测试点，全部测试点满足 2≤n,q≤1052\le n,q\le 10^52≤n,q≤105，0≤ai,x≤1090\le a_i,x\le 10^90≤ai​,x≤109，aia_iai​ 互不相同，o=?o&#x3D;\texttt{?}o=? 时社团至少有两个人，保证存在 o=?o&#x3D;\texttt{?}o=?。</p>
+<h2 id="数据范围-1"><a href="#数据范围-1" class="headerlink" title="数据范围"></a>数据范围</h2><p>本题共 $10$ 个测试点，全部测试点满足 $2 \le n, q \le 10^5$，$0 \le a_i, x \le 10^9$，$a_i$ 互不相同，$o &#x3D; ?$ 时社团至少有两个人，保证存在 $o &#x3D; ?$。</p>
 <table>
 <thead>
 <tr>
-<th align="center">测试点</th>
-<th align="center">n≤n\len≤</th>
-<th align="center">q≤q\le q≤</th>
-<th align="center">特殊限制</th>
+<th>测试点</th>
+<th>$n \le$</th>
+<th>$q \le$</th>
+<th>特殊限制</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">111</td>
-<td align="center">333</td>
-<td align="center">333</td>
-<td align="center">o=?o&#x3D;\texttt{?}o=?</td>
+<td>1</td>
+<td>3</td>
+<td>3</td>
+<td>$o &#x3D; ?$</td>
 </tr>
 <tr>
-<td align="center">222</td>
-<td align="center">999</td>
-<td align="center">999</td>
-<td align="center">o=?o&#x3D;\texttt{?}o=?</td>
+<td>2</td>
+<td>9</td>
+<td>9</td>
+<td>$o &#x3D; ?$</td>
 </tr>
 <tr>
-<td align="center">333</td>
-<td align="center">10310^3103</td>
-<td align="center">10310^3103</td>
-<td align="center">o=?o&#x3D;\texttt{?}o=?</td>
+<td>3</td>
+<td>$10^3$</td>
+<td>$10^3$</td>
+<td>$o &#x3D; ?$</td>
 </tr>
 <tr>
-<td align="center">444</td>
-<td align="center">10510^5105</td>
-<td align="center">101010</td>
-<td align="center">o=?o&#x3D;\texttt{?}o=?</td>
+<td>4</td>
+<td>$10^5$</td>
+<td>$10$</td>
+<td>$o &#x3D; ?$</td>
 </tr>
 <tr>
-<td align="center">5∼65\sim 65∼6</td>
-<td align="center">10510^5105</td>
-<td align="center">10510^5105</td>
-<td align="center">o=?o&#x3D;\texttt{?}o=?</td>
+<td>5~6</td>
+<td>$10^5$</td>
+<td>$10^5$</td>
+<td>$o &#x3D; ?$</td>
 </tr>
 <tr>
-<td align="center">7∼87\sim 87∼8</td>
-<td align="center">10310^3103</td>
-<td align="center">10310^3103</td>
-<td align="center"></td>
+<td>7~8</td>
+<td>$10^3$</td>
+<td>$10^3$</td>
+<td></td>
 </tr>
 <tr>
-<td align="center">9∼109\sim 109∼10</td>
-<td align="center">10510^5105</td>
-<td align="center">10510^5105</td>
-<td align="center"></td>
+<td>9~10</td>
+<td>$10^5$</td>
+<td>$10^5$</td>
+<td></td>
 </tr>
 </tbody></table>
-<h2 id="样例解释-1"><a href="#样例解释-1" class="headerlink" title="样例解释"></a>样例解释</h2><p>对于第一次询问，社团里的人分别在 {1,3,5}\{1,3,5\}{1,3,5}，只需要所有人都在 333 位置汇合即可。</p>
-<p>对于第二次询问，社团里的人分别在 {1,5}\{1,5\}{1,5}，仍然只需要所有人都在 333 位置汇合即可。</p>
-<p>对于第三次询问，社团里的人分别在 {1,2,4,5}\{1,2,4,5\}{1,2,4,5}，策略分为两步：</p>
+<h2 id="样例解释-1"><a href="#样例解释-1" class="headerlink" title="样例解释"></a>样例解释</h2><p>对于第一次询问，社团里的人分别在 ${1,3,5}$，只需要所有人都在 $3$ 位置汇合即可。</p>
+<p>对于第二次询问，社团里的人分别在 ${1,5}$，仍然只需要所有人都在 $3$ 位置汇合即可。</p>
+<p>对于第三次询问，社团里的人分别在 ${1,2,4,5}$，策略分为两步：</p>
 <ul>
-<li>前两个人向后走 111 秒，后两个人向左走 111 秒，分别到 {2,3,3,4}\{2,3,3,4\}{2,3,3,4}，中间两个人传递信息。</li>
-<li>前两个人向对方走 0.50.50.5 秒，后两个人向对方走 0.50.50.5 秒，分别到 {2.5,2.5,3.5,3.5}\{2.5,2.5,3.5,3.5\}{2.5,2.5,3.5,3.5}，此时所有人都收到信息，共花费 1.51.51.5 秒。</li>
+<li>前两个人向后走 $1$ 秒，后两个人向左走 $1$ 秒，分别到 ${2,3,3,4}$，中间两个人传递信息。</li>
+<li>前两个人向对方走 $0.5$ 秒，后两个人向对方走 $0.5$ 秒，分别到 ${2.5,2.5,3.5,3.5}$，此时所有人都收到信息，共花费 $1.5$ 秒。</li>
 </ul>
-<p>注意，本题不设 Special Judge，因为可以证明你的答案的小数点后第三位不是 444 或 555。</p>
-<h1 id="C-潜力值"><a href="#C-潜力值" class="headerlink" title="C.  潜力值"></a>C.  潜力值</h1><p>文件操作</p>
-<blockquote>
-<p>时间限制: 3000ms</p>
-<p>空间限制: 512000KB</p>
-<p>输入文件名: potential.in</p>
+<p>注意，本题不设 Special Judge，因为可以证明你的答案的小数点后第三位不是 $4$ 或 $5$。</p>
+<h1 id="C-潜力值"><a href="#C-潜力值" class="headerlink" title="C. 潜力值"></a>C. 潜力值</h1><blockquote>
+<p>时间限制: 3000ms  </p>
+<p>空间限制: 512000KB  </p>
+<p>输入文件名: potential.in  </p>
 <p>输出文件名: potential.out</p>
 </blockquote>
 <h2 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h2><p>……题目的名称和描述有什么关系呢？</p>
-<p>dXqwq 有一个长度为 nnn 的排列 aaa 和一个长度为 mmm 的队列 qqq，初始时 qqq 中的元素全部为 000，她会对于 x=1∼nx&#x3D;1\sim nx=1∼n 依次执行以下操作：</p>
+<p>dXqwq 有一个长度为 $n$ 的排列 $a$ 和一个长度为 $m$ 的队列 $q$，初始时 $q$ 中的元素全部为 $0$，她会对于 $x&#x3D;1\sim n$ 依次执行以下操作：</p>
 <ul>
-<li>如果队首元素 q1&lt;axq_1&lt;a_xq1​&lt;ax​，则弹出队首，并将 axa_xax​ 放入队尾。</li>
+<li>如果队首元素 $q_1 &lt; a_x$，则弹出队首，并将 $a_x$ 放入队尾。</li>
 </ul>
-<p>在操作结束后，dXqwq 定义自己的<strong>潜力值</strong>为 qqq 中所有元素的和。</p>
-<p>dXqwq 想知道，对于给定排列 bbb 通过重排得到的所有排列 aaa，自己会得到的<strong>潜力值</strong>的和。因为答案实在太大了，她只需要你输出答案对 109+710^9+7109+7 取模的值。</p>
+<p>在操作结束后，dXqwq 定义自己的<strong>潜力值</strong>为 $q$ 中所有元素的和。</p>
+<p>dXqwq 想知道，对于给定排列 $b$ 通过重排得到的所有排列 $a$，自己会得到的<strong>潜力值</strong>的和。因为答案实在太大了，她只需要你输出答案对 $10^9+7$ 取模的值。</p>
 <h2 id="输入格式-2"><a href="#输入格式-2" class="headerlink" title="输入格式"></a>输入格式</h2><p>从文件 <code>potential.in</code> 中读入数据。</p>
-<p>第一行输入两个整数 n,mn,mn,m。</p>
-<p>第二行输入 nnn 个整数 bib_ibi​。</p>
+<p>第一行输入两个整数 $n, m$。</p>
+<p>第二行输入 $n$ 个整数 $b_i$。</p>
 <h2 id="输出格式-2"><a href="#输出格式-2" class="headerlink" title="输出格式"></a>输出格式</h2><p>输出到文件 <code>potential.out</code> 中。</p>
-<p>输出一行一个整数，代表潜力值的和对 109+710^9+7109+7 取模的值。</p>
-<h2 id="样例-2"><a href="#样例-2" class="headerlink" title="样例"></a>样例</h2><h3 id="Input-1-2"><a href="#Input-1-2" class="headerlink" title="Input 1"></a>Input 1</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span> <span class="number">2</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span></span><br></pre></td></tr></table></figure>
+<p>输出一行一个整数，代表潜力值的和对 $10^9+7$ 取模的值。</p>
+<h2 id="样例-2"><a href="#样例-2" class="headerlink" title="样例"></a>样例</h2><h3 id="Input-1-2"><a href="#Input-1-2" class="headerlink" title="Input 1"></a>Input 1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3 2</span><br><span class="line">1 2 3</span><br></pre></td></tr></table></figure>
 
-<h3 id="Output-1-2"><a href="#Output-1-2" class="headerlink" title="Output 1"></a>Output 1</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">28</span></span><br></pre></td></tr></table></figure>
+<h3 id="Output-1-2"><a href="#Output-1-2" class="headerlink" title="Output 1"></a>Output 1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">28</span><br></pre></td></tr></table></figure>
 
-<h3 id="Input-2-2"><a href="#Input-2-2" class="headerlink" title="Input 2"></a>Input 2</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span> <span class="number">4</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span> <span class="number">10</span></span><br></pre></td></tr></table></figure>
+<h3 id="Input-2-2"><a href="#Input-2-2" class="headerlink" title="Input 2"></a>Input 2</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">10 4</span><br><span class="line">1 2 3 4 5 6 7 8 9 10</span><br></pre></td></tr></table></figure>
 
-<h3 id="Output-2-2"><a href="#Output-2-2" class="headerlink" title="Output 2"></a>Output 2</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">105878520</span></span><br></pre></td></tr></table></figure>
+<h3 id="Output-2-2"><a href="#Output-2-2" class="headerlink" title="Output 2"></a>Output 2</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">105878520</span><br></pre></td></tr></table></figure>
 
-<h3 id="Input-3-2"><a href="#Input-3-2" class="headerlink" title="Input 3"></a>Input 3</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 potential3<span class="selector-class">.in</span>。</span><br><span class="line">该样例满足测试点 <span class="number">4</span> 的性质。</span><br></pre></td></tr></table></figure>
+<h3 id="Input-3-2"><a href="#Input-3-2" class="headerlink" title="Input 3"></a>Input 3</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 potential3.in。</span><br><span class="line">该样例满足测试点 4 的性质。</span><br></pre></td></tr></table></figure>
 
-<h3 id="Output-3-2"><a href="#Output-3-2" class="headerlink" title="Output 3"></a>Output 3</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 potential3<span class="selector-class">.ans</span>。</span><br><span class="line">该样例满足测试点 <span class="number">4</span> 的性质。</span><br></pre></td></tr></table></figure>
+<h3 id="Output-3-2"><a href="#Output-3-2" class="headerlink" title="Output 3"></a>Output 3</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 potential3.ans。</span><br><span class="line">该样例满足测试点 4 的性质。</span><br></pre></td></tr></table></figure>
 
-<h2 id="数据范围-2"><a href="#数据范围-2" class="headerlink" title="数据范围"></a>数据范围</h2><p>本题共 202020 个测试点，全部测试点满足 2≤m≤n≤5002\le m\le n\le 5002≤m≤n≤500，1≤bi&lt;109+71\le b_i&lt;10^9+71≤bi​&lt;109+7，bib_ibi​ 严格递增。</p>
+<h2 id="数据范围-2"><a href="#数据范围-2" class="headerlink" title="数据范围"></a>数据范围</h2><p>本题共 20 个测试点，全部测试点满足 $2 \le m \le n \le 500$，$1 \le b_i &lt; 10^9+7$，$b_i$ 严格递增。</p>
 <table>
 <thead>
 <tr>
-<th align="center">测试点</th>
-<th align="center">n≤n\le n≤</th>
-<th align="center">m≤m\lem≤</th>
+<th>测试点</th>
+<th>$n \le$</th>
+<th>$m \le$</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">111</td>
-<td align="center">555</td>
-<td align="center">555</td>
+<td>1</td>
+<td>5</td>
+<td>5</td>
 </tr>
 <tr>
-<td align="center">222</td>
-<td align="center">101010</td>
-<td align="center">101010</td>
+<td>2</td>
+<td>10</td>
+<td>10</td>
 </tr>
 <tr>
-<td align="center">3∼43\sim 43∼4</td>
-<td align="center">181818</td>
-<td align="center">222</td>
+<td>3~4</td>
+<td>18</td>
+<td>2</td>
 </tr>
 <tr>
-<td align="center">5∼75\sim 75∼7</td>
-<td align="center">505050</td>
-<td align="center">222</td>
+<td>5~7</td>
+<td>50</td>
+<td>2</td>
 </tr>
 <tr>
-<td align="center">8∼108\sim 108∼10</td>
-<td align="center">505050</td>
-<td align="center">333</td>
+<td>8~10</td>
+<td>50</td>
+<td>3</td>
 </tr>
 <tr>
-<td align="center">11∼1211\sim 1211∼12</td>
-<td align="center">505050</td>
-<td align="center">444</td>
+<td>11~12</td>
+<td>50</td>
+<td>4</td>
 </tr>
 <tr>
-<td align="center">13∼1513\sim 1513∼15</td>
-<td align="center">505050</td>
-<td align="center">505050</td>
+<td>13~15</td>
+<td>50</td>
+<td>50</td>
 </tr>
 <tr>
-<td align="center">16∼1816\sim 1816∼18</td>
-<td align="center">200200200</td>
-<td align="center">200200200</td>
+<td>16~18</td>
+<td>200</td>
+<td>200</td>
 </tr>
 <tr>
-<td align="center">19∼2019\sim 2019∼20</td>
-<td align="center">500500500</td>
-<td align="center">500500500</td>
+<td>19~20</td>
+<td>500</td>
+<td>500</td>
 </tr>
 </tbody></table>
-<h2 id="样例解释-2"><a href="#样例解释-2" class="headerlink" title="样例解释"></a>样例解释</h2><p>对于第一组样例，aaa 有以下六种可能：</p>
+<h2 id="样例解释-2"><a href="#样例解释-2" class="headerlink" title="样例解释"></a>样例解释</h2><p>对于第一组样例，$a$ 有以下六种可能：</p>
 <ul>
-<li>a=[1,2,3]a&#x3D;[1,2,3]a=[1,2,3]，q=[2,3]q&#x3D;[2,3]q=[2,3]，潜力值为 555。</li>
-<li>a=[1,3,2]a&#x3D;[1,3,2]a=[1,3,2]，q=[3,2]q&#x3D;[3,2]q=[3,2]，潜力值为 555。</li>
-<li>a=[2,1,3]a&#x3D;[2,1,3]a=[2,1,3]，q=[1,3]q&#x3D;[1,3]q=[1,3]，潜力值为 444。</li>
-<li>a=[2,3,1]a&#x3D;[2,3,1]a=[2,3,1]，q=[2,3]q&#x3D;[2,3]q=[2,3]，潜力值为 555。</li>
-<li>a=[3,1,2]a&#x3D;[3,1,2]a=[3,1,2]，q=[3,1]q&#x3D;[3,1]q=[3,1]，潜力值为 444。</li>
-<li>a=[3,2,1]a&#x3D;[3,2,1]a=[3,2,1]，q=[3,2]q&#x3D;[3,2]q=[3,2]，潜力值为 555。</li>
+<li>$a &#x3D; [1,2,3]$，$q &#x3D; [2,3]$，潜力值为 $5$。</li>
+<li>$a &#x3D; [1,3,2]$，$q &#x3D; [3,2]$，潜力值为 $5$。</li>
+<li>$a &#x3D; [2,1,3]$，$q &#x3D; [1,3]$，潜力值为 $4$。</li>
+<li>$a &#x3D; [2,3,1]$，$q &#x3D; [2,3]$，潜力值为 $5$。</li>
+<li>$a &#x3D; [3,1,2]$，$q &#x3D; [3,1]$，潜力值为 $4$。</li>
+<li>$a &#x3D; [3,2,1]$，$q &#x3D; [3,2]$，潜力值为 $5$。</li>
 </ul>
-<p>它们的潜力值之和为 5+5+4+5+4+5=285+5+4+5+4+5&#x3D;285+5+4+5+4+5=28。</p>
-<p>对于第二组样例，如果 a=[1,9,2,6,3,5,7,8,10,4]a&#x3D;[1,9,2,6,3,5,7,8,10,4]a=[1,9,2,6,3,5,7,8,10,4]，操作过程如下：</p>
+<p>它们的潜力值之和为 $5+5+4+5+4+5&#x3D;28$。</p>
+<p>对于第二组样例，如果 $a &#x3D; [1,9,2,6,3,5,7,8,10,4]$，操作过程如下：</p>
 <ul>
-<li>初始时 q=[0,0,0,0]q&#x3D;[0,0,0,0]q=[0,0,0,0]。</li>
-<li>弹出 000，插入 111，q=[0,0,0,1]q&#x3D;[0,0,0,1]q=[0,0,0,1]。</li>
-<li>弹出 000，插入 999，q=[0,0,1,9]q&#x3D;[0,0,1,9]q=[0,0,1,9]。</li>
-<li>弹出 000，插入 222，q=[0,1,9,2]q&#x3D;[0,1,9,2]q=[0,1,9,2]。</li>
-<li>弹出 000，插入 666，q=[1,9,2,6]q&#x3D;[1,9,2,6]q=[1,9,2,6]。</li>
-<li>弹出 111，插入 333，q=[9,2,6,3]q&#x3D;[9,2,6,3]q=[9,2,6,3]。</li>
-<li>5,7,85,7,85,7,8 都没有 999 大，所以不进行修改。</li>
-<li>弹出 999，插入 101010，q=[2,6,3,10]q&#x3D;[2,6,3,10]q=[2,6,3,10]。</li>
-<li>弹出 222，插入 444，q=[6,3,10,4]q&#x3D;[6,3,10,4]q=[6,3,10,4]。</li>
+<li>初始时 $q &#x3D; [0,0,0,0]$。</li>
+<li>弹出 $0$，插入 $1$，$q &#x3D; [0,0,0,1]$。</li>
+<li>弹出 $0$，插入 $9$，$q &#x3D; [0,0,1,9]$。</li>
+<li>弹出 $0$，插入 $2$，$q &#x3D; [0,1,9,2]$。</li>
+<li>弹出 $0$，插入 $6$，$q &#x3D; [1,9,2,6]$。</li>
+<li>弹出 $1$，插入 $3$，$q &#x3D; [9,2,6,3]$。</li>
+<li>$5,7,8$ 都没有 $9$ 大，所以不进行修改。</li>
+<li>弹出 $9$，插入 $10$，$q &#x3D; [2,6,3,10]$。</li>
+<li>弹出 $2$，插入 $4$，$q &#x3D; [6,3,10,4]$。</li>
 </ul>
-<p>所以 q=[6,3,10,4]q&#x3D;[6,3,10,4]q=[6,3,10,4]，潜力值为 232323。</p>
-<h1 id="D-括号"><a href="#D-括号" class="headerlink" title="D.  括号"></a>D.  括号</h1><p>文件操作</p>
+<p>所以 $q &#x3D; [6,3,10,4]$，潜力值为 $23$。</p>
+<h1 id="D-括号"><a href="#D-括号" class="headerlink" title="D. 括号"></a>D. 括号</h1><p>文件操作</p>
 <blockquote>
-<p>时间限制: 1000ms</p>
-<p>空间限制: 512000KB</p>
-<p>输入文件名: bracket.in</p>
+<p>时间限制: 1000ms  </p>
+<p>空间限制: 512000KB  </p>
+<p>输入文件名: bracket.in  </p>
 <p>输出文件名: bracket.out</p>
 </blockquote>
-<h2 id="题目描述-3"><a href="#题目描述-3" class="headerlink" title="题目描述"></a>题目描述</h2><p>dXqwq 和 Haitang 在玩一个括号串上的游戏。</p>
-<p>有一个初始全为黑色的括号串 SSS，两个人各有一把刷子，dXqwq 的刷子是红色的，Haitang 的刷子是蓝色的。</p>
+<h3 id="题目描述-3"><a href="#题目描述-3" class="headerlink" title="题目描述"></a>题目描述</h3><p>dXqwq 和 Haitang 在玩一个括号串上的游戏。</p>
+<p>有一个初始全为黑色的括号串 $S$，两个人各有一把刷子，dXqwq 的刷子是红色的，Haitang 的刷子是蓝色的。</p>
 <p>她们会依次执行以下操作，直到所有括号都被染色，且 dXqwq 先执行操作：</p>
 <ul>
 <li>选择一个没有被染色的括号，用自己的刷子将它染色。</li>
 </ul>
 <p>在操作后，dXqwq 会取出<strong>红色括号</strong>的一个可以匹配的子序列，并将其长度的一半定义为游戏分数。</p>
 <p>dXqwq 希望最大化游戏分数，而 Haitang 则希望最小化这个值，你需要输出两人都在最优策略下操作后的游戏分数。</p>
-<h2 id="输入格式-3"><a href="#输入格式-3" class="headerlink" title="输入格式"></a>输入格式</h2><p>从文件 <code>bracket.in</code> 中读入数据。</p>
+<h3 id="输入格式-3"><a href="#输入格式-3" class="headerlink" title="输入格式"></a>输入格式</h3><p>从文件 <code>bracket.in</code> 中读入数据。</p>
 <p><strong>本题有多组测试数据。</strong></p>
-<p>第一行输入一个整数 TTT，代表数据组数。</p>
-<p>接下来 TTT 行，每行输入一个括号串 SSS。</p>
-<h2 id="输出格式-3"><a href="#输出格式-3" class="headerlink" title="输出格式"></a>输出格式</h2><p>输出到文件 <code>bracket.out</code> 中。</p>
+<p>第一行输入一个整数 $T$，代表数据组数。</p>
+<p>接下来 $T$ 行，每行输入一个括号串 $S$。</p>
+<h3 id="输出格式-3"><a href="#输出格式-3" class="headerlink" title="输出格式"></a>输出格式</h3><p>输出到文件 <code>bracket.out</code> 中。</p>
 <p>对于每组数据输出一行一个整数，代表最优策略下的游戏分数。</p>
-<h2 id="样例-3"><a href="#样例-3" class="headerlink" title="样例"></a>样例</h2><h3 id="Input-1-3"><a href="#Input-1-3" class="headerlink" title="Input 1"></a>Input 1</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span></span><br><span class="line">)(</span><br><span class="line">(())</span><br><span class="line">()()()()</span><br><span class="line">(()(())())</span><br></pre></td></tr></table></figure>
+<h3 id="样例-3"><a href="#样例-3" class="headerlink" title="样例"></a>样例</h3><h4 id="Input-1-3"><a href="#Input-1-3" class="headerlink" title="Input 1"></a>Input 1</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">)(</span><br><span class="line">(())</span><br><span class="line">()()()()</span><br><span class="line">(()(())())</span><br></pre></td></tr></table></figure>
 
-<h3 id="Output-1-3"><a href="#Output-1-3" class="headerlink" title="Output 1"></a>Output 1</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+<h4 id="Output-1-3"><a href="#Output-1-3" class="headerlink" title="Output 1"></a>Output 1</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">0</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
 
-<h3 id="Input-2-3"><a href="#Input-2-3" class="headerlink" title="Input 2"></a>Input 2</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 bracket2<span class="selector-class">.in</span>。</span><br><span class="line">该样例满足测试点 <span class="number">5</span> 的性质。</span><br></pre></td></tr></table></figure>
+<h4 id="Input-2-3"><a href="#Input-2-3" class="headerlink" title="Input 2"></a>Input 2</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 bracket2.in。</span><br><span class="line">该样例满足测试点 5 的性质。</span><br></pre></td></tr></table></figure>
 
-<h3 id="Output-2-3"><a href="#Output-2-3" class="headerlink" title="Output 2"></a>Output 2</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 bracket2<span class="selector-class">.ans</span>。</span><br><span class="line">该样例满足测试点 <span class="number">5</span> 的性质。</span><br></pre></td></tr></table></figure>
+<h4 id="Output-2-3"><a href="#Output-2-3" class="headerlink" title="Output 2"></a>Output 2</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 bracket2.ans。</span><br><span class="line">该样例满足测试点 5 的性质。</span><br></pre></td></tr></table></figure>
 
-<h3 id="Input-3-3"><a href="#Input-3-3" class="headerlink" title="Input 3"></a>Input 3</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 bracket3<span class="selector-class">.in</span>。</span><br><span class="line">该样例满足测试点 <span class="number">11</span> 的性质。</span><br></pre></td></tr></table></figure>
+<h4 id="Input-3-3"><a href="#Input-3-3" class="headerlink" title="Input 3"></a>Input 3</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 bracket3.in。</span><br><span class="line">该样例满足测试点 11 的性质。</span><br></pre></td></tr></table></figure>
 
-<h3 id="Output-3-3"><a href="#Output-3-3" class="headerlink" title="Output 3"></a>Output 3</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 bracket3<span class="selector-class">.ans</span>。</span><br><span class="line">该样例满足测试点 <span class="number">11</span> 的性质。</span><br></pre></td></tr></table></figure>
+<h4 id="Output-3-3"><a href="#Output-3-3" class="headerlink" title="Output 3"></a>Output 3</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">见下发的 bracket3.ans。</span><br><span class="line">该样例满足测试点 11 的性质。</span><br></pre></td></tr></table></figure>
 
-<h2 id="数据范围-3"><a href="#数据范围-3" class="headerlink" title="数据范围"></a>数据范围</h2><p>本题共 101010 个测试点，全部测试点满足 T=10T&#x3D;10T=10，1≤∣S∣≤1051\le |S|\le 10^51≤∣S∣≤105，Si∈{(,)}S_i\in\{\texttt{(},\texttt{)}\}Si​∈{(,)}。</p>
-<p>下表记 N=max⁡(∣S∣)N&#x3D;\max(|S|)N=max(∣S∣)。</p>
+<h3 id="数据范围-3"><a href="#数据范围-3" class="headerlink" title="数据范围"></a>数据范围</h3><p>本题共 $10$ 个测试点，全部测试点满足 $T&#x3D;10$，$1 \leq |S| \leq 10^5$，$S_i \in {\texttt{(},\texttt{)}}$。</p>
+<p>下表记 $N &#x3D; \max(|S|)$。</p>
 <table>
 <thead>
 <tr>
-<th align="center">测试点</th>
-<th align="center">N≤N\le N≤</th>
-<th align="center">特殊限制</th>
+<th>测试点</th>
+<th>$N \leq$</th>
+<th>特殊限制</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">111</td>
-<td align="center">999</td>
-<td align="center">数据随机生成</td>
+<td>1</td>
+<td>9</td>
+<td>数据随机生成</td>
 </tr>
 <tr>
-<td align="center">222</td>
-<td align="center">999</td>
-<td align="center"></td>
+<td>2</td>
+<td>9</td>
+<td></td>
 </tr>
 <tr>
-<td align="center">333</td>
-<td align="center">202020</td>
-<td align="center">数据随机生成</td>
+<td>3</td>
+<td>20</td>
+<td>数据随机生成</td>
 </tr>
 <tr>
-<td align="center">4∼54\sim 54∼5</td>
-<td align="center">202020</td>
-<td align="center"></td>
+<td>4~5</td>
+<td>20</td>
+<td></td>
 </tr>
 <tr>
-<td align="center">666</td>
-<td align="center">10510^5105</td>
-<td align="center">SSS 不存在子序列 ()\texttt{()}()</td>
+<td>6</td>
+<td>$10^5$</td>
+<td>$S$ 不存在子序列 $\texttt{()}$</td>
 </tr>
 <tr>
-<td align="center">7∼87\sim 87∼8</td>
-<td align="center">100100100</td>
-<td align="center">SSS 不存在子序列 )(\texttt{)(})(</td>
+<td>7~8</td>
+<td>100</td>
+<td>$S$ 不存在子序列 $\texttt{)(}$</td>
 </tr>
 <tr>
-<td align="center">999</td>
-<td align="center">10510^5105</td>
-<td align="center">SSS 不存在子序列 )(\texttt{)(})(</td>
+<td>9</td>
+<td>$10^5$</td>
+<td>$S$ 不存在子序列 $\texttt{)(}$</td>
 </tr>
 <tr>
-<td align="center">10∼1110\sim 1110∼11</td>
-<td align="center">100100100</td>
-<td align="center">数据随机生成</td>
+<td>10~11</td>
+<td>100</td>
+<td>数据随机生成</td>
 </tr>
 <tr>
-<td align="center">12∼1312\sim 1312∼13</td>
-<td align="center">100100100</td>
-<td align="center"></td>
+<td>12~13</td>
+<td>100</td>
+<td></td>
 </tr>
 <tr>
-<td align="center">14∼1514\sim 1514∼15</td>
-<td align="center">500500500</td>
-<td align="center">数据随机生成</td>
+<td>14~15</td>
+<td>500</td>
+<td>数据随机生成</td>
 </tr>
 <tr>
-<td align="center">161616</td>
-<td align="center">500500500</td>
-<td align="center"></td>
+<td>16</td>
+<td>500</td>
+<td></td>
 </tr>
 <tr>
-<td align="center">171717</td>
-<td align="center">2×1032\times 10^32×103</td>
-<td align="center">数据随机生成</td>
+<td>17~18</td>
+<td>$2 \times 10^3$</td>
+<td>数据随机生成</td>
 </tr>
 <tr>
-<td align="center">181818</td>
-<td align="center">2×1032\times 10^32×103</td>
-<td align="center"></td>
+<td>19</td>
+<td>$10^5$</td>
+<td>数据随机生成</td>
 </tr>
 <tr>
-<td align="center">191919</td>
-<td align="center">10510^5105</td>
-<td align="center">数据随机生成</td>
-</tr>
-<tr>
-<td align="center">202020</td>
-<td align="center">10510^5105</td>
-<td align="center"></td>
+<td>20</td>
+<td>$10^5$</td>
+<td></td>
 </tr>
 </tbody></table>
-<p>数据随机生成：∣S∣=N|S|&#x3D;N∣S∣=N，每个字符等概率为 (,)\texttt{(},\texttt{)}(,) 中的一个。</p>
-<h2 id="样例解释-3"><a href="#样例解释-3" class="headerlink" title="样例解释"></a>样例解释</h2><p>对于第一组样例，一种最优的决策过程如下：</p>
+<p>数据随机生成：$|S| &#x3D; N$，每个字符等概率为 $\texttt{(}$ 或 $\texttt{)}$ 中的一个。</p>
+<h3 id="样例解释-3"><a href="#样例解释-3" class="headerlink" title="样例解释"></a>样例解释</h3><p>对于第一组样例，一种最优的决策过程如下：</p>
 <ul>
-<li>dXqwq 涂 S1S_1S1​，S=)(S&#x3D;\texttt{\color{red})\color{black}(}S=)(</li>
-<li>Haitang 涂 S2S_2S2​，S=)(S&#x3D;\texttt{\color{red})\color{blue}(}S=)(</li>
+<li>dXqwq 涂 $S_1$，$S &#x3D; \texttt{\color{red}{)}\color{black}{(}}$</li>
+<li>Haitang 涂 $S_2$，$S &#x3D; \texttt{\color{red}{)}\color{blue}{(}}$</li>
 </ul>
+<p>此时红色括号没有匹配的子序列，所以分数为 $0$。</p>
 <p>对于第二组样例，一种最优的决策过程如下：</p>
 <ul>
-<li>dXqwq 涂 S1S_1S1​，S=(())S&#x3D;\texttt{\color{red}(\color{black}())}S=(())</li>
-<li>Haitang 涂 S3S_3S3​，S=(())S&#x3D;\texttt{\color{red}(\color{black}(\color{blue})\color{black}{)}}S=(())</li>
-<li>dXqwq 涂 S4S_4S4​，S=(())S&#x3D;\texttt{\color{red}(\color{black}(\color{blue})\color{red})}S=(())</li>
-<li>Haitang 涂 S2S_2S2​，S=(())S&#x3D;\texttt{\color{red}(\color{blue}(\color{blue})\color{red})}S=(())</li>
+<li>dXqwq 涂 $S_1$，$S &#x3D; \texttt{\color{red}{(}\color{black}{())}}$</li>
+<li>Haitang 涂 $S_3$，$S &#x3D; \texttt{\color{red}{(}\color{black}{(}\color{blue}{)}\color{black}{)}}$</li>
+<li>dXqwq 涂 $S_4$，$S &#x3D; \texttt{\color{red}{(}\color{black}{(}\color{blue}{)}\color{red}{)}}$</li>
+<li>Haitang 涂 $S_2$，$S &#x3D; \texttt{\color{red}{(}\color{blue}{(}\color{blue}{)}\color{red}{)}}$</li>
 </ul>
+<p>此时红色括号有一个匹配的子序列 $\texttt{\color{red}{(}\color{red}{)}}$，长度为 $2$，分数为 $\frac{2}{2} &#x3D; 1$。</p>
 
       
     </div>
