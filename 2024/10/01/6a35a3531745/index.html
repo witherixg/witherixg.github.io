@@ -21,12 +21,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"witherixg.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="前言二分查找是在一个有序数组中，每次查找将数组分成两半，并将查找值与中间值比较，是一个快速查找（$O(\log n)$）的方法。例如，在 $[1, 2, 3, 4, 5, 5, 7]$ 中查找 $7$：  获取中间值 $4$，$4 \lt 5$，所以在右半边 $[5, 5, 7]$ 继续查找。 获取中间值 $5$，$5 \lt 7$，所以在右半边 $[7]$ 继续查找。 数组中只有一个元素 $7$">
+    <meta name="description" content="前言 二分查找是在一个有序数组中，每次查找将数组分成两半，并将查找值与中间值比较，是一个快速查找（\(O(\log n)\)）的方法。 例如，在 \([1, 2, 3, 4, 5, 5, 7]\) 中查找 \(7\)： - 获取中间值 \(4\)，\(4 \lt 5\)，所以在右半边 \([5, 5, 7]\) 继续查找。 - 获取中间值 \(5\)，\(5 \lt 7\)，所以在右半边 \">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法-二分答案">
 <meta property="og:url" content="https://witherixg.github.io/2024/10/01/6a35a3531745/index.html">
 <meta property="og:site_name" content="wither_ixg">
-<meta property="og:description" content="前言二分查找是在一个有序数组中，每次查找将数组分成两半，并将查找值与中间值比较，是一个快速查找（$O(\log n)$）的方法。例如，在 $[1, 2, 3, 4, 5, 5, 7]$ 中查找 $7$：  获取中间值 $4$，$4 \lt 5$，所以在右半边 $[5, 5, 7]$ 继续查找。 获取中间值 $5$，$5 \lt 7$，所以在右半边 $[7]$ 继续查找。 数组中只有一个元素 $7$">
+<meta property="og:description" content="前言 二分查找是在一个有序数组中，每次查找将数组分成两半，并将查找值与中间值比较，是一个快速查找（\(O(\log n)\)）的方法。 例如，在 \([1, 2, 3, 4, 5, 5, 7]\) 中查找 \(7\)： - 获取中间值 \(4\)，\(4 \lt 5\)，所以在右半边 \([5, 5, 7]\) 继续查找。 - 获取中间值 \(5\)，\(5 \lt 7\)，所以在右半边 \">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-09-30T16:36:09.000Z">
 <meta property="article:modified_time" content="2024-09-30T17:11:22.910Z">
@@ -276,62 +276,87 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>二分查找是在一个<strong>有序</strong>数组中，每次查找将数组分成两半，并将查找值与中间值比较，是一个快速查找（$O(\log n)$）的方法。<br>例如，在 $[1, 2, 3, 4, 5, 5, 7]$ 中查找 $7$：</p>
-<ul>
-<li>获取中间值 $4$，$4 \lt 5$，所以在右半边 $[5, 5, 7]$ 继续查找。</li>
-<li>获取中间值 $5$，$5 \lt 7$，所以在右半边 $[7]$ 继续查找。</li>
-<li>数组中只有一个元素 $7$，查找完成。</li>
-</ul>
+    <div class="post-body" itemprop="articleBody"><h1 id="前言">前言</h1>
+<p>二分查找是在一个<strong>有序</strong>数组中，每次查找将数组分成两半，并将查找值与中间值比较，是一个快速查找（<span
+class="math inline">\(O(\log n)\)</span>）的方法。 例如，在 <span
+class="math inline">\([1, 2, 3, 4, 5, 5, 7]\)</span> 中查找 <span
+class="math inline">\(7\)</span>： - 获取中间值 <span
+class="math inline">\(4\)</span>，<span class="math inline">\(4 \lt
+5\)</span>，所以在右半边 <span class="math inline">\([5, 5, 7]\)</span>
+继续查找。 - 获取中间值 <span class="math inline">\(5\)</span>，<span
+class="math inline">\(5 \lt 7\)</span>，所以在右半边 <span
+class="math inline">\([7]\)</span> 继续查找。 - 数组中只有一个元素 <span
+class="math inline">\(7\)</span>，查找完成。</p>
 <p>二分答案与其非常相似，是在一个具有单调性的问题中，查找最值的方法。</p>
-<h1 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h1><h2 id="单调性"><a href="#单调性" class="headerlink" title="单调性"></a>单调性</h2><p>什么问题具有单调性呢？</p>
-<p>以下是几个具有单调性的问题：</p>
+<h1 id="基本思想">基本思想</h1>
+<h2 id="单调性">单调性</h2>
+<p>什么问题具有单调性呢？</p>
+<p>以下是几个具有单调性的问题： - 数字炸弹（伪）：已知数字 <span
+class="math inline">\(x \in [1,n]\)</span>
+后全是炸弹，求出最后一个安全位置。 - <a
+target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2678">[NOIP2015 提高组]
+跳石头</a>：已知隔一段距离有一块石头，求出拆除 <span
+class="math inline">\(x\)</span>
+个石头后，最近两块石头间距离的最大值。</p>
+<p>以上问题都有共同点： - 问题有确定的边界。 - 一定程度上，当 <span
+class="math inline">\(x\)</span> 满足条件时，比 <span
+class="math inline">\(x\)</span> 大或小的数不满足条件。</p>
+<h2 id="处理问题">处理问题</h2>
+<p>根据以上性质，可以按以下思路求解： - 首先，给出一段区间 <span
+class="math inline">\([1,N]\)</span>。 - 之后，求出中间值 <span
+class="math inline">\(mid\)</span>，并验证答案为 <span
+class="math inline">\(mid\)</span> 时是否满足条件。 -
+根据<strong>单调性</strong>，缩小区间。</p>
+<h1 id="注意事项">注意事项</h1>
+<p>在使用二分答案过程中，需要注意以下问题： - 初始区间应该含最终结果。 -
+注意不能出现死循环。 - 编写正确的验证答案算法。</p>
+<h1 id="补充">补充</h1>
+<p>对上述“数字炸弹（伪）”的演示：</p>
+<p>已知在 <span class="math inline">\([1,100]\)</span> 的整数中，<span
+class="math inline">\(78\)</span> 以后是炸弹，求出最大的安全位置。</p>
+<p>虽然显然安全位置等于 <span
+class="math inline">\(78-1\)</span>，但是此处为了演示，使用二分答案。</p>
 <ul>
-<li>数字炸弹（伪）：已知数字 $x \in [1,n]$ 后全是炸弹，求出最后一个安全位置。</li>
-<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2678">[NOIP2015 提高组] 跳石头</a>：已知隔一段距离有一块石头，求出拆除 $x$ 个石头后，最近两块石头间距离的最大值。</li>
-</ul>
-<p>以上问题都有共同点：</p>
-<ul>
-<li>问题有确定的边界。</li>
-<li>一定程度上，当 $x$ 满足条件时，比 $x$ 大或小的数不满足条件。</li>
-</ul>
-<h2 id="处理问题"><a href="#处理问题" class="headerlink" title="处理问题"></a>处理问题</h2><p>根据以上性质，可以按以下思路求解：</p>
-<ul>
-<li>首先，给出一段区间 $[1,N]$。</li>
-<li>之后，求出中间值 $mid$，并验证答案为 $mid$ 时是否满足条件。</li>
-<li>根据<strong>单调性</strong>，缩小区间。</li>
-</ul>
-<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>在使用二分答案过程中，需要注意以下问题：</p>
-<ul>
-<li>初始区间应该含最终结果。</li>
-<li>注意不能出现死循环。</li>
-<li>编写正确的验证答案算法。</li>
-</ul>
-<h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><p>对上述“数字炸弹（伪）”的演示：</p>
-<p>已知在 $[1,100]$ 的整数中，$78$ 以后是炸弹，求出最大的安全位置。</p>
-<p>虽然显然安全位置等于 $78-1$，但是此处为了演示，使用二分答案。</p>
-<ul>
-<li><p>定义二分搜索的上下界：下界是 $1$，上界是 $100$。</p>
-</li>
-<li><p>二分搜索：在每一步中，我们计算中间值 $mid$，并检查它是否是安全位置（即是否小于或等于 $78$）。</p>
-</li>
+<li><p>定义二分搜索的上下界：下界是 <span
+class="math inline">\(1\)</span>，上界是 <span
+class="math inline">\(100\)</span>。</p></li>
+<li><p>二分搜索：在每一步中，我们计算中间值 <span
+class="math inline">\(mid\)</span>，并检查它是否是安全位置（即是否小于或等于
+<span class="math inline">\(78\)</span>）。</p></li>
 <li><p>调整搜索范围：</p>
 <ul>
-<li>如果 $mid$ 是安全位置，并且我们希望找到尽可能大的安全位置，那么我们将下界更新为 $mid + 1$ 并继续搜索。</li>
-<li>如果 $mid$ 不是安全位置，那么我们将上界更新为 $mid - 1$。</li>
-</ul>
-</li>
-<li><p>终止条件：当上下界相遇或错过时，搜索结束。</p>
-</li>
+<li>如果 <span class="math inline">\(mid\)</span>
+是安全位置，并且我们希望找到尽可能大的安全位置，那么我们将下界更新为
+<span class="math inline">\(mid + 1\)</span> 并继续搜索。</li>
+<li>如果 <span class="math inline">\(mid\)</span>
+不是安全位置，那么我们将上界更新为 <span class="math inline">\(mid -
+1\)</span>。</li>
+</ul></li>
+<li><p>终止条件：当上下界相遇或错过时，搜索结束。</p></li>
 </ul>
 <p>以下是演示：</p>
 <ul>
-<li>$l&#x3D;1,r&#x3D;100,mid&#x3D;50$，此时 $mid$ 为较小值，$l \rightarrow mid + 1$。</li>
-<li>$l&#x3D;51,r&#x3D;100,mid&#x3D;75$，此时 $mid$ 为较小值，$l \rightarrow mid + 1$。</li>
-<li>$l&#x3D;76,r&#x3D;100,mid&#x3D;88$，此时 $mid$ 为较大值，$r \rightarrow mid - 1$。</li>
-<li>$l&#x3D;76,r&#x3D;87,mid&#x3D;81$，此时 $mid$ 为较大值，$r \rightarrow mid - 1$。</li>
-<li>$l&#x3D;76,r&#x3D;80,mid&#x3D;78$，此时 $mid$ 为较大值，$r \rightarrow mid - 1$。</li>
-<li>$l&#x3D;76,r&#x3D;77,mid&#x3D;76$，此时 $mid$ 为较小值，$l \rightarrow mid + 1$。</li>
-<li>$l&#x3D;77,r&#x3D;77,mid&#x3D;77$，此时 $l&#x3D;r$，查找结束。所求值为 $77$。</li>
+<li><span class="math inline">\(l=1,r=100,mid=50\)</span>，此时 <span
+class="math inline">\(mid\)</span> 为较小值，<span
+class="math inline">\(l \rightarrow mid + 1\)</span>。</li>
+<li><span class="math inline">\(l=51,r=100,mid=75\)</span>，此时 <span
+class="math inline">\(mid\)</span> 为较小值，<span
+class="math inline">\(l \rightarrow mid + 1\)</span>。</li>
+<li><span class="math inline">\(l=76,r=100,mid=88\)</span>，此时 <span
+class="math inline">\(mid\)</span> 为较大值，<span
+class="math inline">\(r \rightarrow mid - 1\)</span>。</li>
+<li><span class="math inline">\(l=76,r=87,mid=81\)</span>，此时 <span
+class="math inline">\(mid\)</span> 为较大值，<span
+class="math inline">\(r \rightarrow mid - 1\)</span>。</li>
+<li><span class="math inline">\(l=76,r=80,mid=78\)</span>，此时 <span
+class="math inline">\(mid\)</span> 为较大值，<span
+class="math inline">\(r \rightarrow mid - 1\)</span>。</li>
+<li><span class="math inline">\(l=76,r=77,mid=76\)</span>，此时 <span
+class="math inline">\(mid\)</span> 为较小值，<span
+class="math inline">\(l \rightarrow mid + 1\)</span>。</li>
+<li><span class="math inline">\(l=77,r=77,mid=77\)</span>，此时 <span
+class="math inline">\(l=r\)</span>，查找结束。所求值为 <span
+class="math inline">\(77\)</span>。</li>
 </ul>
 
     </div>
