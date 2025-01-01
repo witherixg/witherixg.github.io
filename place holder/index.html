@@ -162,7 +162,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -248,8 +248,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2025-01-01 23:02:40" itemprop="dateCreated datePublished" datetime="2025-01-01T23:02:40+08:00">2025-01-01</time>
+      <time title="Created: 2025-01-01 23:02:40 / Modified: 23:58:38" itemprop="dateCreated datePublished" datetime="2025-01-01T23:02:40+08:00">2025-01-01</time>
     </span>
 
   
@@ -258,7 +259,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Word count in article: </span>
-      <span>0</span>
+      <span>207</span>
     </span>
 </div>
 
@@ -269,7 +270,35 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
+          <h1 id="声明"><a class="markdownIt-Anchor" href="#声明"></a> 声明</h1>
+<p>这是第一个有关Android开发的文章，相关代码使用Kotlin而非Java。</p>
+<h1 id="使用方法"><a class="markdownIt-Anchor" href="#使用方法"></a> 使用方法</h1>
+<h2 id="步骤"><a class="markdownIt-Anchor" href="#步骤"></a> 步骤</h2>
+<p>假定字符串<code>s</code>指向一个PDF文件，在使用<code>Intent</code>时，遵循以下步骤：</p>
+<ul>
+<li>创建<code>Intent</code>对象</li>
+<li>给予读取权限</li>
+<li>传递URI和MIME Type</li>
+<li>开启Activity</li>
+</ul>
+<p>关于常用的MIME Type，此后会作总结。</p>
+<h2 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h2>
+<p>假设当前的<code>this</code>指向了<code>Activity</code>对象：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> intent = Intent(Intent.ACTION_VIEW)</span><br><span class="line"></span><br><span class="line">intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)</span><br><span class="line"></span><br><span class="line">intent.setDataAndType(</span><br><span class="line">    Uri.parse(s)</span><br><span class="line">    <span class="string">&quot;application/pdf&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.startActivity(intent)</span><br></pre></td></tr></table></figure>
+<p>但是一般情况下，运行后会出现类似以下错误：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cannot display PDF(xxx.pdf cannot be open)</span><br></pre></td></tr></table></figure>
+<p>解决方案是使用<code>FileProvider</code></p>
+<h2 id="fileprovider"><a class="markdownIt-Anchor" href="#fileprovider"></a> FileProvider</h2>
+<p>首先，在<code>AndroidManifest.xml</code>中的<code>&lt;application&gt;</code>下层添加：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;provider</span><br><span class="line">    android:name=&quot;androidx.core.content.FileProvider&quot;</span><br><span class="line">    android:authorities=&quot;packageName.fileProvider&quot;</span><br><span class="line">    android:exported=&quot;false&quot;</span><br><span class="line">    android:grantUriPermissions=&quot;true&quot;&gt;</span><br><span class="line">    &lt;meta-data</span><br><span class="line">        android:name=&quot;android.support.FILE_PROVIDER_PATHS&quot;</span><br><span class="line">        android:resource=&quot;@xml/provider_paths&quot;/&gt;</span><br><span class="line">&lt;/provider&gt;</span><br></pre></td></tr></table></figure>
+<p>其中，<code>packageName</code>是包名，对应最外层的<code>package</code>属性。</p>
+<p>然后，在<code>res/xml/</code>下新建<code>provider_paths.xml</code>，输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;paths&gt;</span><br><span class="line">    &lt;external-files-path name=&quot;external_files&quot; path=&quot;.&quot; /&gt;</span><br><span class="line">&lt;/paths&gt;</span><br></pre></td></tr></table></figure>
+<p><code>external_files</code>表示APP的外部存储目录（一般为<code>storage/emulated/0/Android/data/packageName</code>）。</p>
+<p>最后，在传递URI时使用<code>FileProvider</code>：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> intent = Intent(Intent.ACTION_VIEW)</span><br><span class="line"></span><br><span class="line">intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> file = File(s)</span><br><span class="line"></span><br><span class="line">intent.setDataAndType(</span><br><span class="line">    FileProvider.getUriForFile(</span><br><span class="line">        <span class="keyword">this</span>,</span><br><span class="line">        <span class="string">&quot;<span class="subst">$&#123;this.packageName&#125;</span>.fileProvider&quot;</span>,</span><br><span class="line">        file</span><br><span class="line">    )</span><br><span class="line">    <span class="string">&quot;application/pdf&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.startActivity(intent)</span><br></pre></td></tr></table></figure>
+<p>这样就可以正常打开了！</p>
+
       
     </div>
 
