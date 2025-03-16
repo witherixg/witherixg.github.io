@@ -12,7 +12,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=LXGW+WenKai+Lite:300,300italic,400,400italic,700,700italic%7CJetbrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=LXGW+WenKai+Lite:300,300italic,400,400italic,700,700italic%7CJetbrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
@@ -156,13 +156,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">61</span>
+          <span class="site-state-item-count">62</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -183,6 +183,9 @@
     </div>
     <ul class="links-of-recent-posts-list">
         <li class="links-of-recent-posts-item">
+          <a href="/2025/03/16/da49fb1593c6/" title="2025&#x2F;03&#x2F;16&#x2F;da49fb1593c6&#x2F;">VSCode配置C++开发环境</a>
+        </li>
+        <li class="links-of-recent-posts-item">
           <a href="/2025/03/12/8b1abf333d45/" title="2025&#x2F;03&#x2F;12&#x2F;8b1abf333d45&#x2F;">MC Forge 开发笔记00-准备工作</a>
         </li>
         <li class="links-of-recent-posts-item">
@@ -193,9 +196,6 @@
         </li>
         <li class="links-of-recent-posts-item">
           <a href="/2025/02/05/1c79d7dcfc94/" title="2025&#x2F;02&#x2F;05&#x2F;1c79d7dcfc94&#x2F;">Windows10任务栏配置</a>
-        </li>
-        <li class="links-of-recent-posts-item">
-          <a href="/2025/01/29/66ee6ecb5fd4/" title="2025&#x2F;01&#x2F;29&#x2F;66ee6ecb5fd4&#x2F;">海灯节快乐2.0！</a>
         </li>
     </ul>
   </div>
@@ -211,6 +211,156 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://witherixg.github.io/2025/03/16/da49fb1593c6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/./images/avatar.jpg">
+      <meta itemprop="name" content="wither_ixg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wither_ixg">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | wither_ixg">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/03/16/da49fb1593c6/" class="post-title-link" itemprop="url">VSCode配置C++开发环境</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2025-03-16 22:17:34" itemprop="dateCreated datePublished" datetime="2025-03-16T22:17:34+08:00">2025-03-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-03-17 01:12:51" itemprop="dateModified" datetime="2025-03-17T01:12:51+08:00">2025-03-17</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span>805</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="准备工作"><a class="markdownIt-Anchor" href="#准备工作"></a> 准备工作</h2>
+<p>需要下载的内容：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/sha/download?build=stable&amp;os=win32-x64-user">VSCode安装包</a></li>
+<li><a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/gnu/gcc/gcc-9.3.0/gcc-9.3.0.tar.gz">GCC编译器(镜像链接)</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.8/LLVM-18.1.8-win64.exe">LLVM(格式化工具，可选)</a>(<a target="_blank" rel="noopener" href="https://ghproxy.net/https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.8/LLVM-18.1.8-win64.exe">镜像链接</a>)</li>
+</ul>
+<h2 id="主编译器配置"><a class="markdownIt-Anchor" href="#主编译器配置"></a> 主编译器配置</h2>
+<h3 id="配置"><a class="markdownIt-Anchor" href="#配置"></a> 配置</h3>
+<p>解压<code>gcc-9.3.0.tar.gz</code>到一个位置，点进去找到<code>bin</code>文件夹，在里面有<code>g++.exe</code>这个文件，此时复制路径(点击地址栏空白处即可复制)。</p>
+<p>右键此电脑→属性→高级系统设置→环境变量→在系统变量里找到Path→编辑→新建→把刚才的路径粘贴进去即可。</p>
+<h3 id="测试"><a class="markdownIt-Anchor" href="#测试"></a> 测试</h3>
+<p>按下<code>Win+R</code>，输入<code>cmd</code>并回车，输入以下内容：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -v</span><br></pre></td></tr></table></figure>
+<p>之后应该显示相关的版本信息，说明配置成功了。</p>
+<h2 id="格式化编译器配置可选"><a class="markdownIt-Anchor" href="#格式化编译器配置可选"></a> 格式化编译器配置(可选)</h2>
+<p>打开<code>LLVM-18.1.8-win64.exe</code>，选择<code>Add LLVM to the system PATH for all users</code>，继续安装即可。</p>
+<h2 id="vscode-配置"><a class="markdownIt-Anchor" href="#vscode-配置"></a> VSCode 配置</h2>
+<h3 id="基本操作"><a class="markdownIt-Anchor" href="#基本操作"></a> 基本操作</h3>
+<p>安装好 VSCode 之后，可以右键文件夹用 Code 打开（这里的 Code 就是 VSCode），作为项目文件夹。</p>
+<p>最左边的五个按钮中，主要使用最上面的<strong>资源管理器</strong>(显示文件夹的各种层级结构)和最下面的<strong>插件</strong>。</p>
+<p>首先，可以在插件中下载简体中文，插件名称为<code>Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code</code>。</p>
+<p>把鼠标项目文件夹名称的位置，右边会出现四个按键。</p>
+<ul>
+<li>新建文件(需要加扩展名)</li>
+<li>新建文件夹</li>
+<li>刷新</li>
+<li>折叠</li>
+</ul>
+<p>新建文件之后，打开即可编辑内容。</p>
+<ul>
+<li>单击是临时打开，当打开下一个文件时会关闭临时打开的这个文件。</li>
+<li>双击是永久打开。</li>
+</ul>
+<h3 id="编译运行"><a class="markdownIt-Anchor" href="#编译运行"></a> 编译&amp;运行</h3>
+<p>掌握简单命令很重要！按下快捷键<code>Ctrl+J</code>，即可调出终端。</p>
+<h4 id="切换文件夹命令"><a class="markdownIt-Anchor" href="#切换文件夹命令"></a> 切换文件夹命令</h4>
+<p>一般使用相对路径。</p>
+<p><code>cd 路径名称</code>，即可切换到对应子文件夹，<code>.</code>代表本层文件夹，<code>..</code>代表上层文件夹。</p>
+<h4 id="编译命令"><a class="markdownIt-Anchor" href="#编译命令"></a> 编译命令</h4>
+<p><code>g++ cpp文件名(含.cpp) -o 输出文件名(不含.exe) -o2</code><br />
+<code>g++ cpp文件名(含.cpp) -o 输出文件名(不含.exe) -o2</code><br />
+<code>g++ cpp文件名(含.cpp) -o 输出文件名(不含.exe) -o2</code></p>
+<p>重要的事情说三遍！</p>
+<p>其中<code>-o2</code>是指开启 <code>O2</code> 优化的意思。</p>
+<h4 id="运行命令"><a class="markdownIt-Anchor" href="#运行命令"></a> 运行命令</h4>
+<p>直接输入<code>exe</code>文件的名称就可以了。特别的，在<code>Powershell</code>环境下需要输入<code>.\xxx.exe</code>。</p>
+<h3 id="安装插件"><a class="markdownIt-Anchor" href="#安装插件"></a> 安装插件</h3>
+<p>下载以下插件：</p>
+<ul>
+<li>
+<p><code>C/C++</code>、<code>C/C++ Extension Pack</code>、<code>C/C++ Themes</code>，提供高亮显示等基本操作。</p>
+</li>
+<li>
+<p><code>Code Runner</code>(可选)，运行文件。</p>
+</li>
+<li>
+<p><code>Clang-Format</code>(可选)，格式化文件。</p>
+</li>
+</ul>
+<p>如果没下载<code>Code Runner</code>，可以手动输入命令编译运行代码。</p>
+<p>在左下角的设置中，搜索<code>code-runner.executorMap</code>，选择在 <code>settings.json</code> 中编辑，找到<code>C++</code>一行，根据上面的内容编辑冒号后面的命令。</p>
+<p>这个插件提供了一些变量以适配不同的文件名，下面我给出一段示例命令作为参考：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ $fileName -o $fileNameWithoutExt -o2 &amp;&amp; .\\$fileNameWithoutExt</span><br></pre></td></tr></table></figure>
+<h3 id="格式化可选"><a class="markdownIt-Anchor" href="#格式化可选"></a> 格式化(可选)</h3>
+<p>格式化的作用就是为了让代码有一个统一的风格，更整洁好看。</p>
+<p>在项目文件夹的根目录下，新建<code>.clang-format</code>文件，在里面编辑格式化的方案。</p>
+<p>这里我提供一个我在使用的格式化方案，链接见<a href="/.clang-format">此处</a>。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1142,119 +1292,6 @@
     <div class="post-body" itemprop="articleBody">
           <p><a target="_blank" rel="noopener" href="https://sywt.lanzout.com/b0sxckhde">https://sywt.lanzout.com/b0sxckhde</a><br />
 密码:0000</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://witherixg.github.io/2025/01/01/60fe2b95ca55/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/./images/avatar.jpg">
-      <meta itemprop="name" content="wither_ixg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/01/01/60fe2b95ca55/" class="post-title-link" itemprop="url">Android-通过Intent实现外部应用打开文件</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2025-01-01 23:02:40" itemprop="dateCreated datePublished" datetime="2025-01-01T23:02:40+08:00">2025-01-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-03-09 23:35:45" itemprop="dateModified" datetime="2025-03-09T23:35:45+08:00">2025-03-09</time>
-    </span>
-
-  
-    <span class="post-meta-item" title="Word count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Word count in article: </span>
-      <span>224</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="声明"><a class="markdownIt-Anchor" href="#声明"></a> 声明</h2>
-<p>这是第一个有关Android开发的文章，相关代码使用Kotlin而非Java。</p>
-<h2 id="使用方法"><a class="markdownIt-Anchor" href="#使用方法"></a> 使用方法</h2>
-<h3 id="步骤"><a class="markdownIt-Anchor" href="#步骤"></a> 步骤</h3>
-<p>假定字符串<code>s</code>指向一个PDF文件，在使用<code>Intent</code>时，遵循以下步骤：</p>
-<ul>
-<li>创建<code>Intent</code>对象</li>
-<li>给予读取权限</li>
-<li>传递URI和MIME Type</li>
-<li>开启Activity</li>
-</ul>
-<p>关于常用的MIME Type，此后会作总结。</p>
-<h3 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h3>
-<p>假设当前的<code>this</code>指向了<code>Activity</code>对象：</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> intent = Intent(Intent.ACTION_VIEW)</span><br><span class="line"></span><br><span class="line">intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)</span><br><span class="line"></span><br><span class="line">intent.setDataAndType(</span><br><span class="line">    Uri.parse(s)</span><br><span class="line">    <span class="string">&quot;application/pdf&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.startActivity(intent)</span><br></pre></td></tr></table></figure>
-<p>但是一般情况下，运行后会出现类似以下错误：</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cannot display PDF(xxx.pdf cannot be open)</span><br></pre></td></tr></table></figure>
-<p>解决方案是使用<code>FileProvider</code></p>
-<h3 id="fileprovider"><a class="markdownIt-Anchor" href="#fileprovider"></a> FileProvider</h3>
-<p>首先，在<code>AndroidManifest.xml</code>中的<code>&lt;application&gt;</code>下层添加：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">provider</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:name</span>=<span class="string">&quot;androidx.core.content.FileProvider&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:authorities</span>=<span class="string">&quot;packageName.fileProvider&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:exported</span>=<span class="string">&quot;false&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:grantUriPermissions</span>=<span class="string">&quot;true&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta-data</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:name</span>=<span class="string">&quot;android.support.FILE_PROVIDER_PATHS&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:resource</span>=<span class="string">&quot;@xml/provider_paths&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">provider</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>其中，<code>packageName</code>是包名，对应最外层的<code>package</code>属性。</p>
-<p>然后，在<code>res/xml/</code>下新建<code>provider_paths.xml</code>，输入：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">paths</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">external-files-path</span> <span class="attr">name</span>=<span class="string">&quot;external_files&quot;</span> <span class="attr">path</span>=<span class="string">&quot;.&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">paths</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><code>external_files</code>表示APP的外部存储目录（一般为<code>storage/emulated/0/Android/data/packageName</code>）。</p>
-<p>最后，在传递URI时使用<code>FileProvider</code>：</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> intent = Intent(Intent.ACTION_VIEW)</span><br><span class="line"></span><br><span class="line">intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> file = File(s)</span><br><span class="line"></span><br><span class="line">intent.setDataAndType(</span><br><span class="line">    FileProvider.getUriForFile(</span><br><span class="line">        <span class="keyword">this</span>,</span><br><span class="line">        <span class="string">&quot;<span class="subst">$&#123;this.packageName&#125;</span>.fileProvider&quot;</span>,</span><br><span class="line">        file</span><br><span class="line">    )</span><br><span class="line">    <span class="string">&quot;application/pdf&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.startActivity(intent)</span><br></pre></td></tr></table></figure>
-<p>这样就可以正常打开了！</p>
-<h2 id="补充"><a class="markdownIt-Anchor" href="#补充"></a> 补充</h2>
-<p>示例程序参考：</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/commonsguy/cw-omnibus/tree/master/ContentProvider/V4FileProvider">https://github.com/commonsguy/cw-omnibus/tree/master/ContentProvider/V4FileProvider</a></p>
 
       
     </div>
