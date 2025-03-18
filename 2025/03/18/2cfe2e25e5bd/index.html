@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=LXGW+WenKai+Lite:300,300italic,400,400italic,700,700italic%7CJetbrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"witherixg.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="严格说，和int128，string不属于算法，但为了便于归类才标记为算法。  前言 觉得char[]难用？一起来用string吧！  使用方法 一般地，同为数据类型，大部分的操作都可以参考int类型变量。  输入&#x2F;输出 如果输入以空格或换行符分隔，可以直接使用cin。 12string str;cin &gt;&gt; str; 如果希望输入一整行(包括空格)的话，可以使用getline。 12">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法-字符串string">
+<meta property="og:url" content="https://witherixg.github.io/2025/03/18/2cfe2e25e5bd/index.html">
+<meta property="og:site_name" content="wither_ixg">
+<meta property="og:description" content="严格说，和int128，string不属于算法，但为了便于归类才标记为算法。  前言 觉得char[]难用？一起来用string吧！  使用方法 一般地，同为数据类型，大部分的操作都可以参考int类型变量。  输入&#x2F;输出 如果输入以空格或换行符分隔，可以直接使用cin。 12string str;cin &gt;&gt; str; 如果希望输入一整行(包括空格)的话，可以使用getline。 12">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-03-18T15:50:18.000Z">
+<meta property="article:modified_time" content="2025-03-18T17:29:55.736Z">
+<meta property="article:author" content="wither_ixg">
+<meta property="article:tag" content="Algorithm">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://witherixg.github.io/2025/03/18/2cfe2e25e5bd/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://witherixg.github.io/2025/03/18/2cfe2e25e5bd/","path":"2025/03/18/2cfe2e25e5bd/","title":"算法-字符串string"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>算法-字符串string | wither_ixg</title>
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.7.0/style.css" />
+<link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">
+<script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">wither_ixg</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text"> 使用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="nav-number">2.1.</span> <span class="nav-text"> 输入&#x2F;输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">2.2.</span> <span class="nav-text"> 定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">2.3.</span> <span class="nav-text"> 基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%95%BF%E5%BA%A6"><span class="nav-number">2.3.1.</span> <span class="nav-text"> 获取字符串长度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AF%94%E8%BE%83ascii%E7%A0%81"><span class="nav-number">2.3.2.</span> <span class="nav-text"> 比较(ASCII码)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0"><span class="nav-number">2.3.3.</span> <span class="nav-text"> 添加</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A0%E9%99%A4"><span class="nav-number">2.3.4.</span> <span class="nav-text"> 删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%BF%E6%8D%A2"><span class="nav-number">2.3.5.</span> <span class="nav-text"> 替换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%AD%97%E7%AC%A6"><span class="nav-number">2.3.6.</span> <span class="nav-text"> 获取字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE"><span class="nav-number">2.3.7.</span> <span class="nav-text"> 查找</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%88%AA%E5%8F%96"><span class="nav-number">2.3.8.</span> <span class="nav-text"> 截取</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F"><span class="nav-number">2.3.9.</span> <span class="nav-text"> 排序</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="wither_ixg"
+      src="/./images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">wither_ixg</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">63</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/witherixg" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;witherixg" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.luogu.com.cn/user/1240959" title="Luogu → https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;user&#x2F;1240959" rel="noopener me" target="_blank"><i class="fa-solid fa-laptop-code fa-fw"></i>Luogu</a>
+      </span>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最近发布
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/2025/03/18/2cfe2e25e5bd/" title="2025&#x2F;03&#x2F;18&#x2F;2cfe2e25e5bd&#x2F;">算法-字符串string</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/2025/03/16/da49fb1593c6/" title="2025&#x2F;03&#x2F;16&#x2F;da49fb1593c6&#x2F;">VSCode配置C++开发环境</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/2025/03/12/8b1abf333d45/" title="2025&#x2F;03&#x2F;12&#x2F;8b1abf333d45&#x2F;">MC Forge 开发笔记00-准备工作</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/2025/02/24/41f44198e3be/" title="2025&#x2F;02&#x2F;24&#x2F;41f44198e3be&#x2F;">重构声明</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/2025/02/21/40a4fde51ad4/" title="2025&#x2F;02&#x2F;21&#x2F;40a4fde51ad4&#x2F;">60级快乐~</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://witherixg.github.io/2025/03/18/2cfe2e25e5bd/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/./images/avatar.jpg">
+      <meta itemprop="name" content="wither_ixg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wither_ixg">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="算法-字符串string | wither_ixg">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          算法-字符串string
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2025-03-18 23:50:18" itemprop="dateCreated datePublished" datetime="2025-03-18T23:50:18+08:00">2025-03-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-03-19 01:29:55" itemprop="dateModified" datetime="2025-03-19T01:29:55+08:00">2025-03-19</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span>558</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>严格说，和<a href="/2024/11/09/80d8470fb88b"><code>int128</code></a>，<code>string</code>不属于算法，但为了便于归类才标记为算法。</p>
+<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>觉得<code>char[]</code>难用？一起来用<code>string</code>吧！</p>
+<h2 id="使用方法"><a class="markdownIt-Anchor" href="#使用方法"></a> 使用方法</h2>
+<p>一般地，同为数据类型，大部分的操作都可以参考<code>int</code>类型变量。</p>
+<h3 id="输入输出"><a class="markdownIt-Anchor" href="#输入输出"></a> 输入/输出</h3>
+<p>如果输入以空格或换行符分隔，可以直接使用<code>cin</code>。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string str;</span><br><span class="line">cin &gt;&gt; str;</span><br></pre></td></tr></table></figure>
+<p>如果希望输入一整行(包括空格)的话，可以使用<code>getline</code>。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string str;</span><br><span class="line"><span class="built_in">getline</span>(cin, str);</span><br></pre></td></tr></table></figure>
+<p><strong>注意：在使用<code>getline</code>前，如果使用过<code>cin</code>，必须先清空输入流！</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">string str1, str2;</span><br><span class="line">cin &gt;&gt; str;</span><br><span class="line">cin.<span class="built_in">clear</span>();</span><br><span class="line">cin.<span class="built_in">ignore</span>();</span><br><span class="line"><span class="built_in">getline</span>(cin, str2);</span><br></pre></td></tr></table></figure>
+<p>输出直接用<code>cout</code>即可。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;wither_ixg&quot;</span>;</span><br><span class="line">cout &lt;&lt; str &lt;&lt; endl; <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
+<p>由于<code>string</code>并不是C语言的内容(而是C++)，所以<code>scanf</code>和<code>printf</code>不支持<code>string</code><s>当然也有特殊的方法，在此不多展开</s>。</p>
+<h3 id="定义"><a class="markdownIt-Anchor" href="#定义"></a> 定义</h3>
+<p>和<code>int</code>一样，<code>string</code>类型变量也有以下定义方式(任选一种)：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">string part1 = <span class="string">&quot;wither&quot;</span>;</span><br><span class="line"><span class="function">string <span class="title">part2</span><span class="params">(<span class="string">&quot;_&quot;</span>)</span></span>;</span><br><span class="line">string part3&#123;<span class="string">&quot;ixg&quot;</span>&#125;;</span><br><span class="line">cout &lt;&lt; part1 &lt;&lt; part2 &lt;&lt; part3 &lt;&lt; endl; <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
+<p>不过特殊的是，<code>string</code>类型还有很多初始化的方法(称为构造函数)，在此额外补充一个常用的：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">string <span class="title">str</span><span class="params">(<span class="number">5</span>, <span class="string">&#x27;a&#x27;</span>)</span></span>; <span class="comment">// &quot;aaaaa&quot;</span></span><br><span class="line"><span class="function">string <span class="title">str</span><span class="params">(<span class="number">6</span>, <span class="string">&#x27;b&#x27;</span>)</span></span>; <span class="comment">// &quot;bbbbbb&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="基本操作"><a class="markdownIt-Anchor" href="#基本操作"></a> 基本操作</h3>
+<h4 id="获取字符串长度"><a class="markdownIt-Anchor" href="#获取字符串长度"></a> 获取字符串长度</h4>
+<p>使用<code>length</code>(如果你把它看作数组)或<code>size</code>(STL通用的名称)即可，两个函数<strong>没有任何区别</strong>。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;wither_ixg&quot;</span>;</span><br><span class="line"><span class="type">int</span> len1 = str.<span class="built_in">length</span>(); <span class="comment">// 10</span></span><br><span class="line"><span class="type">int</span> len2 = str.<span class="built_in">size</span>(); <span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
+<h4 id="比较ascii码"><a class="markdownIt-Anchor" href="#比较ascii码"></a> 比较(ASCII码)</h4>
+<p>最简单的比较方式：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str1 = <span class="string">&quot;abc&quot;</span>, str2 = <span class="string">&quot;abd&quot;</span>, str3 = <span class="string">&quot;abe&quot;</span>;</span><br><span class="line">cout &lt;&lt; (str2 &gt; str1) &lt;&lt; endl; <span class="comment">// 1</span></span><br><span class="line">cout &lt;&lt; (str2 &gt; str3) &lt;&lt; endl; <span class="comment">// 0</span></span><br></pre></td></tr></table></figure>
+<p>类似<code>strcmp</code>的比较方式：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str1 = <span class="string">&quot;abc&quot;</span>, str2 = <span class="string">&quot;abd&quot;</span>, str3 = <span class="string">&quot;abe&quot;</span>;</span><br><span class="line">cout &lt;&lt; (str<span class="number">2.</span><span class="built_in">compare</span>(str1)) &lt;&lt; endl; <span class="comment">// 1</span></span><br><span class="line">cout &lt;&lt; (str<span class="number">2.</span><span class="built_in">compare</span>(str3)) &lt;&lt; endl; <span class="comment">// -1</span></span><br></pre></td></tr></table></figure>
+<h4 id="添加"><a class="markdownIt-Anchor" href="#添加"></a> 添加</h4>
+<p>下面是一种最简单的做法：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;wither&quot;</span>;</span><br><span class="line">str += <span class="string">&#x27;_&#x27;</span>; <span class="comment">// wither_</span></span><br><span class="line">str += <span class="string">&quot;ixg&quot;</span>; <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
+<p>如果想在指定位置插入，使用<code>insert</code>。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;_ixg&quot;</span>;</span><br><span class="line">str.<span class="built_in">insert</span>(<span class="number">0</span>, <span class="string">&quot;w&quot;</span>); <span class="comment">// w_ixg</span></span><br><span class="line">str.<span class="built_in">insert</span>(<span class="number">1</span>, <span class="string">&quot;ither&quot;</span>); <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
+<h4 id="删除"><a class="markdownIt-Anchor" href="#删除"></a> 删除</h4>
+<p>使用<code>erase(from, len)</code>，其中<code>from</code>代表从哪开始，<code>len</code>代表长度：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;withhhhhhhher_ixg&quot;</span>;</span><br><span class="line"><span class="comment">// Hint:          ^^^^^^^</span></span><br><span class="line">str.<span class="built_in">erase</span>(<span class="number">4</span>, <span class="number">7</span>); <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
+<h4 id="替换"><a class="markdownIt-Anchor" href="#替换"></a> 替换</h4>
+<p>使用<code>replace(from, len, str)</code>，其中<code>from</code>代表从哪开始，<code>len</code>代表长度，<code>str</code>代表要替换成什么字符串：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;with++++++++ixg&quot;</span>;</span><br><span class="line"><span class="comment">// Hint:          ^^^^^^^^</span></span><br><span class="line">str.<span class="built_in">replace</span>(<span class="number">4</span>, <span class="number">8</span>, <span class="string">&quot;er_&quot;</span>); <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
+<h4 id="获取字符"><a class="markdownIt-Anchor" href="#获取字符"></a> 获取字符</h4>
+<p>类似于数组：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;abc&quot;</span>;</span><br><span class="line"><span class="type">char</span> ch = str[<span class="number">0</span>]; <span class="comment">// &#x27;a&#x27;</span></span><br></pre></td></tr></table></figure>
+<h4 id="查找"><a class="markdownIt-Anchor" href="#查找"></a> 查找</h4>
+<p>使用<code>find</code>和<code>rfind</code>函数，其中<code>r</code>代表从右开始查找。</p>
+<p>以<code>find</code>为例：</p>
+<ul>
+<li>如果使用<code>find(str)</code>，代表从左到右查询第一次遇到字符串<code>str</code>的位置。</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;wither_ixg&quot;</span>;</span><br><span class="line">str.<span class="built_in">find</span>(<span class="string">&quot;i&quot;</span>); <span class="comment">// 1</span></span><br><span class="line">str.<span class="built_in">rfind</span>(<span class="string">&quot;i&quot;</span>); <span class="comment">// 7</span></span><br><span class="line">str.<span class="built_in">rfind</span>(<span class="string">&quot;ixg&quot;</span>); <span class="comment">// 7</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>如果使用<code>find(str, from)</code>，代表从<code>from</code>的下标开始，查询第一次遇到字符串<code>str</code>的位置。</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;wither_ixg&quot;</span>;</span><br><span class="line"><span class="comment">// Hint:             |--&gt;</span></span><br><span class="line">str.<span class="built_in">find</span>(<span class="string">&quot;i&quot;</span>， <span class="number">7</span>); <span class="comment">// 7</span></span><br></pre></td></tr></table></figure>
+<p>特别地，如果<code>find</code>函数找不到匹配的位置，会返回一个很大的整数<code>string::npos</code>，也就是<code>18446744073709551615</code>。</p>
+<p>注：<code>string::npos</code>就是一个普通的整型常量，只是形式上有些奇怪？</p>
+<h4 id="截取"><a class="markdownIt-Anchor" href="#截取"></a> 截取</h4>
+<p>使用<code>substr(from, len)</code>，其中<code>from</code>代表从哪开始，<code>len</code>代表长度：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;wwwwither_ixgggg&quot;</span>;</span><br><span class="line"><span class="comment">// Hint:         ^^^^^^^^^^</span></span><br><span class="line">string new_str = str.<span class="built_in">substr</span>(<span class="number">3</span>, <span class="number">10</span>); <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
+<h4 id="排序"><a class="markdownIt-Anchor" href="#排序"></a> 排序</h4>
+<p>和<code>vector</code>类似，可使用<code>sort</code>排序：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;qazwsxedcrfvtgbyhnujmikolp&quot;</span>;</span><br><span class="line"><span class="built_in">sort</span>(str.<span class="built_in">begin</span>(), str.<span class="built_in">end</span>());</span><br><span class="line">cout &lt;&lt; str &lt;&lt; endl; <span class="comment">// abcdefghijklmnopqrstuvwxyz</span></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Algorithm/" rel="tag"><i class="fa fa-tag"></i> Algorithm</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/03/16/da49fb1593c6/" rel="prev" title="VSCode配置C++开发环境">
+                  <i class="fa fa-angle-left"></i> VSCode配置C++开发环境
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa-solid fa-code"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">wither_ixg</span>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

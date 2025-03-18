@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-count">63</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -183,6 +183,9 @@
     </div>
     <ul class="links-of-recent-posts-list">
         <li class="links-of-recent-posts-item">
+          <a href="/2025/03/18/2cfe2e25e5bd/" title="2025&#x2F;03&#x2F;18&#x2F;2cfe2e25e5bd&#x2F;">算法-字符串string</a>
+        </li>
+        <li class="links-of-recent-posts-item">
           <a href="/2025/03/16/da49fb1593c6/" title="2025&#x2F;03&#x2F;16&#x2F;da49fb1593c6&#x2F;">VSCode配置C++开发环境</a>
         </li>
         <li class="links-of-recent-posts-item">
@@ -193,9 +196,6 @@
         </li>
         <li class="links-of-recent-posts-item">
           <a href="/2025/02/21/40a4fde51ad4/" title="2025&#x2F;02&#x2F;21&#x2F;40a4fde51ad4&#x2F;">60级快乐~</a>
-        </li>
-        <li class="links-of-recent-posts-item">
-          <a href="/2025/02/05/1c79d7dcfc94/" title="2025&#x2F;02&#x2F;05&#x2F;1c79d7dcfc94&#x2F;">Windows10任务栏配置</a>
         </li>
     </ul>
   </div>
@@ -211,6 +211,150 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://witherixg.github.io/2025/03/18/2cfe2e25e5bd/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/./images/avatar.jpg">
+      <meta itemprop="name" content="wither_ixg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wither_ixg">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | wither_ixg">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/03/18/2cfe2e25e5bd/" class="post-title-link" itemprop="url">算法-字符串string</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2025-03-18 23:50:18" itemprop="dateCreated datePublished" datetime="2025-03-18T23:50:18+08:00">2025-03-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-03-19 01:29:55" itemprop="dateModified" datetime="2025-03-19T01:29:55+08:00">2025-03-19</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span>558</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>严格说，和<a href="/2024/11/09/80d8470fb88b"><code>int128</code></a>，<code>string</code>不属于算法，但为了便于归类才标记为算法。</p>
+<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>觉得<code>char[]</code>难用？一起来用<code>string</code>吧！</p>
+<h2 id="使用方法"><a class="markdownIt-Anchor" href="#使用方法"></a> 使用方法</h2>
+<p>一般地，同为数据类型，大部分的操作都可以参考<code>int</code>类型变量。</p>
+<h3 id="输入输出"><a class="markdownIt-Anchor" href="#输入输出"></a> 输入/输出</h3>
+<p>如果输入以空格或换行符分隔，可以直接使用<code>cin</code>。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string str;</span><br><span class="line">cin &gt;&gt; str;</span><br></pre></td></tr></table></figure>
+<p>如果希望输入一整行(包括空格)的话，可以使用<code>getline</code>。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string str;</span><br><span class="line"><span class="built_in">getline</span>(cin, str);</span><br></pre></td></tr></table></figure>
+<p><strong>注意：在使用<code>getline</code>前，如果使用过<code>cin</code>，必须先清空输入流！</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">string str1, str2;</span><br><span class="line">cin &gt;&gt; str;</span><br><span class="line">cin.<span class="built_in">clear</span>();</span><br><span class="line">cin.<span class="built_in">ignore</span>();</span><br><span class="line"><span class="built_in">getline</span>(cin, str2);</span><br></pre></td></tr></table></figure>
+<p>输出直接用<code>cout</code>即可。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;wither_ixg&quot;</span>;</span><br><span class="line">cout &lt;&lt; str &lt;&lt; endl; <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
+<p>由于<code>string</code>并不是C语言的内容(而是C++)，所以<code>scanf</code>和<code>printf</code>不支持<code>string</code><s>当然也有特殊的方法，在此不多展开</s>。</p>
+<h3 id="定义"><a class="markdownIt-Anchor" href="#定义"></a> 定义</h3>
+<p>和<code>int</code>一样，<code>string</code>类型变量也有以下定义方式(任选一种)：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">string part1 = <span class="string">&quot;wither&quot;</span>;</span><br><span class="line"><span class="function">string <span class="title">part2</span><span class="params">(<span class="string">&quot;_&quot;</span>)</span></span>;</span><br><span class="line">string part3&#123;<span class="string">&quot;ixg&quot;</span>&#125;;</span><br><span class="line">cout &lt;&lt; part1 &lt;&lt; part2 &lt;&lt; part3 &lt;&lt; endl; <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
+<p>不过特殊的是，<code>string</code>类型还有很多初始化的方法(称为构造函数)，在此额外补充一个常用的：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">string <span class="title">str</span><span class="params">(<span class="number">5</span>, <span class="string">&#x27;a&#x27;</span>)</span></span>; <span class="comment">// &quot;aaaaa&quot;</span></span><br><span class="line"><span class="function">string <span class="title">str</span><span class="params">(<span class="number">6</span>, <span class="string">&#x27;b&#x27;</span>)</span></span>; <span class="comment">// &quot;bbbbbb&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="基本操作"><a class="markdownIt-Anchor" href="#基本操作"></a> 基本操作</h3>
+<h4 id="获取字符串长度"><a class="markdownIt-Anchor" href="#获取字符串长度"></a> 获取字符串长度</h4>
+<p>使用<code>length</code>(如果你把它看作数组)或<code>size</code>(STL通用的名称)即可，两个函数<strong>没有任何区别</strong>。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;wither_ixg&quot;</span>;</span><br><span class="line"><span class="type">int</span> len1 = str.<span class="built_in">length</span>(); <span class="comment">// 10</span></span><br><span class="line"><span class="type">int</span> len2 = str.<span class="built_in">size</span>(); <span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
+<h4 id="比较ascii码"><a class="markdownIt-Anchor" href="#比较ascii码"></a> 比较(ASCII码)</h4>
+<p>最简单的比较方式：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str1 = <span class="string">&quot;abc&quot;</span>, str2 = <span class="string">&quot;abd&quot;</span>, str3 = <span class="string">&quot;abe&quot;</span>;</span><br><span class="line">cout &lt;&lt; (str2 &gt; str1) &lt;&lt; endl; <span class="comment">// 1</span></span><br><span class="line">cout &lt;&lt; (str2 &gt; str3) &lt;&lt; endl; <span class="comment">// 0</span></span><br></pre></td></tr></table></figure>
+<p>类似<code>strcmp</code>的比较方式：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str1 = <span class="string">&quot;abc&quot;</span>, str2 = <span class="string">&quot;abd&quot;</span>, str3 = <span class="string">&quot;abe&quot;</span>;</span><br><span class="line">cout &lt;&lt; (str<span class="number">2.</span><span class="built_in">compare</span>(str1)) &lt;&lt; endl; <span class="comment">// 1</span></span><br><span class="line">cout &lt;&lt; (str<span class="number">2.</span><span class="built_in">compare</span>(str3)) &lt;&lt; endl; <span class="comment">// -1</span></span><br></pre></td></tr></table></figure>
+<h4 id="添加"><a class="markdownIt-Anchor" href="#添加"></a> 添加</h4>
+<p>下面是一种最简单的做法：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;wither&quot;</span>;</span><br><span class="line">str += <span class="string">&#x27;_&#x27;</span>; <span class="comment">// wither_</span></span><br><span class="line">str += <span class="string">&quot;ixg&quot;</span>; <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
+<p>如果想在指定位置插入，使用<code>insert</code>。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;_ixg&quot;</span>;</span><br><span class="line">str.<span class="built_in">insert</span>(<span class="number">0</span>, <span class="string">&quot;w&quot;</span>); <span class="comment">// w_ixg</span></span><br><span class="line">str.<span class="built_in">insert</span>(<span class="number">1</span>, <span class="string">&quot;ither&quot;</span>); <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
+<h4 id="删除"><a class="markdownIt-Anchor" href="#删除"></a> 删除</h4>
+<p>使用<code>erase(from, len)</code>，其中<code>from</code>代表从哪开始，<code>len</code>代表长度：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;withhhhhhhher_ixg&quot;</span>;</span><br><span class="line"><span class="comment">// Hint:          ^^^^^^^</span></span><br><span class="line">str.<span class="built_in">erase</span>(<span class="number">4</span>, <span class="number">7</span>); <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
+<h4 id="替换"><a class="markdownIt-Anchor" href="#替换"></a> 替换</h4>
+<p>使用<code>replace(from, len, str)</code>，其中<code>from</code>代表从哪开始，<code>len</code>代表长度，<code>str</code>代表要替换成什么字符串：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;with++++++++ixg&quot;</span>;</span><br><span class="line"><span class="comment">// Hint:          ^^^^^^^^</span></span><br><span class="line">str.<span class="built_in">replace</span>(<span class="number">4</span>, <span class="number">8</span>, <span class="string">&quot;er_&quot;</span>); <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
+<h4 id="获取字符"><a class="markdownIt-Anchor" href="#获取字符"></a> 获取字符</h4>
+<p>类似于数组：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;abc&quot;</span>;</span><br><span class="line"><span class="type">char</span> ch = str[<span class="number">0</span>]; <span class="comment">// &#x27;a&#x27;</span></span><br></pre></td></tr></table></figure>
+<h4 id="查找"><a class="markdownIt-Anchor" href="#查找"></a> 查找</h4>
+<p>使用<code>find</code>和<code>rfind</code>函数，其中<code>r</code>代表从右开始查找。</p>
+<p>以<code>find</code>为例：</p>
+<ul>
+<li>如果使用<code>find(str)</code>，代表从左到右查询第一次遇到字符串<code>str</code>的位置。</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;wither_ixg&quot;</span>;</span><br><span class="line">str.<span class="built_in">find</span>(<span class="string">&quot;i&quot;</span>); <span class="comment">// 1</span></span><br><span class="line">str.<span class="built_in">rfind</span>(<span class="string">&quot;i&quot;</span>); <span class="comment">// 7</span></span><br><span class="line">str.<span class="built_in">rfind</span>(<span class="string">&quot;ixg&quot;</span>); <span class="comment">// 7</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>如果使用<code>find(str, from)</code>，代表从<code>from</code>的下标开始，查询第一次遇到字符串<code>str</code>的位置。</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;wither_ixg&quot;</span>;</span><br><span class="line"><span class="comment">// Hint:             |--&gt;</span></span><br><span class="line">str.<span class="built_in">find</span>(<span class="string">&quot;i&quot;</span>， <span class="number">7</span>); <span class="comment">// 7</span></span><br></pre></td></tr></table></figure>
+<p>特别地，如果<code>find</code>函数找不到匹配的位置，会返回一个很大的整数<code>string::npos</code>，也就是<code>18446744073709551615</code>。</p>
+<p>注：<code>string::npos</code>就是一个普通的整型常量，只是形式上有些奇怪？</p>
+<h4 id="截取"><a class="markdownIt-Anchor" href="#截取"></a> 截取</h4>
+<p>使用<code>substr(from, len)</code>，其中<code>from</code>代表从哪开始，<code>len</code>代表长度：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;wwwwither_ixgggg&quot;</span>;</span><br><span class="line"><span class="comment">// Hint:         ^^^^^^^^^^</span></span><br><span class="line">string new_str = str.<span class="built_in">substr</span>(<span class="number">3</span>, <span class="number">10</span>); <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
+<h4 id="排序"><a class="markdownIt-Anchor" href="#排序"></a> 排序</h4>
+<p>和<code>vector</code>类似，可使用<code>sort</code>排序：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;qazwsxedcrfvtgbyhnujmikolp&quot;</span>;</span><br><span class="line"><span class="built_in">sort</span>(str.<span class="built_in">begin</span>(), str.<span class="built_in">end</span>());</span><br><span class="line">cout &lt;&lt; str &lt;&lt; endl; <span class="comment">// abcdefghijklmnopqrstuvwxyz</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1208,90 +1352,6 @@
 <img src="/images/2025/01/13/10.jpg" alt="图片10" /><br />
 <img src="/images/2025/01/13/11.jpg" alt="图片11" /><br />
 <img src="/images/2025/01/13/12.jpg" alt="图片12" /></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://witherixg.github.io/2025/01/11/fe5954c122bb/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/./images/avatar.jpg">
-      <meta itemprop="name" content="wither_ixg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/01/11/fe5954c122bb/" class="post-title-link" itemprop="url">Android-报纸答案</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2025-01-11 23:42:23" itemprop="dateCreated datePublished" datetime="2025-01-11T23:42:23+08:00">2025-01-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-03-09 23:35:33" itemprop="dateModified" datetime="2025-03-09T23:35:33+08:00">2025-03-09</time>
-    </span>
-
-  
-    <span class="post-meta-item" title="Word count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Word count in article: </span>
-      <span>6</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://sywt.lanzout.com/b0sxckhde">https://sywt.lanzout.com/b0sxckhde</a><br />
-密码:0000</p>
 
       
     </div>
