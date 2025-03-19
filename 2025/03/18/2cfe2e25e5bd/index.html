@@ -29,7 +29,7 @@
 <meta property="og:description" content="严格说，和int128一样，string不属于算法，但为了便于归类才标记为算法。  前言 觉得char[]难用？一起来用string吧！  使用方法 一般地，同为数据类型，大部分的操作都可以参考int类型变量。  输入&#x2F;输出 如果输入以空格或换行符分隔，可以直接使用cin。 12string str;cin &gt;&gt; str; 如果希望输入一整行(包括空格)的话，可以使用getline。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-03-18T15:50:18.000Z">
-<meta property="article:modified_time" content="2025-03-18T17:35:57.201Z">
+<meta property="article:modified_time" content="2025-03-19T15:32:59.146Z">
 <meta property="article:author" content="wither_ixg">
 <meta property="article:tag" content="Algorithm">
 <meta name="twitter:card" content="summary">
@@ -147,7 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text"> 使用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="nav-number">2.1.</span> <span class="nav-text"> 输入&#x2F;输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">2.2.</span> <span class="nav-text"> 定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">2.3.</span> <span class="nav-text"> 基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%95%BF%E5%BA%A6"><span class="nav-number">2.3.1.</span> <span class="nav-text"> 获取字符串长度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AF%94%E8%BE%83ascii%E7%A0%81"><span class="nav-number">2.3.2.</span> <span class="nav-text"> 比较(ASCII码)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0"><span class="nav-number">2.3.3.</span> <span class="nav-text"> 添加</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A0%E9%99%A4"><span class="nav-number">2.3.4.</span> <span class="nav-text"> 删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%BF%E6%8D%A2"><span class="nav-number">2.3.5.</span> <span class="nav-text"> 替换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%AD%97%E7%AC%A6"><span class="nav-number">2.3.6.</span> <span class="nav-text"> 获取字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE"><span class="nav-number">2.3.7.</span> <span class="nav-text"> 查找</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%88%AA%E5%8F%96"><span class="nav-number">2.3.8.</span> <span class="nav-text"> 截取</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F"><span class="nav-number">2.3.9.</span> <span class="nav-text"> 排序</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text"> 使用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="nav-number">2.1.</span> <span class="nav-text"> 输入&#x2F;输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">2.2.</span> <span class="nav-text"> 定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">2.3.</span> <span class="nav-text"> 基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E9%95%BF%E5%BA%A6"><span class="nav-number">2.3.1.</span> <span class="nav-text"> 获取长度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AF%94%E8%BE%83ascii%E7%A0%81"><span class="nav-number">2.3.2.</span> <span class="nav-text"> 比较(ASCII码)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0"><span class="nav-number">2.3.3.</span> <span class="nav-text"> 添加</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A0%E9%99%A4"><span class="nav-number">2.3.4.</span> <span class="nav-text"> 删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%BF%E6%8D%A2"><span class="nav-number">2.3.5.</span> <span class="nav-text"> 替换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%AD%97%E7%AC%A6"><span class="nav-number">2.3.6.</span> <span class="nav-text"> 获取字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE"><span class="nav-number">2.3.7.</span> <span class="nav-text"> 查找</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%88%AA%E5%8F%96"><span class="nav-number">2.3.8.</span> <span class="nav-text"> 截取</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F"><span class="nav-number">2.3.9.</span> <span class="nav-text"> 排序</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text"> 总结</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -263,7 +263,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-03-19 01:35:57" itemprop="dateModified" datetime="2025-03-19T01:35:57+08:00">2025-03-19</time>
+      <time title="Modified: 2025-03-19 23:32:59" itemprop="dateModified" datetime="2025-03-19T23:32:59+08:00">2025-03-19</time>
     </span>
 
   
@@ -272,7 +272,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Word count in article: </span>
-      <span>560</span>
+      <span>731</span>
     </span>
 </div>
 
@@ -301,9 +301,9 @@
 <p>和<code>int</code>一样，<code>string</code>类型变量也有以下定义方式(任选一种)：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">string part1 = <span class="string">&quot;wither&quot;</span>;</span><br><span class="line"><span class="function">string <span class="title">part2</span><span class="params">(<span class="string">&quot;_&quot;</span>)</span></span>;</span><br><span class="line">string part3&#123;<span class="string">&quot;ixg&quot;</span>&#125;;</span><br><span class="line">cout &lt;&lt; part1 &lt;&lt; part2 &lt;&lt; part3 &lt;&lt; endl; <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
 <p>不过特殊的是，<code>string</code>类型还有很多初始化的方法(称为构造函数)，在此额外补充一个常用的：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">string <span class="title">str</span><span class="params">(<span class="number">5</span>, <span class="string">&#x27;a&#x27;</span>)</span></span>; <span class="comment">// &quot;aaaaa&quot;</span></span><br><span class="line"><span class="function">string <span class="title">str</span><span class="params">(<span class="number">6</span>, <span class="string">&#x27;b&#x27;</span>)</span></span>; <span class="comment">// &quot;bbbbbb&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">string <span class="title">str1</span><span class="params">(<span class="number">5</span>, <span class="string">&#x27;a&#x27;</span>)</span></span>; <span class="comment">// &quot;aaaaa&quot;</span></span><br><span class="line"><span class="function">string <span class="title">str2</span><span class="params">(<span class="number">6</span>, <span class="string">&#x27;b&#x27;</span>)</span></span>; <span class="comment">// &quot;bbbbbb&quot;</span></span><br></pre></td></tr></table></figure>
 <h3 id="基本操作"><a class="markdownIt-Anchor" href="#基本操作"></a> 基本操作</h3>
-<h4 id="获取字符串长度"><a class="markdownIt-Anchor" href="#获取字符串长度"></a> 获取字符串长度</h4>
+<h4 id="获取长度"><a class="markdownIt-Anchor" href="#获取长度"></a> 获取长度</h4>
 <p>使用<code>length</code>(如果你把它看作数组)或<code>size</code>(STL通用的名称)即可，两个函数<strong>没有任何区别</strong>。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;wither_ixg&quot;</span>;</span><br><span class="line"><span class="type">int</span> len1 = str.<span class="built_in">length</span>(); <span class="comment">// 10</span></span><br><span class="line"><span class="type">int</span> len2 = str.<span class="built_in">size</span>(); <span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
 <h4 id="比较ascii码"><a class="markdownIt-Anchor" href="#比较ascii码"></a> 比较(ASCII码)</h4>
@@ -335,7 +335,7 @@
 <ul>
 <li>如果使用<code>find(str, from)</code>，代表从<code>from</code>的下标开始，查询第一次遇到字符串<code>str</code>的位置。</li>
 </ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;wither_ixg&quot;</span>;</span><br><span class="line"><span class="comment">// Hint:             |--&gt;</span></span><br><span class="line">str.<span class="built_in">find</span>(<span class="string">&quot;i&quot;</span>， <span class="number">7</span>); <span class="comment">// 7</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;wither_ixg&quot;</span>;</span><br><span class="line"><span class="comment">// Hint:             |--&gt;</span></span><br><span class="line">str.<span class="built_in">find</span>(<span class="string">&quot;i&quot;</span>, <span class="number">7</span>); <span class="comment">// 7</span></span><br></pre></td></tr></table></figure>
 <p>特别地，如果<code>find</code>函数找不到匹配的位置，会返回一个很大的整数<code>string::npos</code>，也就是<code>18446744073709551615</code>。</p>
 <p>注：<code>string::npos</code>就是一个普通的整型常量，只是形式上有些奇怪？</p>
 <h4 id="截取"><a class="markdownIt-Anchor" href="#截取"></a> 截取</h4>
@@ -344,6 +344,63 @@
 <h4 id="排序"><a class="markdownIt-Anchor" href="#排序"></a> 排序</h4>
 <p>和<code>vector</code>类似，可使用<code>sort</code>排序：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;qazwsxedcrfvtgbyhnujmikolp&quot;</span>;</span><br><span class="line"><span class="built_in">sort</span>(str.<span class="built_in">begin</span>(), str.<span class="built_in">end</span>());</span><br><span class="line">cout &lt;&lt; str &lt;&lt; endl; <span class="comment">// abcdefghijklmnopqrstuvwxyz</span></span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h2>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>函数名</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>获取长度</td>
+<td><code>str.length()</code>/<code>str.size()</code></td>
+<td>两个函数没有区别</td>
+</tr>
+<tr>
+<td>比较</td>
+<td><code>str1 &lt; str2</code>/<code>str1.compare(str2)</code></td>
+<td>前者返回<code>bool</code>值，后者返回<code>-1</code>/<code>0</code>/<code>1</code></td>
+</tr>
+<tr>
+<td>添加</td>
+<td><code>str1 += x</code></td>
+<td><code>x</code>可以是<code>char</code>，也可以是<code>string</code></td>
+</tr>
+<tr>
+<td>删除</td>
+<td><code>str.erase(from, len)</code></td>
+<td>从下标<code>from</code>开始，连续删除<code>len</code>个字符</td>
+</tr>
+<tr>
+<td>替换</td>
+<td><code>str1.replace(from, len, str2)</code></td>
+<td>从下标<code>from</code>开始，将连续<code>len</code>个字符替换为<code>str2</code></td>
+</tr>
+<tr>
+<td>获取字符</td>
+<td><code>str[index]</code></td>
+<td>和数组的操作类似</td>
+</tr>
+<tr>
+<td>查找</td>
+<td><code>str1.find(str2)</code>/<code>str1.find(str2, index)</code></td>
+<td>(从下标<code>index</code>)往后找，返回位置的下标(找不到返回<code>string::npos</code>)</td>
+</tr>
+<tr>
+<td>截取</td>
+<td><code>str.substr(from, len)</code></td>
+<td>从下标<code>from</code>开始，连续截取<code>len</code>个字符</td>
+</tr>
+<tr>
+<td>排序</td>
+<td><code>sort(str.begin(), str.end())</code></td>
+<td>类似<code>vector</code>的排序</td>
+</tr>
+</tbody>
+</table>
 
     </div>
 
