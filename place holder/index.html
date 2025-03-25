@@ -256,7 +256,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-03-19 23:32:59" itemprop="dateModified" datetime="2025-03-19T23:32:59+08:00">2025-03-19</time>
+      <time title="Modified: 2025-03-25 23:00:09" itemprop="dateModified" datetime="2025-03-25T23:00:09+08:00">2025-03-25</time>
     </span>
 
   
@@ -265,7 +265,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Word count in article: </span>
-      <span>731</span>
+      <span>771</span>
     </span>
 </div>
 
@@ -296,6 +296,10 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">string part1 = <span class="string">&quot;wither&quot;</span>;</span><br><span class="line"><span class="function">string <span class="title">part2</span><span class="params">(<span class="string">&quot;_&quot;</span>)</span></span>;</span><br><span class="line">string part3&#123;<span class="string">&quot;ixg&quot;</span>&#125;;</span><br><span class="line">cout &lt;&lt; part1 &lt;&lt; part2 &lt;&lt; part3 &lt;&lt; endl; <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
 <p>不过特殊的是，<code>string</code>类型还有很多初始化的方法(称为构造函数)，在此额外补充一个常用的：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">string <span class="title">str1</span><span class="params">(<span class="number">5</span>, <span class="string">&#x27;a&#x27;</span>)</span></span>; <span class="comment">// &quot;aaaaa&quot;</span></span><br><span class="line"><span class="function">string <span class="title">str2</span><span class="params">(<span class="number">6</span>, <span class="string">&#x27;b&#x27;</span>)</span></span>; <span class="comment">// &quot;bbbbbb&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="转换"><a class="markdownIt-Anchor" href="#转换"></a> 转换</h3>
+<p>实际使用时，会经常需要将<code>int</code>等类型转化成字符串。</p>
+<p>C++11之后，可以使用<code>to_string</code>函数完成这一操作：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> num = <span class="number">10000</span>;</span><br><span class="line">string str = <span class="built_in">to_string</span>(num); <span class="comment">// &quot;10000&quot;</span></span><br></pre></td></tr></table></figure>
 <h3 id="基本操作"><a class="markdownIt-Anchor" href="#基本操作"></a> 基本操作</h3>
 <h4 id="获取长度"><a class="markdownIt-Anchor" href="#获取长度"></a> 获取长度</h4>
 <p>使用<code>length</code>(如果你把它看作数组)或<code>size</code>(STL通用的名称)即可，两个函数<strong>没有任何区别</strong>。</p>
