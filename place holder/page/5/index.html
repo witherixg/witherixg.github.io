@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">63</span>
+          <span class="site-state-item-count">62</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -211,153 +211,6 @@
     </div>
 
     <div class="main-inner index posts-expand">
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://witherixg.github.io/2024/09/09/3d71fe128d1e/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/./images/avatar.jpg">
-      <meta itemprop="name" content="wither_ixg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/09/09/3d71fe128d1e/" class="post-title-link" itemprop="url">Luogu-SP3377-BUGLIFE - A Bug&#39;s Life</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2024-09-09 15:12:50" itemprop="dateCreated datePublished" datetime="2024-09-09T15:12:50+08:00">2024-09-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-02-24 22:47:03" itemprop="dateModified" datetime="2025-02-24T22:47:03+08:00">2025-02-24</time>
-    </span>
-
-  
-    <span class="post-meta-item" title="Word count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Word count in article: </span>
-      <span>816</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="题目-buglife-a-bugs-life原spoj"><a class="markdownIt-Anchor" href="#题目-buglife-a-bugs-life原spoj"></a> 题目 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/SP3377">BUGLIFE - A Bug's Life</a>/<a target="_blank" rel="noopener" href="https://www.spoj.com/problems/BUGLIFE/">原SPOJ</a></h2>
-<h3 id="题目描述"><a class="markdownIt-Anchor" href="#题目描述"></a> 题目描述</h3>
-<p>就是一个奇怪的ke学家，他专门研究虫子是否存在同性恋。。。<br />
-他为没一只虫子都标上了序号。<br />
-通过这个奇怪的ke学家的研究，找出了在这些虫子中的所有关系的虫子，<strong>题目询问在这么多有关系的虫子中是否存在</strong>“同性恋”。</p>
-<blockquote>
-<p>Professor Hopper is researching the sexual behavior of a rare species of bugs. He assumes that they feature two different genders and that they only interact with bugs of the opposite gender. In his experiment, individual bugs and their interactions were easy to identify, because numbers were printed on their backs.<br />
-Given a list of bug interactions, decide whether the experiment supports his assumption of two genders with no homosexual bugs or if it contains some bug interactions that falsify it.</p>
-</blockquote>
-<h3 id="输入格式"><a class="markdownIt-Anchor" href="#输入格式"></a> 输入格式</h3>
-<p>第一行， 输入一个数，表示有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathnormal">t</span></span></span></span> 组数据<br />
-对于每组数据，第一行输入 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo separator="true">,</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">n,m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">m</span></span></span></span>，表示有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 只虫子，有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span></span></span></span> 个关系<br />
-接下来行每行两个数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo separator="true">,</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x,y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span>，表示 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo separator="true">,</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x,y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> 有关系</p>
-<blockquote>
-<p>The first line of the input contains the number of scenarios. Each scenario starts with one line giving the number of bugs (at least one, and up to 2000) and the number of interactions (up to 1000000) separated by a single space. In the following lines, each interaction is given in the form of two distinct bug numbers separated by a single space. Bugs are numbered consecutively starting from one.</p>
-</blockquote>
-<h3 id="输出格式"><a class="markdownIt-Anchor" href="#输出格式"></a> 输出格式</h3>
-<p>对于每一组数据：<br />
-先输出：“Scenario #i” ，表示第<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span>组数据<br />
-然后如果有同性恋的输出&quot;Suspicious bugs found!&quot;<br />
-否则输出&quot;No suspicious bugs found!&quot;</p>
-<blockquote>
-<p>The output for every scenario is a line containing “Scenario #i:”, where i is the number of the scenario starting at 1, followed by one line saying either “No suspicious bugs found!” if the experiment is consistent with his assumption about the bugs’ sexual behavior, or “Suspicious bugs found!” if Professor Hopper’s assumption is definitely wrong.</p>
-</blockquote>
-<h2 id="思路邻接表链式前向星"><a class="markdownIt-Anchor" href="#思路邻接表链式前向星"></a> 思路：邻接表/链式前向星</h2>
-<h3 id="整体思路"><a class="markdownIt-Anchor" href="#整体思路"></a> 整体思路</h3>
-<p>首先考虑样例 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>↔</mo><mn>2</mn><mo separator="true">,</mo><mn>2</mn><mo>↔</mo><mn>3</mn><mo separator="true">,</mo><mn>1</mn><mo>↔</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">1 \leftrightarrow 2,2 \leftrightarrow 3,1 \leftrightarrow 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">↔</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">↔</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">↔</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span>：</p>
-<p>显然存在同性恋。为什么？</p>
-<p>因为存在<strong>奇数个节点</strong>的环。</p>
-<p>思考：如果一个环有奇数个节点，那么<strong>必定</strong>存在同性恋。</p>
-<p>因为奇数意味着男女两种性别的数量不同，因此必定会有相同性别的点连通（有关系）。</p>
-<h3 id="代码转换"><a class="markdownIt-Anchor" href="#代码转换"></a> 代码转换</h3>
-<p>考虑以下流程：</p>
-<ul>
-<li>
-<p>将 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 号点的性别标记为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>。对于每个和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 连通（有关系）的点（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span>），将它们的性别标记为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>。</p>
-</li>
-<li>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 号点标记过，所以直接遍历连通的点（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span>，因为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 已经访问过了，所以不再访问）。</p>
-</li>
-<li>
-<p>因为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> 号点的性别和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 号点的性别标记相同，所以认为：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 号点和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> 号点是同性恋的关系。</p>
-</li>
-</ul>
-<p>因为是从每个点出发，寻找所有连通的点，所以使用邻接表/链式前向星（保存了一个点出发的所有边）的方式。</p>
-<h3 id="具体流程"><a class="markdownIt-Anchor" href="#具体流程"></a> 具体流程</h3>
-<p>对于每一组数据，进行如下操作：</p>
-<ul>
-<li>初始化</li>
-<li>建图</li>
-<li>遍历 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>∈</mo><mrow><mo fence="true">[</mo><mn>1</mn><mo separator="true">,</mo><mi>n</mi><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">i \in \left[1,n\right]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69862em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">[</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span><span class="mclose delimcenter" style="top:0em;">]</span></span></span></span></span> 的所有节点：
-<ul>
-<li>如果没访问过 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> ，将其性别设为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>。</li>
-<li>访问每个与 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 连通的点 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mi>o</mi></mrow><annotation encoding="application/x-tex">to</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal">o</span></span></span></span>。
-<ul>
-<li>如果没访问过 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mi>o</mi></mrow><annotation encoding="application/x-tex">to</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal">o</span></span></span></span>，将其性别设为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mtext> </mtext><mrow><mi mathvariant="normal">x</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">r</mi></mrow><mtext> </mtext><mi>t</mi><mi>o</mi></mrow><annotation encoding="application/x-tex">1 \ \mathrm{xor}\ to</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace"> </span><span class="mord"><span class="mord mathrm">x</span><span class="mord mathrm">o</span><span class="mord mathrm">r</span></span><span class="mspace"> </span><span class="mord mathnormal">t</span><span class="mord mathnormal">o</span></span></span></span>。</li>
-<li>如果访问过 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mi>o</mi></mrow><annotation encoding="application/x-tex">to</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal">o</span></span></span></span>，检查 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 号点的性别与 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mi>o</mi></mrow><annotation encoding="application/x-tex">to</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal">o</span></span></span></span> 号节点的性别是否相同，相同则为同性恋。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>如果到最后也没有同性恋，则整个图中都没有同性恋。</li>
-</ul>
-<h2 id="ac-code"><a class="markdownIt-Anchor" href="#ac-code"></a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/176414835">AC Code</a></h2>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// template v4</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x7f7f7f7f</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">2024</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> M = <span class="number">2024000</span>;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Edge</span> &#123;</span><br><span class="line">    <span class="type">int</span> to, next;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">vector&lt;Edge&gt; edges;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> head[N];</span><br><span class="line"><span class="type">int</span> pt = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> mark[M];</span><br><span class="line"><span class="type">bool</span> vis[M];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add_edge</span><span class="params">(<span class="type">int</span> from, <span class="type">int</span> to)</span> </span>&#123;</span><br><span class="line">    edges.<span class="built_in">push_back</span>(&#123;to, head[from]&#125;);</span><br><span class="line">    head[from] = pt;</span><br><span class="line">    pt++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(mark, <span class="number">0</span>, <span class="keyword">sizeof</span> mark);</span><br><span class="line">    <span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="keyword">sizeof</span> vis);</span><br><span class="line">    <span class="built_in">memset</span>(head, <span class="number">0</span>, <span class="keyword">sizeof</span> head);</span><br><span class="line">    pt = <span class="number">1</span>;</span><br><span class="line">    edges.<span class="built_in">clear</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_str</span><span class="params">(<span class="type">int</span> t)</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="type">int</span> t1, t2;</span><br><span class="line">    edges.<span class="built_in">push_back</span>(&#123;<span class="number">0</span>, <span class="number">0</span>&#125;);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        cin &gt;&gt; t1 &gt;&gt; t2;</span><br><span class="line">        <span class="built_in">add_edge</span>(t1, t2);</span><br><span class="line">        <span class="built_in">add_edge</span>(t2, t1);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(!vis[i]) mark[i] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = head[i]; j; j = edges[j].next) &#123;</span><br><span class="line">            <span class="type">int</span> to = edges[j].to;</span><br><span class="line">            <span class="keyword">if</span>(!vis[to]) mark[to] = <span class="number">1</span> ^ mark[i];</span><br><span class="line">            <span class="keyword">if</span>(mark[to] == mark[i]) &#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;Scenario #%d:\nSuspicious bugs found!\n&quot;</span>, t);</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(vis[to]) <span class="keyword">continue</span>;</span><br><span class="line">            vis[to] = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Scenario #%d:\nNo suspicious bugs found!\n&quot;</span>, t);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> t;</span><br><span class="line">    cin &gt;&gt; t;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= t; i++) &#123;</span><br><span class="line">        <span class="built_in">init</span>();</span><br><span class="line">        <span class="built_in">get_str</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
 
     
 
@@ -1398,6 +1251,91 @@ Given a list of bug interactions, decide whether the experiment supports his ass
 </ul>
 <h2 id="ac-code"><a class="markdownIt-Anchor" href="#ac-code"></a> AC Code</h2>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// template v4</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf = <span class="number">0x7fffffff</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">50</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> M = <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> dp[<span class="number">2</span>][N][M][M][M];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> A[N][N];</span><br><span class="line"><span class="type">int</span> B[N][N];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> ans[N][N];</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> MOD = <span class="number">998244353</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> n, m, k;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= m; j++) &#123;</span><br><span class="line">            cin &gt;&gt; A[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= m; j++) &#123;</span><br><span class="line">            cin &gt;&gt; B[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    dp[<span class="number">1</span>][<span class="number">1</span>][<span class="number">0</span>][<span class="number">0</span>][k] = <span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> x = <span class="number">1</span>; x &lt;= n; x++)&#123;</span><br><span class="line">        i ^= <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> y = <span class="number">1</span>; y &lt;= m; y++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> money = k; money &gt;= <span class="number">0</span>; money--)&#123;</span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> sx = <span class="number">0</span>; sx + x &lt;= n; sx++)&#123;</span><br><span class="line">                    <span class="keyword">for</span>(<span class="type">int</span> sy = <span class="number">0</span>; sy + y &lt;= m; sy++)&#123;</span><br><span class="line">                        ll res = <span class="number">0</span>;</span><br><span class="line">                        <span class="keyword">if</span>(x != <span class="number">1</span>) res += dp[i ^ <span class="number">1</span>][y][sx + <span class="number">1</span>][sy][money];</span><br><span class="line">                        <span class="keyword">if</span>(y != <span class="number">1</span>) res += dp[i][y - <span class="number">1</span>][sx][sy + <span class="number">1</span>][money];</span><br><span class="line">                        res %= MOD;</span><br><span class="line">                        <span class="keyword">if</span>(sx &amp;&amp; A[x][y] + money &lt;= k) res += dp[i][y][sx - <span class="number">1</span>][sy][money+A[x][y]];</span><br><span class="line">                        <span class="keyword">if</span>(sy &amp;&amp; B[x][y] + money &lt;= k) res += dp[i][y][sx][sy - <span class="number">1</span>][money+B[x][y]];</span><br><span class="line">                        <span class="keyword">if</span>(sx &amp;&amp; sy &amp;&amp; A[x][y] + B[x][y] + money &lt;= k) res += MOD - dp[i][y][sx - <span class="number">1</span>][sy - <span class="number">1</span>][money + A[x][y] + B[x][y]];</span><br><span class="line">                        dp[i][y][sx][sy][money] += (res % MOD);</span><br><span class="line">                        dp[i][y][sx][sy][money] %= MOD;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            ans[x][y] = dp[i][y][<span class="number">0</span>][<span class="number">0</span>][<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">memset</span>(dp[i ^ <span class="number">1</span>], <span class="number">0</span>, <span class="keyword">sizeof</span> dp[i ^ <span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">1</span>; j &lt;= m; j++) &#123;</span><br><span class="line">            cout &lt;&lt; ans[i][j] &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://witherixg.github.io/2024/08/11/ffae8acc77f6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/./images/avatar.jpg">
+      <meta itemprop="name" content="wither_ixg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wither_ixg">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | wither_ixg">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/08/11/ffae8acc77f6/" class="post-title-link" itemprop="url">我同学发明的“Y”染色体</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-08-11 01:06:18" itemprop="dateCreated datePublished" datetime="2024-08-11T01:06:18+08:00">2024-08-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-02-24 22:44:20" itemprop="dateModified" datetime="2025-02-24T22:44:20+08:00">2025-02-24</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="Word count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Word count in article: </span>
+      <span>30</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Ta认为，XY同源染色体互换可以没有同源区段，于是：</p>
+<p><img src="/images/2024/08/11/1.png" alt="示意图片" /></p>
+<p>真·<strong>Y</strong>染色体。</p>
 
       
     </div>
