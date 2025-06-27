@@ -21,23 +21,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"witherixg.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"default"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="wither_ixg">
-<meta property="og:url" content="https://witherixg.github.io/place%20holder/index.html">
+    <meta name="description" content="某种程度上讲，二进制也算一种算法？  前言 二进制从定义上讲只是一种数字表示方式。 与你们人类使用的十进制不同，二进制表示法中只有0和1两个数位。 例如，十进制下的 191919 在二进制下就表示为 100111001110011（注：所有二进制数均省略二进制表示法）。  十进制转换为二进制  二的幂分解 首先需要了解常用的二进制整数（即 222 的幂）：2,4,8,16,32,⋯2,4,8,16">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法-二进制">
+<meta property="og:url" content="https://witherixg.github.io/2025/06/27/57c1bdfdaea7/index.html">
 <meta property="og:site_name" content="wither_ixg">
+<meta property="og:description" content="某种程度上讲，二进制也算一种算法？  前言 二进制从定义上讲只是一种数字表示方式。 与你们人类使用的十进制不同，二进制表示法中只有0和1两个数位。 例如，十进制下的 191919 在二进制下就表示为 100111001110011（注：所有二进制数均省略二进制表示法）。  十进制转换为二进制  二的幂分解 首先需要了解常用的二进制整数（即 222 的幂）：2,4,8,16,32,⋯2,4,8,16">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-06-27T15:04:37.000Z">
+<meta property="article:modified_time" content="2025-06-27T16:55:32.314Z">
 <meta property="article:author" content="wither_ixg">
+<meta property="article:tag" content="Algorithm">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://witherixg.github.io/place%20holder/">
+<link rel="canonical" href="https://witherixg.github.io/2025/06/27/57c1bdfdaea7/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"place holder/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://witherixg.github.io/2025/06/27/57c1bdfdaea7/","path":"2025/06/27/57c1bdfdaea7/","title":"算法-二进制"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>wither_ixg</title>
+<title>算法-二进制 | wither_ixg</title>
   
 
 
@@ -76,7 +81,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">wither_ixg</h1>
+      <p class="site-title">wither_ixg</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -129,7 +134,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -142,6 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E8%BF%9B%E5%88%B6"><span class="nav-number">2.</span> <span class="nav-text"> 十进制转换为二进制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E7%9A%84%E5%B9%82%E5%88%86%E8%A7%A3"><span class="nav-number">2.1.</span> <span class="nav-text"> 二的幂分解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%80%92%E5%BA%8F%E5%8F%96%E4%BD%99"><span class="nav-number">2.2.</span> <span class="nav-text"> 倒序取余</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%8D%81%E8%BF%9B%E5%88%B6"><span class="nav-number">3.</span> <span class="nav-text"> 二进制转换为十进制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text"> 补码表示法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%8D%E6%93%8D%E4%BD%9C%E4%BD%8D%E8%BF%90%E7%AE%97"><span class="nav-number">5.</span> <span class="nav-text"> 位操作&#x2F;位运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A5%E5%85%85"><span class="nav-number">6.</span> <span class="nav-text"> 补充</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -210,16 +216,17 @@
 
     </div>
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://witherixg.github.io/2025/06/27/57c1bdfdaea7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -233,13 +240,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | wither_ixg">
+      <meta itemprop="name" content="算法-二进制 | wither_ixg">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/06/27/57c1bdfdaea7/" class="post-title-link" itemprop="url">算法-二进制</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          算法-二进制
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -275,8 +282,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-          <p><s>某种程度上讲，二进制也算一种算法？</s></p>
+    <div class="post-body" itemprop="articleBody"><p><s>某种程度上讲，二进制也算一种算法？</s></p>
 <h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
 <p><strong>二进制</strong>从定义上讲只是一种数字表示方式。</p>
 <p>与<s>你们人类使用的</s>十进制不同，二进制表示法中只有<code>0</code>和<code>1</code>两个数位。</p>
@@ -364,7 +370,6 @@
 </li>
 </ul>
 
-      
     </div>
 
     
@@ -372,8 +377,21 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-tags">
+              <a href="/tags/Algorithm/" rel="tag"><i class="fa fa-tag"></i> Algorithm</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/03/18/2cfe2e25e5bd/" rel="prev" title="算法-字符串string">
+                  <i class="fa fa-angle-left"></i> 算法-字符串string
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
@@ -381,1134 +399,7 @@
 
 
 
-    
 
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://witherixg.github.io/2025/03/18/2cfe2e25e5bd/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/./images/avatar.jpg">
-      <meta itemprop="name" content="wither_ixg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/03/18/2cfe2e25e5bd/" class="post-title-link" itemprop="url">算法-字符串string</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2025-03-18 23:50:18" itemprop="dateCreated datePublished" datetime="2025-03-18T23:50:18+08:00">2025-03-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-03-25 23:00:09" itemprop="dateModified" datetime="2025-03-25T23:00:09+08:00">2025-03-25</time>
-    </span>
-
-  
-    <span class="post-meta-item" title="Word count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Word count in article: </span>
-      <span>771</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>严格说，和<a href="/2024/11/09/80d8470fb88b"><code>int128</code></a>一样，<code>string</code>不属于算法，但为了便于归类才标记为算法。</p>
-<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>觉得<code>char[]</code>难用？一起来用<code>string</code>吧！</p>
-<h2 id="使用方法"><a class="markdownIt-Anchor" href="#使用方法"></a> 使用方法</h2>
-<p>一般地，同为数据类型，大部分的操作都可以参考<code>int</code>类型变量。</p>
-<h3 id="输入输出"><a class="markdownIt-Anchor" href="#输入输出"></a> 输入/输出</h3>
-<p>如果输入以空格或换行符分隔，可以直接使用<code>cin</code>。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string str;</span><br><span class="line">cin &gt;&gt; str;</span><br></pre></td></tr></table></figure>
-<p>如果希望输入一整行(包括空格)的话，可以使用<code>getline</code>。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string str;</span><br><span class="line"><span class="built_in">getline</span>(cin, str);</span><br></pre></td></tr></table></figure>
-<p><strong>注意：在使用<code>getline</code>前，如果使用过<code>cin</code>，必须先清空输入流！</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">string str1, str2;</span><br><span class="line">cin &gt;&gt; str;</span><br><span class="line">cin.<span class="built_in">clear</span>();</span><br><span class="line">cin.<span class="built_in">ignore</span>();</span><br><span class="line"><span class="built_in">getline</span>(cin, str2);</span><br></pre></td></tr></table></figure>
-<p>输出直接用<code>cout</code>即可。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;wither_ixg&quot;</span>;</span><br><span class="line">cout &lt;&lt; str &lt;&lt; endl; <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
-<p>由于<code>string</code>并不是C语言的内容(而是C++)，所以<code>scanf</code>和<code>printf</code>不支持<code>string</code><s>当然也有特殊的方法，在此不多展开</s>。</p>
-<h3 id="定义"><a class="markdownIt-Anchor" href="#定义"></a> 定义</h3>
-<p>和<code>int</code>一样，<code>string</code>类型变量也有以下定义方式(任选一种)：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">string part1 = <span class="string">&quot;wither&quot;</span>;</span><br><span class="line"><span class="function">string <span class="title">part2</span><span class="params">(<span class="string">&quot;_&quot;</span>)</span></span>;</span><br><span class="line">string part3&#123;<span class="string">&quot;ixg&quot;</span>&#125;;</span><br><span class="line">cout &lt;&lt; part1 &lt;&lt; part2 &lt;&lt; part3 &lt;&lt; endl; <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
-<p>不过特殊的是，<code>string</code>类型还有很多初始化的方法(称为构造函数)，在此额外补充一个常用的：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">string <span class="title">str1</span><span class="params">(<span class="number">5</span>, <span class="string">&#x27;a&#x27;</span>)</span></span>; <span class="comment">// &quot;aaaaa&quot;</span></span><br><span class="line"><span class="function">string <span class="title">str2</span><span class="params">(<span class="number">6</span>, <span class="string">&#x27;b&#x27;</span>)</span></span>; <span class="comment">// &quot;bbbbbb&quot;</span></span><br></pre></td></tr></table></figure>
-<h3 id="转换"><a class="markdownIt-Anchor" href="#转换"></a> 转换</h3>
-<p>实际使用时，会经常需要将<code>int</code>等类型转化成字符串。</p>
-<p>C++11之后，可以使用<code>to_string</code>函数完成这一操作：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> num = <span class="number">10000</span>;</span><br><span class="line">string str = <span class="built_in">to_string</span>(num); <span class="comment">// &quot;10000&quot;</span></span><br></pre></td></tr></table></figure>
-<h3 id="基本操作"><a class="markdownIt-Anchor" href="#基本操作"></a> 基本操作</h3>
-<h4 id="获取长度"><a class="markdownIt-Anchor" href="#获取长度"></a> 获取长度</h4>
-<p>使用<code>length</code>(如果你把它看作数组)或<code>size</code>(STL通用的名称)即可，两个函数<strong>没有任何区别</strong>。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;wither_ixg&quot;</span>;</span><br><span class="line"><span class="type">int</span> len1 = str.<span class="built_in">length</span>(); <span class="comment">// 10</span></span><br><span class="line"><span class="type">int</span> len2 = str.<span class="built_in">size</span>(); <span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
-<h4 id="比较ascii码"><a class="markdownIt-Anchor" href="#比较ascii码"></a> 比较(ASCII码)</h4>
-<p>最简单的比较方式：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str1 = <span class="string">&quot;abc&quot;</span>, str2 = <span class="string">&quot;abd&quot;</span>, str3 = <span class="string">&quot;abe&quot;</span>;</span><br><span class="line">cout &lt;&lt; (str2 &gt; str1) &lt;&lt; endl; <span class="comment">// 1</span></span><br><span class="line">cout &lt;&lt; (str2 &gt; str3) &lt;&lt; endl; <span class="comment">// 0</span></span><br></pre></td></tr></table></figure>
-<p>类似<code>strcmp</code>的比较方式：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str1 = <span class="string">&quot;abc&quot;</span>, str2 = <span class="string">&quot;abd&quot;</span>, str3 = <span class="string">&quot;abe&quot;</span>;</span><br><span class="line">cout &lt;&lt; (str<span class="number">2.</span><span class="built_in">compare</span>(str1)) &lt;&lt; endl; <span class="comment">// 1</span></span><br><span class="line">cout &lt;&lt; (str<span class="number">2.</span><span class="built_in">compare</span>(str3)) &lt;&lt; endl; <span class="comment">// -1</span></span><br></pre></td></tr></table></figure>
-<h4 id="添加"><a class="markdownIt-Anchor" href="#添加"></a> 添加</h4>
-<p>下面是一种最简单的做法：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;wither&quot;</span>;</span><br><span class="line">str += <span class="string">&#x27;_&#x27;</span>; <span class="comment">// wither_</span></span><br><span class="line">str += <span class="string">&quot;ixg&quot;</span>; <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
-<p>如果想在指定位置插入，使用<code>insert</code>。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;_ixg&quot;</span>;</span><br><span class="line">str.<span class="built_in">insert</span>(<span class="number">0</span>, <span class="string">&quot;w&quot;</span>); <span class="comment">// w_ixg</span></span><br><span class="line">str.<span class="built_in">insert</span>(<span class="number">1</span>, <span class="string">&quot;ither&quot;</span>); <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
-<h4 id="删除"><a class="markdownIt-Anchor" href="#删除"></a> 删除</h4>
-<p>使用<code>erase(from, len)</code>，其中<code>from</code>代表从哪开始，<code>len</code>代表长度：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;withhhhhhhher_ixg&quot;</span>;</span><br><span class="line"><span class="comment">// Hint:          ^^^^^^^</span></span><br><span class="line">str.<span class="built_in">erase</span>(<span class="number">4</span>, <span class="number">7</span>); <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
-<h4 id="替换"><a class="markdownIt-Anchor" href="#替换"></a> 替换</h4>
-<p>使用<code>replace(from, len, str)</code>，其中<code>from</code>代表从哪开始，<code>len</code>代表长度，<code>str</code>代表要替换成什么字符串：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;with++++++++ixg&quot;</span>;</span><br><span class="line"><span class="comment">// Hint:          ^^^^^^^^</span></span><br><span class="line">str.<span class="built_in">replace</span>(<span class="number">4</span>, <span class="number">8</span>, <span class="string">&quot;er_&quot;</span>); <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
-<h4 id="获取字符"><a class="markdownIt-Anchor" href="#获取字符"></a> 获取字符</h4>
-<p>类似于数组：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;abc&quot;</span>;</span><br><span class="line"><span class="type">char</span> ch = str[<span class="number">0</span>]; <span class="comment">// &#x27;a&#x27;</span></span><br></pre></td></tr></table></figure>
-<h4 id="查找"><a class="markdownIt-Anchor" href="#查找"></a> 查找</h4>
-<p>使用<code>find</code>和<code>rfind</code>函数，其中<code>r</code>代表从右开始查找。</p>
-<p>以<code>find</code>为例：</p>
-<ul>
-<li>如果使用<code>find(str)</code>，代表从左到右查询第一次遇到字符串<code>str</code>的位置。</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;wither_ixg&quot;</span>;</span><br><span class="line">str.<span class="built_in">find</span>(<span class="string">&quot;i&quot;</span>); <span class="comment">// 1</span></span><br><span class="line">str.<span class="built_in">rfind</span>(<span class="string">&quot;i&quot;</span>); <span class="comment">// 7</span></span><br><span class="line">str.<span class="built_in">rfind</span>(<span class="string">&quot;ixg&quot;</span>); <span class="comment">// 7</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>如果使用<code>find(str, from)</code>，代表从<code>from</code>的下标开始，查询第一次遇到字符串<code>str</code>的位置。</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;wither_ixg&quot;</span>;</span><br><span class="line"><span class="comment">// Hint:             |--&gt;</span></span><br><span class="line">str.<span class="built_in">find</span>(<span class="string">&quot;i&quot;</span>, <span class="number">7</span>); <span class="comment">// 7</span></span><br></pre></td></tr></table></figure>
-<p>特别地，如果<code>find</code>函数找不到匹配的位置，会返回一个很大的整数<code>string::npos</code>，也就是<code>18446744073709551615</code>。</p>
-<p>注：<code>string::npos</code>就是一个普通的整型常量，只是形式上有些奇怪？</p>
-<h4 id="截取"><a class="markdownIt-Anchor" href="#截取"></a> 截取</h4>
-<p>使用<code>substr(from, len)</code>，其中<code>from</code>代表从哪开始，<code>len</code>代表长度：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;wwwwither_ixgggg&quot;</span>;</span><br><span class="line"><span class="comment">// Hint:         ^^^^^^^^^^</span></span><br><span class="line">string new_str = str.<span class="built_in">substr</span>(<span class="number">3</span>, <span class="number">10</span>); <span class="comment">// wither_ixg</span></span><br></pre></td></tr></table></figure>
-<h4 id="排序"><a class="markdownIt-Anchor" href="#排序"></a> 排序</h4>
-<p>和<code>vector</code>类似，可使用<code>sort</code>排序：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string str = <span class="string">&quot;qazwsxedcrfvtgbyhnujmikolp&quot;</span>;</span><br><span class="line"><span class="built_in">sort</span>(str.<span class="built_in">begin</span>(), str.<span class="built_in">end</span>());</span><br><span class="line">cout &lt;&lt; str &lt;&lt; endl; <span class="comment">// abcdefghijklmnopqrstuvwxyz</span></span><br></pre></td></tr></table></figure>
-<h2 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h2>
-<table>
-<thead>
-<tr>
-<th>操作</th>
-<th>函数名</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>获取长度</td>
-<td><code>str.length()</code>/<code>str.size()</code></td>
-<td>两个函数没有区别</td>
-</tr>
-<tr>
-<td>比较</td>
-<td><code>str1 &lt; str2</code>/<code>str1.compare(str2)</code></td>
-<td>前者返回<code>bool</code>值，后者返回<code>-1</code>/<code>0</code>/<code>1</code></td>
-</tr>
-<tr>
-<td>添加</td>
-<td><code>str1 += x</code></td>
-<td><code>x</code>可以是<code>char</code>，也可以是<code>string</code></td>
-</tr>
-<tr>
-<td>删除</td>
-<td><code>str.erase(from, len)</code></td>
-<td>从下标<code>from</code>开始，连续删除<code>len</code>个字符</td>
-</tr>
-<tr>
-<td>替换</td>
-<td><code>str1.replace(from, len, str2)</code></td>
-<td>从下标<code>from</code>开始，将连续<code>len</code>个字符替换为<code>str2</code></td>
-</tr>
-<tr>
-<td>获取字符</td>
-<td><code>str[index]</code></td>
-<td>和数组的操作类似</td>
-</tr>
-<tr>
-<td>查找</td>
-<td><code>str1.find(str2)</code>/<code>str1.find(str2, index)</code></td>
-<td>(从下标<code>index</code>)往后找，返回位置的下标(找不到返回<code>string::npos</code>)</td>
-</tr>
-<tr>
-<td>截取</td>
-<td><code>str.substr(from, len)</code></td>
-<td>从下标<code>from</code>开始，连续截取<code>len</code>个字符</td>
-</tr>
-<tr>
-<td>排序</td>
-<td><code>sort(str.begin(), str.end())</code></td>
-<td>类似<code>vector</code>的排序</td>
-</tr>
-</tbody>
-</table>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://witherixg.github.io/2025/03/16/da49fb1593c6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/./images/avatar.jpg">
-      <meta itemprop="name" content="wither_ixg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/03/16/da49fb1593c6/" class="post-title-link" itemprop="url">VSCode配置C++开发环境</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2025-03-16 22:17:34" itemprop="dateCreated datePublished" datetime="2025-03-16T22:17:34+08:00">2025-03-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-04-04 17:24:18" itemprop="dateModified" datetime="2025-04-04T17:24:18+08:00">2025-04-04</time>
-    </span>
-
-  
-    <span class="post-meta-item" title="Word count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Word count in article: </span>
-      <span>846</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="准备工作"><a class="markdownIt-Anchor" href="#准备工作"></a> 准备工作</h2>
-<p>需要下载的内容：</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/sha/download?build=stable&amp;os=win32-x64-user">VSCode安装包</a></li>
-<li><a target="_blank" rel="noopener" href="https://files.1f0.de/mingw/mingw-w64-gcc-9.3-stable-r32.7z">MinGW w64 GCC编译器(镜像链接)</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.8/LLVM-18.1.8-win64.exe">LLVM(格式化工具，可选)</a>(<a target="_blank" rel="noopener" href="https://ghproxy.net/https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.8/LLVM-18.1.8-win64.exe">镜像链接</a>)</li>
-</ul>
-<h2 id="主编译器配置"><a class="markdownIt-Anchor" href="#主编译器配置"></a> 主编译器配置</h2>
-<h3 id="配置"><a class="markdownIt-Anchor" href="#配置"></a> 配置</h3>
-<p>解压<code>gcc-9.3.0.tar.gz</code>到一个位置，点进去找到<code>bin</code>文件夹，在里面有<code>g++.exe</code>这个文件，此时复制路径(点击地址栏空白处即可复制)。</p>
-<p>右键此电脑→属性→高级系统设置→环境变量→在系统变量里找到Path→编辑→新建→把刚才的路径粘贴进去即可。</p>
-<h3 id="测试"><a class="markdownIt-Anchor" href="#测试"></a> 测试</h3>
-<p>按下<code>Win+R</code>，输入<code>cmd</code>并回车，输入以下内容：</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -v</span><br></pre></td></tr></table></figure>
-<p>之后应该显示相关的版本信息，说明配置成功了。</p>
-<h2 id="格式化编译器配置可选"><a class="markdownIt-Anchor" href="#格式化编译器配置可选"></a> 格式化编译器配置(可选)</h2>
-<p>打开<code>LLVM-18.1.8-win64.exe</code>，选择<code>Add LLVM to the system PATH for all users</code>，继续安装即可。</p>
-<h2 id="vscode-配置"><a class="markdownIt-Anchor" href="#vscode-配置"></a> VSCode 配置</h2>
-<h3 id="基本操作"><a class="markdownIt-Anchor" href="#基本操作"></a> 基本操作</h3>
-<p>安装好 VSCode 之后，可以右键文件夹用 Code 打开(这里的 Code 就是 VSCode)，或者把文件夹拖到 VSCode 图标上面打开，作为项目文件夹。</p>
-<p>最左边的五个按钮中，主要使用最上面的<strong>资源管理器</strong>(显示文件夹的各种层级结构)和最下面的<strong>插件</strong>。</p>
-<p>首先，可以在插件中下载简体中文，插件名称为<code>Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code</code>。</p>
-<p>把鼠标移动到<strong>资源管理器</strong>中项目文件夹名称的位置，右边会出现四个按键。</p>
-<ul>
-<li>新建文件(需要加扩展名)</li>
-<li>新建文件夹</li>
-<li>刷新</li>
-<li>折叠</li>
-</ul>
-<p>新建文件之后，打开即可编辑内容。</p>
-<ul>
-<li>单击是临时打开，当打开下一个文件时会关闭临时打开的这个文件。</li>
-<li>双击是永久打开。</li>
-</ul>
-<p>当然，右键也可以创建文件/子文件夹。</p>
-<h3 id="编译运行"><a class="markdownIt-Anchor" href="#编译运行"></a> 编译&amp;运行</h3>
-<p>掌握简单命令很重要！按下快捷键<code>Ctrl+J</code>，即可调出终端。</p>
-<h4 id="切换文件夹命令"><a class="markdownIt-Anchor" href="#切换文件夹命令"></a> 切换文件夹命令</h4>
-<p>一般使用相对路径。</p>
-<p><code>cd 路径名称</code>，即可切换到对应子文件夹，<code>.</code>代表本层文件夹，<code>..</code>代表上层文件夹。</p>
-<h4 id="编译命令"><a class="markdownIt-Anchor" href="#编译命令"></a> 编译命令</h4>
-<p><code>g++ cpp文件名(含.cpp) -o 输出文件名(不含.exe) -o2</code><br />
-<code>g++ cpp文件名(含.cpp) -o 输出文件名(不含.exe) -o2</code><br />
-<code>g++ cpp文件名(含.cpp) -o 输出文件名(不含.exe) -o2</code></p>
-<p>重要的事情说三遍！</p>
-<p>其中<code>-o2</code>是指开启 <code>O2</code> 优化的意思。</p>
-<h4 id="运行命令"><a class="markdownIt-Anchor" href="#运行命令"></a> 运行命令</h4>
-<p>直接输入<code>exe</code>文件的名称就可以了。特别的，在<code>Powershell</code>环境下需要输入<code>.\xxx.exe</code>。</p>
-<h3 id="安装插件"><a class="markdownIt-Anchor" href="#安装插件"></a> 安装插件</h3>
-<p>下载以下插件：</p>
-<ul>
-<li>
-<p><code>C/C++</code>、<code>C/C++ Extension Pack</code>、<code>C/C++ Themes</code>，提供高亮显示等基本操作。</p>
-</li>
-<li>
-<p><code>Code Runner</code>(可选)，运行文件。</p>
-</li>
-<li>
-<p><code>Clang-Format</code>(可选)，格式化文件。</p>
-</li>
-</ul>
-<p>如果没下载<code>Code Runner</code>，可以手动输入命令编译运行代码。</p>
-<p>在左下角的设置中，搜索<code>code-runner.executorMap</code>，选择在 <code>settings.json</code> 中编辑，找到<code>C++</code>一行，根据上面的内容编辑冒号后面的命令。</p>
-<p>这个插件提供了一些变量以适配不同的文件名，下面我给出一段示例命令作为参考：</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ $fileName -o $fileNameWithoutExt -o2 &amp;&amp; .\\$fileNameWithoutExt</span><br></pre></td></tr></table></figure>
-<h3 id="格式化可选"><a class="markdownIt-Anchor" href="#格式化可选"></a> 格式化(可选)</h3>
-<p>格式化的作用就是为了让代码有一个统一的风格，更整洁好看。</p>
-<p>在项目文件夹的根目录下，新建<code>.clang-format</code>文件，在里面编辑格式化的方案。</p>
-<p>这里我提供一个我在使用的格式化方案，链接见<a href="/.clang-format">此处</a>。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://witherixg.github.io/2025/03/12/8b1abf333d45/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/./images/avatar.jpg">
-      <meta itemprop="name" content="wither_ixg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/03/12/8b1abf333d45/" class="post-title-link" itemprop="url">MC Forge 开发笔记00-准备工作</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2025-03-12 00:00:10 / Modified: 01:16:25" itemprop="dateCreated datePublished" datetime="2025-03-12T00:00:10+08:00">2025-03-12</time>
-    </span>
-
-  
-    <span class="post-meta-item" title="Word count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Word count in article: </span>
-      <span>1.1k</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="提醒"><a class="markdownIt-Anchor" href="#提醒"></a> 提醒</h2>
-<p>在开发mod前，首先应该知道要实现的功能是否需要一个mod来解决。</p>
-<ul>
-<li>
-<p>一部分简单的逻辑，或者修改合成配方，用数据包即可。</p>
-</li>
-<li>
-<p>如果只是修改模型、贴图、语言文件，用资源包(材质包)即可。</p>
-</li>
-</ul>
-<p>排除上面的情况之后，就要正式开始制作mod了！</p>
-<h2 id="准备工作"><a class="markdownIt-Anchor" href="#准备工作"></a> 准备工作</h2>
-<h3 id="编程相关"><a class="markdownIt-Anchor" href="#编程相关"></a> 编程相关</h3>
-<p>作为mod开发者，需要一定的Java/Kotlin基础。</p>
-<p>当然，编程语言基本都是互通的，所以有其它语言的基础也会有很大帮助<s>没有也没太大关系</s>。</p>
-<p>只要你有<strong>举一反三</strong>、<strong>复制粘贴</strong>、<strong>看懂单词</strong>的能力，开发mod也不是什么难事。</p>
-<h3 id="软件下载"><a class="markdownIt-Anchor" href="#软件下载"></a> 软件下载</h3>
-<p>开发Java/Kotlin的工具，首先推荐<a target="_blank" rel="noopener" href="https://www.jetbrains.com/idea/">Intellij Idea</a>。个人开发者推荐使用社区版(Community)<s>或者使用一些破解工具</s>。</p>
-<p>下载并安装完成后，打开<code>Idea</code>，在左边找到<code>Plugins</code>，下载<code>Minecraft Development</code>插件。</p>
-<p>在同样的位置，可以找到官方支持的简体中文插件。为了保持统一，这里的图片中不使用这些插件(如果下载了也可以根据位置对照)。</p>
-<h3 id="创建mod项目"><a class="markdownIt-Anchor" href="#创建mod项目"></a> 创建mod项目</h3>
-<ul>
-<li>
-<p>首先创建项目(<code>New Project</code>)，根据以下提示填写基本信息。</p>
-<p><img src="/images/2025/03/12/1.png" alt="创建项目示例图片" /></p>
-<p>由上到下：</p>
-<ul>
-<li><code>Name</code>：项目名称，一般为Mod名称。</li>
-<li><code>Minecraft Version</code>：Mod对应的Minecraft版本。</li>
-<li><code>Forge Version</code>：Mod对应的Forge版本。</li>
-<li><code>Mod Id</code>：由数字(0~9)，字母(大小写)，下划线(<code>_</code>)组成，在游戏内按下<code>F3+H</code>可以看到每个物品对应的Mod ID(例如，泥土<code>minecraft:dirt</code>对应<code>minecraft</code>，机械手<code>create:deployer</code>对应<code>create</code>)，一个Mod ID只能对应一个mod。</li>
-<li><code>Mod Name</code>：Mod名称，可随意指定。</li>
-<li><code>Main Class</code>：Mod的入口(主类)，我的习惯是设置为<code>Main</code>。其中，<code>com.example_domain</code>是域名的倒置，命名规则和Mod ID一致。<code>com.example_domain.example_mod</code>是<strong>包名</strong>，<code>Main</code>是<strong>类名</strong>。</li>
-</ul>
-<p>注意：如果要修改原版的代码(通常需要)，可以提前勾选上Mixin。</p>
-</li>
-<li>
-<p>等待构建完成，如果构建失败可以使用镜像源，具体见<a href="%E9%95%9C%E5%83%8F%E9%85%8D%E7%BD%AE%E7%9A%84%E9%93%BE%E6%8E%A5%EF%BC%81%EF%BC%81%EF%BC%81">镜像配置</a>。</p>
-</li>
-<li>
-<p>删除<code>Config.java</code>和Mod主类中多余的内容，稍作修改之后：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example_domain.example_mod;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.mojang.logging.LogUtils;</span><br><span class="line"><span class="keyword">import</span> net.minecraftforge.fml.common.Mod;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"></span><br><span class="line"><span class="comment">// The value here should match an entry in the META-INF/mods.toml file</span></span><br><span class="line"><span class="meta">@Mod(Main.MOD_ID)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Define mod id in a common place for everything to reference</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">MOD_ID</span> <span class="operator">=</span> <span class="string">&quot;example_mod&quot;</span>;</span><br><span class="line">    <span class="comment">// Directly reference a slf4j logger</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Logger</span> <span class="variable">LOGGER</span> <span class="operator">=</span> LogUtils.getLogger();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>代码部分的详细解释见<a href="#%E4%BB%A3%E7%A0%81%E8%A7%A3%E9%87%8A">代码解释</a>部分。</p>
-</li>
-</ul>
-<h3 id="操作"><a class="markdownIt-Anchor" href="#操作"></a> 操作</h3>
-<ul>
-<li>运行客户端：选择<code>runClient</code>。</li>
-<li>运行服务端：选择<code>runServer</code>(通常不会选)。</li>
-<li>导出为Jar文件：在右边的Gradle中，依次选择<code>Tasks-&gt;build-&gt;build</code>，等待之后在左边文件夹<code>build/libs</code>中可以找到Mod的jar文件。</li>
-<li>修改mod版本：在<code>gradle.properties</code>中找到<code>mod_version</code>，修改即可。切忌把版本号改小！</li>
-</ul>
-<h2 id="完成"><a class="markdownIt-Anchor" href="#完成"></a> 完成</h2>
-<p>至此，一个Minecraft Mod项目就制作完毕了。</p>
-<p>虽然目前这个Mod还没有任何功能，但是已经<strong>可以</strong>改变这个世界的一切了，不是吗？</p>
-<h2 id="代码解释"><a class="markdownIt-Anchor" href="#代码解释"></a> 代码解释</h2>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example_domain.example_mod;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.mojang.logging.LogUtils;</span><br><span class="line"><span class="keyword">import</span> net.minecraftforge.fml.common.Mod;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"></span><br><span class="line"><span class="comment">// The value here should match an entry in the META-INF/mods.toml file</span></span><br><span class="line"><span class="meta">@Mod(Main.MOD_ID)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Define mod id in a common place for everything to reference</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">MOD_ID</span> <span class="operator">=</span> <span class="string">&quot;example_mod&quot;</span>;</span><br><span class="line">    <span class="comment">// Directly reference a slf4j logger</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Logger</span> <span class="variable">LOGGER</span> <span class="operator">=</span> LogUtils.getLogger();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>每条语句之后要有分号！！！</strong></p>
-<p>逐行：</p>
-<ul>
-<li>
-<p><code>package</code>之后的内容和包名保持一致。</p>
-</li>
-<li>
-<p><code>import</code>暂时不用关注。</p>
-</li>
-<li>
-<p><code>@Mod(string)</code>：<code>@Mod</code>是<strong>注解</strong>，放在类的定义之前，表示下面的类是Mod主类，string是Mod ID。</p>
-</li>
-<li>
-<p><code>public class Main</code>：定义一个类，Main与上面的类名保持一致，大括号中是这个类的内容。它会被上一行标记为<strong>Mod主类</strong>。</p>
-</li>
-<li>
-<p><code>public static final String MOD_ID</code>：定义一个变量，它具有如下性质：</p>
-<ul>
-<li>
-<p><code>public</code>：在任何地方都可以访问。</p>
-</li>
-<li>
-<p><code>static</code>：不需要创建一个对象(实例化)，使用<code>类名.变量名</code>的方式就可以访问(如<code>Main.MOD_ID</code>) 。</p>
-</li>
-<li>
-<p><code>final</code>：变量不可以被修改(常量)。</p>
-</li>
-<li>
-<p><code>String</code>：变量的类型为字符串(可以理解为一堆字就是字符串)。每个变量都要有类型，以下是常用的类型：</p>
-<ul>
-<li><code>int</code>：整型，存放整数。</li>
-<li><code>float</code>：浮点型(可以理解为小数)。</li>
-<li><code>double</code>：双精度浮点型，比<code>float</code>更精确。</li>
-<li><code>String</code>：字符串。</li>
-</ul>
-</li>
-<li>
-<p><code>MOD_ID</code>：表示这个变量的名称为<code>MOD_ID</code>。</p>
-</li>
-</ul>
-</li>
-<li>
-<p><code>&quot;example_mod&quot;</code>：表示一个字符串，所有的字符串都要使用双引号。</p>
-</li>
-<li>
-<p><code>LOGGER</code>：日志记录器。可以很方便的调试程序，分不同的等级，常用的有<code>info</code>、<code>error</code>和<code>debug</code>。用法：<code>LOGGER.info(string)</code>，string表示日志输出的内容(字符串)。</p>
-</li>
-<li>
-<p><code>//</code>后表示注释，给人看的东西，随便写<s>其实很少有人写</s>。</p>
-</li>
-</ul>
-<h2 id="吐槽"><a class="markdownIt-Anchor" href="#吐槽"></a> 吐槽</h2>
-<p><s>怎么一不小心写了这么多…？</s></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://witherixg.github.io/2025/02/24/41f44198e3be/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/./images/avatar.jpg">
-      <meta itemprop="name" content="wither_ixg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/02/24/41f44198e3be/" class="post-title-link" itemprop="url">重构声明</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2025-02-24 22:04:09 / Modified: 23:13:39" itemprop="dateCreated datePublished" datetime="2025-02-24T22:04:09+08:00">2025-02-24</time>
-    </span>
-
-  
-    <span class="post-meta-item" title="Word count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Word count in article: </span>
-      <span>74</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>声明：所有文章在2025/02/24重构了一次，以符合<code>markdownlint</code>的规范。</p>
-<p>由于以下文章内，大部分markdown内容均为题目的提供者所写，并且无法避免标题重复等问题，所以不过多重构：</p>
-<ul>
-<li><a href="/2024/10/14/e56f5f8ce2c9/">模拟题</a></li>
-<li><a href="/2024/10/19/b3a551529fba/">信友队模拟赛</a></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://witherixg.github.io/2025/02/21/40a4fde51ad4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/./images/avatar.jpg">
-      <meta itemprop="name" content="wither_ixg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/02/21/40a4fde51ad4/" class="post-title-link" itemprop="url">60级快乐~</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2025-02-21 22:35:22" itemprop="dateCreated datePublished" datetime="2025-02-21T22:35:22+08:00">2025-02-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-02-24 23:52:06" itemprop="dateModified" datetime="2025-02-24T23:52:06+08:00">2025-02-24</time>
-    </span>
-
-  
-    <span class="post-meta-item" title="Word count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Word count in article: </span>
-      <span>23</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>2023/06/30~2025/02/21</p>
-<iframe height="450" width="800" src="/videos/2025/02/21/1.mp4"></iframe>
-<p><img src="/images/2025/02/21/1.png" alt="纪念图片" /></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://witherixg.github.io/2025/02/05/1c79d7dcfc94/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/./images/avatar.jpg">
-      <meta itemprop="name" content="wither_ixg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/02/05/1c79d7dcfc94/" class="post-title-link" itemprop="url">Windows10任务栏配置</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2025-02-05 01:08:06 / Modified: 01:25:46" itemprop="dateCreated datePublished" datetime="2025-02-05T01:08:06+08:00">2025-02-05</time>
-    </span>
-
-  
-    <span class="post-meta-item" title="Word count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Word count in article: </span>
-      <span>185</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="1-打开关闭任务视图-搜索等"><a class="markdownIt-Anchor" href="#1-打开关闭任务视图-搜索等"></a> 1. 打开/关闭<code>任务视图</code>、<code>搜索</code>等</h2>
-<ul>
-<li>右键任务栏空白处。</li>
-<li>找到想要打开/关闭的内容。
-<ul>
-<li>如果是一级菜单，直接勾选即可。</li>
-<li>如果是二级菜单，点进去再勾选即可。</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-任务栏全透明"><a class="markdownIt-Anchor" href="#2-任务栏全透明"></a> 2. 任务栏全透明</h2>
-<p><strong>这里不推荐 Windows 自带的透明功能。</strong></p>
-<ul>
-<li>打开 Microsoft Store。</li>
-<li>搜索<code>TranslucentTB</code>。</li>
-<li>下载之后配置即可。</li>
-</ul>
-<p>此处提供链接：<a target="_blank" rel="noopener" href="https://apps.microsoft.com/detail/9pf4kz2vn4w9">https://apps.microsoft.com/detail/9pf4kz2vn4w9</a>。</p>
-<h2 id="3-任务栏居中"><a class="markdownIt-Anchor" href="#3-任务栏居中"></a> 3. 任务栏居中</h2>
-<ul>
-<li>进入<a target="_blank" rel="noopener" href="https://github.com/mdhiggins/CenterTaskbar">https://github.com/mdhiggins/CenterTaskbar</a>。</li>
-<li>在 Releases 中找到 exe 文件，下载。</li>
-<li>运行 exe 文件之后，任务栏就居中了。</li>
-</ul>
-<p>可以设置开机自启动，方法如下：</p>
-<ul>
-<li>Win+R，输入<code>shell:startup</code>。</li>
-<li>将 exe 文件扔进去！</li>
-</ul>
-<p>这样每次开机都会运行一次，也就是开机自启动。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://witherixg.github.io/2025/01/29/66ee6ecb5fd4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/./images/avatar.jpg">
-      <meta itemprop="name" content="wither_ixg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/01/29/66ee6ecb5fd4/" class="post-title-link" itemprop="url">海灯节快乐2.0！</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2025-01-29 21:30:52" itemprop="dateCreated datePublished" datetime="2025-01-29T21:30:52+08:00">2025-01-29</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-02-24 23:51:51" itemprop="dateModified" datetime="2025-02-24T23:51:51+08:00">2025-02-24</time>
-    </span>
-
-  
-    <span class="post-meta-item" title="Word count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Word count in article: </span>
-      <span>48</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>别问为什么直接是2.0！<s>因为去年还没创建这个站点。</s></p>
-<p><img src="/images/2025/01/29/1.png" alt="图片1" /><br />
-<img src="/images/2025/01/29/2.png" alt="图片2" /><br />
-<img src="/images/2025/01/29/3.png" alt="图片3" /><br />
-<img src="/images/2025/01/29/4.png" alt="图片4" /><br />
-<img src="/images/2025/01/29/5.png" alt="图片5" /><br />
-<img src="/images/2025/01/29/6.png" alt="图片6" /><br />
-<img src="/images/2025/01/29/7.png" alt="图片7" /><br />
-<img src="/images/2025/01/29/8.png" alt="图片8" /><br />
-<img src="/images/2025/01/29/9.png" alt="图片9" /></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://witherixg.github.io/2025/01/28/f53ed6806ce4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/./images/avatar.jpg">
-      <meta itemprop="name" content="wither_ixg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/01/28/f53ed6806ce4/" class="post-title-link" itemprop="url">常用镜像站点</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2025-01-28 01:34:06" itemprop="dateCreated datePublished" datetime="2025-01-28T01:34:06+08:00">2025-01-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-03-09 23:31:00" itemprop="dateModified" datetime="2025-03-09T23:31:00+08:00">2025-03-09</time>
-    </span>
-
-  
-    <span class="post-meta-item" title="Word count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Word count in article: </span>
-      <span>59</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <ul>
-<li>
-<p>阿里 <a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/">https://mirrors.aliyun.com/</a></p>
-</li>
-<li>
-<p>腾讯 <a target="_blank" rel="noopener" href="https://mirrors.cloud.tencent.com">https://mirrors.cloud.tencent.com</a></p>
-</li>
-<li>
-<p>网易 <a target="_blank" rel="noopener" href="http://mirrors.163.com/">http://mirrors.163.com/</a></p>
-</li>
-<li>
-<p>搜狐 <a target="_blank" rel="noopener" href="http://mirrors.sohu.com/">http://mirrors.sohu.com/</a></p>
-</li>
-<li>
-<p>华为 <a target="_blank" rel="noopener" href="https://mirrors.huaweicloud.com/home">https://mirrors.huaweicloud.com/home</a></p>
-</li>
-<li>
-<p>清华大学 <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/">https://mirrors.tuna.tsinghua.edu.cn/</a></p>
-</li>
-<li>
-<p>华中科技大学 <a target="_blank" rel="noopener" href="http://mirror.hust.edu.cn/">http://mirror.hust.edu.cn/</a></p>
-</li>
-<li>
-<p>浙江大学 <a target="_blank" rel="noopener" href="http://mirrors.zju.edu.cn/">http://mirrors.zju.edu.cn/</a></p>
-</li>
-<li>
-<p>北京理工大学 <a target="_blank" rel="noopener" href="http://mirror.bit.edu.cn/">http://mirror.bit.edu.cn/</a></p>
-</li>
-<li>
-<p>中国科技大学 <a target="_blank" rel="noopener" href="http://mirrors.ustc.edu.cn/">http://mirrors.ustc.edu.cn/</a></p>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://witherixg.github.io/2025/01/28/283344606543/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/./images/avatar.jpg">
-      <meta itemprop="name" content="wither_ixg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | wither_ixg">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/01/28/283344606543/" class="post-title-link" itemprop="url">Gradle&Maven镜像</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2025-01-28 01:09:22" itemprop="dateCreated datePublished" datetime="2025-01-28T01:09:22+08:00">2025-01-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-02-24 23:51:30" itemprop="dateModified" datetime="2025-02-24T23:51:30+08:00">2025-02-24</time>
-    </span>
-
-  
-    <span class="post-meta-item" title="Word count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Word count in article: </span>
-      <span>182</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="gradle-本体"><a class="markdownIt-Anchor" href="#gradle-本体"></a> Gradle 本体</h2>
-<p>此处为项目内下载 Gradle 本体时，设置为镜像源。</p>
-<ul>
-<li>打开<code>gradle/wrapper/gradle-wrapper.properties</code></li>
-<li>找到键<code>distributionUrl</code></li>
-<li>记住它的值（https://services.gradle.org/distributions/gradle-版本-类型.zip）下 Gradle 的版本和类型（一般为bin）</li>
-<li>在镜像源（以阿里云为例，链接见<a href="/2025/01/28/f53ed6806ce4/">常用镜像站点</a>）下找到刚才版本对应的文件夹，点进去找到类型对应的文件，右键复制链接</li>
-<li>将<code>distributionUrl</code>的<strong>值</strong>改为刚才的链接（注：冒号<code>'</code>前要使用<code>\</code>转义，参考原文）</li>
-</ul>
-<p>这样就设置成功了！</p>
-<h2 id="依赖"><a class="markdownIt-Anchor" href="#依赖"></a> 依赖</h2>
-<p>此处指下载所需依赖时的加速。</p>
-<ul>
-<li>
-<p>找到<code>settings.gradle(.kts)</code></p>
-</li>
-<li>
-<p>在<code>pluginManagement.repositories</code>的前几行中添加镜像地址（阿里云）：</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">maven &#123; setUrl(<span class="string">&quot;https://maven.aliyun.com/repository/central&quot;</span>) &#125;</span><br><span class="line">maven &#123; setUrl(<span class="string">&quot;https://maven.aliyun.com/repository/jcenter&quot;</span>) &#125;</span><br><span class="line">maven &#123; setUrl(<span class="string">&quot;https://maven.aliyun.com/repository/google&quot;</span>) &#125;</span><br><span class="line">maven &#123; setUrl(<span class="string">&quot;https://maven.aliyun.com/repository/gradle-plugin&quot;</span>) &#125;</span><br><span class="line">maven &#123; setUrl(<span class="string">&quot;https://maven.aliyun.com/repository/public&quot;</span>) &#125;</span><br><span class="line">maven &#123; setUrl(<span class="string">&quot;https://maven.aliyun.com/nexus/content/groups/public/&quot;</span>) &#125;</span><br><span class="line">maven &#123; setUrl(<span class="string">&quot;https://maven.aliyun.com/nexus/content/repositories/jcenter&quot;</span>) &#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>这样就设置成功了！</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/place%20holder/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/place%20holder/page/7/">7</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/place%20holder/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
 
 </div>
   </main>
