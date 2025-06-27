@@ -502,6 +502,26 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
       </tags>
   </entry>
   <entry>
+    <title>git推送出现the remote end hung up unexpectedly</title>
+    <url>/2024/08/11/37f2b043ad12/</url>
+    <content><![CDATA[<h2 id="原因"><a class="markdownIt-Anchor" href="#原因"></a> 原因</h2>
+<ul>
+<li>缓冲不够大</li>
+<li>网络速度不够快</li>
+<li>等待时间过短</li>
+</ul>
+<h2 id="解决方案"><a class="markdownIt-Anchor" href="#解决方案"></a> 解决方案</h2>
+<p>以上三条一一对应下列的措施</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git config <span class="literal">--global</span> http.postBuffer <span class="number">524288000</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git config <span class="literal">--global</span> http.lowSpeedLimit <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git config <span class="literal">--global</span> http.lowSpeedTime <span class="number">999999</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Luogu-P9743-旅行</title>
     <url>/2024/08/11/de7e8a70a61f/</url>
     <content><![CDATA[<h2 id="题目-p9743-kdoi-06-j旅行"><a class="markdownIt-Anchor" href="#题目-p9743-kdoi-06-j旅行"></a> 题目 <a href="https://www.luogu.com.cn/problem/P9743">P9743 「KDOI-06-J」旅行</a></h2>
@@ -596,26 +616,6 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 ]]></content>
       <tags>
         <tag>Luogu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git推送出现the remote end hung up unexpectedly</title>
-    <url>/2024/08/11/37f2b043ad12/</url>
-    <content><![CDATA[<h2 id="原因"><a class="markdownIt-Anchor" href="#原因"></a> 原因</h2>
-<ul>
-<li>缓冲不够大</li>
-<li>网络速度不够快</li>
-<li>等待时间过短</li>
-</ul>
-<h2 id="解决方案"><a class="markdownIt-Anchor" href="#解决方案"></a> 解决方案</h2>
-<p>以上三条一一对应下列的措施</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git config <span class="literal">--global</span> http.postBuffer <span class="number">524288000</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git config <span class="literal">--global</span> http.lowSpeedLimit <span class="number">0</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">git config <span class="literal">--global</span> http.lowSpeedTime <span class="number">999999</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -3341,17 +3341,6 @@ Given a list of bug interactions, decide whether the experiment supports his ass
       </tags>
   </entry>
   <entry>
-    <title>60级快乐~</title>
-    <url>/2025/02/21/40a4fde51ad4/</url>
-    <content><![CDATA[<p>2023/06/30~2025/02/21</p>
-<iframe height="450" width="800" src="/videos/2025/02/21/1.mp4"></iframe>
-<p><img src="/images/2025/02/21/1.png" alt="纪念图片" /></p>
-]]></content>
-      <tags>
-        <tag>Genshin</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Windows10任务栏配置</title>
     <url>/2025/02/05/1c79d7dcfc94/</url>
     <content><![CDATA[<h2 id="1-打开关闭任务视图-搜索等"><a class="markdownIt-Anchor" href="#1-打开关闭任务视图-搜索等"></a> 1. 打开/关闭<code>任务视图</code>、<code>搜索</code>等</h2>
@@ -3390,6 +3379,17 @@ Given a list of bug interactions, decide whether the experiment supports his ass
       </tags>
   </entry>
   <entry>
+    <title>60级快乐~</title>
+    <url>/2025/02/21/40a4fde51ad4/</url>
+    <content><![CDATA[<p>2023/06/30~2025/02/21</p>
+<iframe height="450" width="800" src="/videos/2025/02/21/1.mp4"></iframe>
+<p><img src="/images/2025/02/21/1.png" alt="纪念图片" /></p>
+]]></content>
+      <tags>
+        <tag>Genshin</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>重构声明</title>
     <url>/2025/02/24/41f44198e3be/</url>
     <content><![CDATA[<p>声明：所有文章在2025/02/24重构了一次，以符合<code>markdownlint</code>的规范。</p>
@@ -3399,84 +3399,6 @@ Given a list of bug interactions, decide whether the experiment supports his ass
 <li><a href="/2024/10/19/b3a551529fba/">信友队模拟赛</a></li>
 </ul>
 ]]></content>
-  </entry>
-  <entry>
-    <title>VSCode配置C++开发环境</title>
-    <url>/2025/03/16/da49fb1593c6/</url>
-    <content><![CDATA[<h2 id="准备工作"><a class="markdownIt-Anchor" href="#准备工作"></a> 准备工作</h2>
-<p>需要下载的内容：</p>
-<ul>
-<li><a href="https://code.visualstudio.com/sha/download?build=stable&amp;os=win32-x64-user">VSCode安装包</a></li>
-<li><a href="https://files.1f0.de/mingw/mingw-w64-gcc-9.3-stable-r32.7z">MinGW w64 GCC编译器(镜像链接)</a></li>
-<li><a href="https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.8/LLVM-18.1.8-win64.exe">LLVM(格式化工具，可选)</a>(<a href="https://ghproxy.net/https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.8/LLVM-18.1.8-win64.exe">镜像链接</a>)</li>
-</ul>
-<h2 id="主编译器配置"><a class="markdownIt-Anchor" href="#主编译器配置"></a> 主编译器配置</h2>
-<h3 id="配置"><a class="markdownIt-Anchor" href="#配置"></a> 配置</h3>
-<p>解压<code>gcc-9.3.0.tar.gz</code>到一个位置，点进去找到<code>bin</code>文件夹，在里面有<code>g++.exe</code>这个文件，此时复制路径(点击地址栏空白处即可复制)。</p>
-<p>右键此电脑→属性→高级系统设置→环境变量→在系统变量里找到Path→编辑→新建→把刚才的路径粘贴进去即可。</p>
-<h3 id="测试"><a class="markdownIt-Anchor" href="#测试"></a> 测试</h3>
-<p>按下<code>Win+R</code>，输入<code>cmd</code>并回车，输入以下内容：</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">g++ -v</span><br></pre></td></tr></table></figure>
-<p>之后应该显示相关的版本信息，说明配置成功了。</p>
-<h2 id="格式化编译器配置可选"><a class="markdownIt-Anchor" href="#格式化编译器配置可选"></a> 格式化编译器配置(可选)</h2>
-<p>打开<code>LLVM-18.1.8-win64.exe</code>，选择<code>Add LLVM to the system PATH for all users</code>，继续安装即可。</p>
-<h2 id="vscode-配置"><a class="markdownIt-Anchor" href="#vscode-配置"></a> VSCode 配置</h2>
-<h3 id="基本操作"><a class="markdownIt-Anchor" href="#基本操作"></a> 基本操作</h3>
-<p>安装好 VSCode 之后，可以右键文件夹用 Code 打开(这里的 Code 就是 VSCode)，或者把文件夹拖到 VSCode 图标上面打开，作为项目文件夹。</p>
-<p>最左边的五个按钮中，主要使用最上面的<strong>资源管理器</strong>(显示文件夹的各种层级结构)和最下面的<strong>插件</strong>。</p>
-<p>首先，可以在插件中下载简体中文，插件名称为<code>Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code</code>。</p>
-<p>把鼠标移动到<strong>资源管理器</strong>中项目文件夹名称的位置，右边会出现四个按键。</p>
-<ul>
-<li>新建文件(需要加扩展名)</li>
-<li>新建文件夹</li>
-<li>刷新</li>
-<li>折叠</li>
-</ul>
-<p>新建文件之后，打开即可编辑内容。</p>
-<ul>
-<li>单击是临时打开，当打开下一个文件时会关闭临时打开的这个文件。</li>
-<li>双击是永久打开。</li>
-</ul>
-<p>当然，右键也可以创建文件/子文件夹。</p>
-<h3 id="编译运行"><a class="markdownIt-Anchor" href="#编译运行"></a> 编译&amp;运行</h3>
-<p>掌握简单命令很重要！按下快捷键<code>Ctrl+J</code>，即可调出终端。</p>
-<h4 id="切换文件夹命令"><a class="markdownIt-Anchor" href="#切换文件夹命令"></a> 切换文件夹命令</h4>
-<p>一般使用相对路径。</p>
-<p><code>cd 路径名称</code>，即可切换到对应子文件夹，<code>.</code>代表本层文件夹，<code>..</code>代表上层文件夹。</p>
-<h4 id="编译命令"><a class="markdownIt-Anchor" href="#编译命令"></a> 编译命令</h4>
-<p><code>g++ cpp文件名(含.cpp) -o 输出文件名(不含.exe) -o2</code><br />
-<code>g++ cpp文件名(含.cpp) -o 输出文件名(不含.exe) -o2</code><br />
-<code>g++ cpp文件名(含.cpp) -o 输出文件名(不含.exe) -o2</code></p>
-<p>重要的事情说三遍！</p>
-<p>其中<code>-o2</code>是指开启 <code>O2</code> 优化的意思。</p>
-<h4 id="运行命令"><a class="markdownIt-Anchor" href="#运行命令"></a> 运行命令</h4>
-<p>直接输入<code>exe</code>文件的名称就可以了。特别的，在<code>Powershell</code>环境下需要输入<code>.\xxx.exe</code>。</p>
-<h3 id="安装插件"><a class="markdownIt-Anchor" href="#安装插件"></a> 安装插件</h3>
-<p>下载以下插件：</p>
-<ul>
-<li>
-<p><code>C/C++</code>、<code>C/C++ Extension Pack</code>、<code>C/C++ Themes</code>，提供高亮显示等基本操作。</p>
-</li>
-<li>
-<p><code>Code Runner</code>(可选)，运行文件。</p>
-</li>
-<li>
-<p><code>Clang-Format</code>(可选)，格式化文件。</p>
-</li>
-</ul>
-<p>如果没下载<code>Code Runner</code>，可以手动输入命令编译运行代码。</p>
-<p>在左下角的设置中，搜索<code>code-runner.executorMap</code>，选择在 <code>settings.json</code> 中编辑，找到<code>C++</code>一行，根据上面的内容编辑冒号后面的命令。</p>
-<p>这个插件提供了一些变量以适配不同的文件名，下面我给出一段示例命令作为参考：</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">g++ $fileName -o $fileNameWithoutExt -o2 &amp;&amp; .\\$fileNameWithoutExt</span><br></pre></td></tr></table></figure>
-<h3 id="格式化可选"><a class="markdownIt-Anchor" href="#格式化可选"></a> 格式化(可选)</h3>
-<p>格式化的作用就是为了让代码有一个统一的风格，更整洁好看。</p>
-<p>在项目文件夹的根目录下，新建<code>.clang-format</code>文件，在里面编辑格式化的方案。</p>
-<p>这里我提供一个我在使用的格式化方案，链接见<a href="/.clang-format">此处</a>。</p>
-]]></content>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>VSCode</tag>
-      </tags>
   </entry>
   <entry>
     <title>MC Forge 开发笔记00-准备工作</title>
@@ -3596,6 +3518,84 @@ Given a list of bug interactions, decide whether the experiment supports his ass
         <tag>Minecraft</tag>
         <tag>Tutorial</tag>
         <tag>Forge</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VSCode配置C++开发环境</title>
+    <url>/2025/03/16/da49fb1593c6/</url>
+    <content><![CDATA[<h2 id="准备工作"><a class="markdownIt-Anchor" href="#准备工作"></a> 准备工作</h2>
+<p>需要下载的内容：</p>
+<ul>
+<li><a href="https://code.visualstudio.com/sha/download?build=stable&amp;os=win32-x64-user">VSCode安装包</a></li>
+<li><a href="https://files.1f0.de/mingw/mingw-w64-gcc-9.3-stable-r32.7z">MinGW w64 GCC编译器(镜像链接)</a></li>
+<li><a href="https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.8/LLVM-18.1.8-win64.exe">LLVM(格式化工具，可选)</a>(<a href="https://ghproxy.net/https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.8/LLVM-18.1.8-win64.exe">镜像链接</a>)</li>
+</ul>
+<h2 id="主编译器配置"><a class="markdownIt-Anchor" href="#主编译器配置"></a> 主编译器配置</h2>
+<h3 id="配置"><a class="markdownIt-Anchor" href="#配置"></a> 配置</h3>
+<p>解压<code>gcc-9.3.0.tar.gz</code>到一个位置，点进去找到<code>bin</code>文件夹，在里面有<code>g++.exe</code>这个文件，此时复制路径(点击地址栏空白处即可复制)。</p>
+<p>右键此电脑→属性→高级系统设置→环境变量→在系统变量里找到Path→编辑→新建→把刚才的路径粘贴进去即可。</p>
+<h3 id="测试"><a class="markdownIt-Anchor" href="#测试"></a> 测试</h3>
+<p>按下<code>Win+R</code>，输入<code>cmd</code>并回车，输入以下内容：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">g++ -v</span><br></pre></td></tr></table></figure>
+<p>之后应该显示相关的版本信息，说明配置成功了。</p>
+<h2 id="格式化编译器配置可选"><a class="markdownIt-Anchor" href="#格式化编译器配置可选"></a> 格式化编译器配置(可选)</h2>
+<p>打开<code>LLVM-18.1.8-win64.exe</code>，选择<code>Add LLVM to the system PATH for all users</code>，继续安装即可。</p>
+<h2 id="vscode-配置"><a class="markdownIt-Anchor" href="#vscode-配置"></a> VSCode 配置</h2>
+<h3 id="基本操作"><a class="markdownIt-Anchor" href="#基本操作"></a> 基本操作</h3>
+<p>安装好 VSCode 之后，可以右键文件夹用 Code 打开(这里的 Code 就是 VSCode)，或者把文件夹拖到 VSCode 图标上面打开，作为项目文件夹。</p>
+<p>最左边的五个按钮中，主要使用最上面的<strong>资源管理器</strong>(显示文件夹的各种层级结构)和最下面的<strong>插件</strong>。</p>
+<p>首先，可以在插件中下载简体中文，插件名称为<code>Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code</code>。</p>
+<p>把鼠标移动到<strong>资源管理器</strong>中项目文件夹名称的位置，右边会出现四个按键。</p>
+<ul>
+<li>新建文件(需要加扩展名)</li>
+<li>新建文件夹</li>
+<li>刷新</li>
+<li>折叠</li>
+</ul>
+<p>新建文件之后，打开即可编辑内容。</p>
+<ul>
+<li>单击是临时打开，当打开下一个文件时会关闭临时打开的这个文件。</li>
+<li>双击是永久打开。</li>
+</ul>
+<p>当然，右键也可以创建文件/子文件夹。</p>
+<h3 id="编译运行"><a class="markdownIt-Anchor" href="#编译运行"></a> 编译&amp;运行</h3>
+<p>掌握简单命令很重要！按下快捷键<code>Ctrl+J</code>，即可调出终端。</p>
+<h4 id="切换文件夹命令"><a class="markdownIt-Anchor" href="#切换文件夹命令"></a> 切换文件夹命令</h4>
+<p>一般使用相对路径。</p>
+<p><code>cd 路径名称</code>，即可切换到对应子文件夹，<code>.</code>代表本层文件夹，<code>..</code>代表上层文件夹。</p>
+<h4 id="编译命令"><a class="markdownIt-Anchor" href="#编译命令"></a> 编译命令</h4>
+<p><code>g++ cpp文件名(含.cpp) -o 输出文件名(不含.exe) -o2</code><br />
+<code>g++ cpp文件名(含.cpp) -o 输出文件名(不含.exe) -o2</code><br />
+<code>g++ cpp文件名(含.cpp) -o 输出文件名(不含.exe) -o2</code></p>
+<p>重要的事情说三遍！</p>
+<p>其中<code>-o2</code>是指开启 <code>O2</code> 优化的意思。</p>
+<h4 id="运行命令"><a class="markdownIt-Anchor" href="#运行命令"></a> 运行命令</h4>
+<p>直接输入<code>exe</code>文件的名称就可以了。特别的，在<code>Powershell</code>环境下需要输入<code>.\xxx.exe</code>。</p>
+<h3 id="安装插件"><a class="markdownIt-Anchor" href="#安装插件"></a> 安装插件</h3>
+<p>下载以下插件：</p>
+<ul>
+<li>
+<p><code>C/C++</code>、<code>C/C++ Extension Pack</code>、<code>C/C++ Themes</code>，提供高亮显示等基本操作。</p>
+</li>
+<li>
+<p><code>Code Runner</code>(可选)，运行文件。</p>
+</li>
+<li>
+<p><code>Clang-Format</code>(可选)，格式化文件。</p>
+</li>
+</ul>
+<p>如果没下载<code>Code Runner</code>，可以手动输入命令编译运行代码。</p>
+<p>在左下角的设置中，搜索<code>code-runner.executorMap</code>，选择在 <code>settings.json</code> 中编辑，找到<code>C++</code>一行，根据上面的内容编辑冒号后面的命令。</p>
+<p>这个插件提供了一些变量以适配不同的文件名，下面我给出一段示例命令作为参考：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">g++ $fileName -o $fileNameWithoutExt -o2 &amp;&amp; .\\$fileNameWithoutExt</span><br></pre></td></tr></table></figure>
+<h3 id="格式化可选"><a class="markdownIt-Anchor" href="#格式化可选"></a> 格式化(可选)</h3>
+<p>格式化的作用就是为了让代码有一个统一的风格，更整洁好看。</p>
+<p>在项目文件夹的根目录下，新建<code>.clang-format</code>文件，在里面编辑格式化的方案。</p>
+<p>这里我提供一个我在使用的格式化方案，链接见<a href="/.clang-format">此处</a>。</p>
+]]></content>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>VSCode</tag>
       </tags>
   </entry>
   <entry>
